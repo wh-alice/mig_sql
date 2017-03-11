@@ -88,9 +88,9 @@ manager: "jhubbard"
   
 -   If you are deploying the database to an existing VM, the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be configured to listen on a TCP/IP port.  
   
--   Either a Windows Azure VM or Gallery image you plan to use for creation of the VM must have the [Cloud Adapter for SQL Server](http://msdn.microsoft.com/en-US/library/dn169301(SQL.130).aspx) configured and running.  
+-   Either a Windows Azure VM or Gallery image you plan to use for creation of the VM must have the [Cloud Adapter for SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) configured and running.  
   
--   You must configure an open endpoint for your [Cloud Adapter for SQL Server](http://msdn.microsoft.com/en-US/library/dn169301(SQL.130).aspx) on the Windows Azure gateway with private port 11435.  
+-   You must configure an open endpoint for your [Cloud Adapter for SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) on the Windows Azure gateway with private port 11435.  
   
  In addition, if you plan to deploy your database into an existing Windows Azure VM, you must also be able to provide:  
   
@@ -283,7 +283,7 @@ Specify or confirm the name of a new database. If the database name already exis
  Click **Finish** to close the wizard.  
   
 ## See Also  
- [Cloud Adapter for SQL Server](http://msdn.microsoft.com/en-US/library/dn169301(SQL.130).aspx)   
+ [Cloud Adapter for SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [Database Lifecycle Management](../../relational-databases/database-lifecycle-management.md)   
  [Export a Data-tier Application](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Import a BACPAC File to Create a New User Database](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   

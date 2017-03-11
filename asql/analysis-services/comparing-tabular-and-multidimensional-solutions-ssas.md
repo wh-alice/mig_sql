@@ -128,7 +128,7 @@ manager: "erikre"
   
 -   Analysis Services PowerShell is supported for Tabular and Multidimensional models and databases.  
   
- All databases support XML/A. See [Query and Expression Language Reference &#40;Analysis Services&#41;](http://msdn.microsoft.com/en-US/library/gg492188(SQL.130).aspx) and [Analysis Services Developer Documentation](../analysis-services/analysis-services-developer-documentation.md) for more information.  
+ All databases support XML/A. See [Query and Expression Language Reference &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/9597533d-35f4-4742-9d8c-7af392163527) and [Analysis Services Developer Documentation](../analysis-services/analysis-services-developer-documentation.md) for more information.  
   
 ##  <a name="bkmk_sec"></a> Security Features  
  All Analysis Services solutions can be secured at the database level. More granular security options vary by mode. If granular security settings are requirement for your solution, review the following list to ensure the level of security you want is supported in the type of solution you want to build:  
@@ -200,13 +200,13 @@ manager: "erikre"
   
 -   Build a multidimensional model. See,  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/tutorials/multidimensional-modeling-adventure-works-tutorial.md).  
   
--   Build a data mining model. See,  [Basic Data Mining Tutorial](http://msdn.microsoft.com/en-US/library/ms167167(SQL.130).aspx).  
+-   Build a data mining model. See,  [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ## See Also  
  [Analysis Services Instance Management](../analysis-services/instances/analysis-services-instance-management.md)   
  [What's New in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)     
  [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkId=238141)   
  [Power Pivot BI Semantic Model Connection &#40;.bism&#41;](../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-.bism.md)   
- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/en-US/library/bb283152(SQL.130).aspx)  
+ [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)  
   
   

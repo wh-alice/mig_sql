@@ -135,7 +135,7 @@ manager: "erikre"
  For more information about turning off features, see [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
 ##  <a name="ModifyTitle"></a> Customize Styles or Application Title  
- [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] does not support customization of the Report Manager style sheets. However, if you have expertise in Web development, you can modify the styles at your own risk. For more information about which files contain style information, see [Customize Style Sheets for HTML Viewer and Report Manager](http://msdn.microsoft.com/en-US/library/ms345247(SQL.130).aspx).  
+ [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] does not support customization of the Report Manager style sheets. However, if you have expertise in Web development, you can modify the styles at your own risk. For more information about which files contain style information, see [Customize Style Sheets for HTML Viewer and Report Manager](http://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd).  
   
  Report Manager has an application title that appears at the top of the page. By default, the title is **SQL Server Reporting Services**. This title can be customized. To change the title, use the Site Settings page in Report Manager. To modify application settings in Report Manager, you must be assigned to the **System Administrator** role to set properties on the Site Settings page. To view the application title, users must be assigned to the **System User** role.  
   
@@ -169,11 +169,11 @@ manager: "erikre"
  For more information about how to modify the configuration file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver.config.md). For more information about disabling features in [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], see [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
 ## See Also  
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-a-url-ssrs-configuration-manager.md)   
  [Verify a Reporting Services Installation](../../reporting-services/install/windows/verify-a-reporting-services-installation.md)   
- [Customize Style Sheets for HTML Viewer and Report Manager](http://msdn.microsoft.com/en-US/library/ms345247(SQL.130).aspx)   
+ [Customize Style Sheets for HTML Viewer and Report Manager](http://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)   
  [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
  [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver.config-configuration-file.md)   

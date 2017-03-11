@@ -33,7 +33,7 @@ manager: "jhubbard"
     -   If you created the project in an earlier release of [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], after you open the project file in [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)], convert the project to the project deployment model.  
   
         > [!NOTE]  
-        >  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that the packages in the project can share, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/en-US/library/ms140237(SQL.130).aspx).  
+        >  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that the packages in the project can share, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
          Depending on whether you run the **Integration Services Project Conversion Wizard** from [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] or from [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], the wizard performs different conversion tasks.  
   

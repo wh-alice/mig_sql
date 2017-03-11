@@ -1,7 +1,7 @@
 ---
 title: "SQL Server R Services Performance Tuning | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-01"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 19
+caps.latest.revision: 20
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
@@ -54,7 +54,7 @@ The following are links to information used in the development of this document.
 
 * [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 
-* [RevoScaleR Users Guide](https://packages.revolutionanalytics.com/doc/7.0.0/win/RevoScaleR_Users_Guide.pdf)
+* [Explore R and ScaleR in 25 Functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started-tutorial)
 
 * [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
 

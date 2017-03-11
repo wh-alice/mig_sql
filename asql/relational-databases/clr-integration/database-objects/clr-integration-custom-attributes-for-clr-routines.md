@@ -68,7 +68,7 @@ manager: "jhubbard"
  [CLR User-Defined Aggregates](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
  [CLR User-Defined Functions](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [CLR User-Defined Types](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
- [CLR Stored Procedures](http://msdn.microsoft.com/en-US/library/ms131094(SQL.130).aspx)   
- [CLR Triggers](http://msdn.microsoft.com/en-US/library/ms131093(SQL.130).aspx)  
+ [CLR Stored Procedures](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [CLR Triggers](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
   
   

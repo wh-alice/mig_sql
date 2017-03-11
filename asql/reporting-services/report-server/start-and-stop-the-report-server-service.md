@@ -51,6 +51,6 @@ manager: "erikre"
   
 ## See Also  
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md)   
- [Start, Stop, or Pause the SQL Server Agent Service](../Topic/Start,%20Stop,%20or%20Pause%20the%20SQL%20Server%20Agent%20Service.md)  
+ [Start, Stop, or Pause the SQL Server Agent Service](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   

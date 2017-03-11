@@ -38,7 +38,7 @@ Upgrading an existing Tabular solution is recommended but not required. Existing
  DAX and MDX are supported for Tabular models at compatibility level 1200.  
   
 ## Expression Language  
- Filters and expressions used to create calculated objects, including measures and KPIs, are formulated in DAX. See [Understanding DAX in Tabular Models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) and [Data Analysis Expressions &#40;DAX&#41; in Analysis Services](http://msdn.microsoft.com/en-US/library/mt238289(SQL.130).aspx).  
+ Filters and expressions used to create calculated objects, including measures and KPIs, are formulated in DAX. See [Understanding DAX in Tabular Models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) and [Data Analysis Expressions &#40;DAX&#41; in Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5).  
   
 ## Managed Code for Tabular Models and Databases  
  AMO includes a new namespace, Microsoft.AnalysisServices.Tabular, for working with Tabular 1200 models programmatically. See [Microsoft.AnalysisServices Namespace](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx) for more information.  

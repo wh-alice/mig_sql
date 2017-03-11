@@ -42,10 +42,10 @@ manager: "jhubbard"
  [Database Engine Extended Stored Procedure Programming](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
  Describes how to use extended stored procedures to create your own external routines in a programming language such as C.  
   
- [Data Collector Programming](http://msdn.microsoft.com/en-US/library/bb677200(SQL.130).aspx)  
+ [Data Collector Programming](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
  Describes the Data Collector object model.  
   
- [Exception Message Box Programming](http://msdn.microsoft.com/en-US/library/ms166343(SQL.130).aspx)  
+ [Exception Message Box Programming](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Describes how you can use the exception message box programmatic interface in your applications to provide more control over the messaging experience, to give your users the option to save error message content for later reference, and to get help with messages.  
   
 ## See Also  

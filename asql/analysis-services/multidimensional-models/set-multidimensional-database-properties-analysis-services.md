@@ -44,7 +44,7 @@ manager: "erikre"
 |MasterDataSource ID|Used with remote partitions. For more information, see [Remote Partitions](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
 ## See Also  
- [Database Properties Dialog Box &#40;SSAS - Multidimensional&#41;](http://msdn.microsoft.com/en-US/library/ms186506(SQL.130).aspx)   
+ [Database Properties Dialog Box &#40;SSAS - Multidimensional&#41;](http://msdn.microsoft.com/library/70f000b7-917f-4699-b142-7a0d13ff767c)   
  [Configure Analysis Services Project Properties &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

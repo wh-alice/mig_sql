@@ -58,7 +58,7 @@ manager: "erikre"
   
 ## See Also  
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Create Data-driven Subscription Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms187066(SQL.130).aspx)   
+ [Create Data-driven Subscription Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [Preload the Cache &#40;Report Manager&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

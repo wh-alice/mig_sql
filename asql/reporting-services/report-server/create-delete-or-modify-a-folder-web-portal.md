@@ -19,7 +19,7 @@ manager: "erikre"
   
 #### To create a folder  
   
-1.  Start the [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx).  
+1.  Start the [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In the web portal, select **Folder** under the **New** menu drop down. Or, to create a folder under an existing folder, navigate to that folder and select **Folder** under the **New** menu drop down.  
   

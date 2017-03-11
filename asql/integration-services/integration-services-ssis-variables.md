@@ -42,7 +42,7 @@ manager: "jhubbard"
 ## System and user-defined variables  
  [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] supports two types of variables: user-defined variables and system variables. User-defined variables are defined by package developers, and system variables are defined by [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)]. You can create as many user-defined variables as a package requires, but you cannot create additional system variables.  
   
- All variables—system and user-defined—can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters in SQL statements. For more information, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](http://msdn.microsoft.com/en-US/library/cc280502(SQL.130).aspx).  
+ All variables—system and user-defined—can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters in SQL statements. For more information, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
 > [!NOTE]  
 >  The names of user-defined and system variables are case sensitive.  
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
  A different set of system variables is available for different container types. For more information about the system variables used by packages and their elements, see [System Variables](../integration-services/system-variables.md).  
   
- For more information about real-life use scenarios for variables, see [Use Variables in Packages](http://msdn.microsoft.com/en-US/library/ms140216(SQL.130).aspx).  
+ For more information about real-life use scenarios for variables, see [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## Properties of variables  
  You can configure user-defined variables by setting the following properties in either the **Variables** window or the **Properties** window. Certain properties are available only in the Properties window.  
@@ -141,9 +141,9 @@ manager: "jhubbard"
   
  **Data Flow Expressions** Use variables to provide values in the expressions that the Derived Column and Conditional Split transformations use to populate columns, or to direct data rows to different transformation outputs. For example, the expression, `@varSalutation + LastName`, concatenates the value in the `VarSalutation` variable and the `LastName` column. The expression, `Income < @HighIncome`, directs data rows in which the value of the `Income` column is less than the value in the `HighIncome` variable to an output. For more information, see [Derived Column Transformation](../integration-services/data-flow/transformations/derived-column-transformation.md), [Conditional Split Transformation](../integration-services/data-flow/transformations/conditional-split-transformation.md), and [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- **Precedence Constraint Expressions** Provide values to use in precedence constraints to determine whether a constrained executable runs. The expressions can be used either together with an execution outcome (success, failure, completion), or instead of an execution outcome. For example, if the expression, `@varMax > @varMin`, evaluates to **true**, the executable runs. For more information, see [Add Expressions to Precedence Constraints](http://msdn.microsoft.com/en-US/library/ms140153(SQL.130).aspx).  
+ **Precedence Constraint Expressions** Provide values to use in precedence constraints to determine whether a constrained executable runs. The expressions can be used either together with an execution outcome (success, failure, completion), or instead of an execution outcome. For example, if the expression, `@varMax > @varMin`, evaluates to **true**, the executable runs. For more information, see [Add Expressions to Precedence Constraints](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
- **Parameters and Return Codes** Provide values to input parameters, or store the values of output parameters and return codes. You do this by mapping the variables to parameters and return values. For example, if you set the variable `varProductId` to 23 and run the SQL statement, `SELECT * from Production.Product WHERE ProductID = ?`, the query retrieves the product with a `ProductID` of 23. For more information, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](http://msdn.microsoft.com/en-US/library/cc280502(SQL.130).aspx).  
+ **Parameters and Return Codes** Provide values to input parameters, or store the values of output parameters and return codes. You do this by mapping the variables to parameters and return values. For example, if you set the variable `varProductId` to 23 and run the SQL statement, `SELECT * from Production.Product WHERE ProductID = ?`, the query retrieves the product with a `ProductID` of 23. For more information, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
  **For Loop Expressions** Provide values to use in the initialization, evaluation, and assignment expressions of the For Loop. For example, if the variable `varCount` is 2 and `varMaxCount` is 10, the initialization expression is `@varCount`, the evaluation expression is  `@varCount < @varMaxCount`, and the assignment expression is `@varCount =@varCount +1`, then the loop repeats 8 times. For more information, see [For Loop Container](../integration-services/control-flow/for-loop-container.md).  
   
@@ -171,7 +171,7 @@ manager: "jhubbard"
   
 6.  Optionally, click the **Grid Options** icon, select additional columns to show in the **Variables Grid Options** dialog box, and then click **OK**.  
   
-7.  Optionally, set the variable properties. For more information, see [Set the Properties of a User-Defined Variable](http://msdn.microsoft.com/en-US/library/ms141663(SQL.130).aspx).  
+7.  Optionally, set the variable properties. For more information, see [Set the Properties of a User-Defined Variable](http://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
   
 8.  To save the updated package, click **Save Selected Items** on the **File** menu.  
 

@@ -73,7 +73,7 @@ manager: "jhubbard"
  [ODBC Table-Valued Parameter API Summary](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Lists the ODBC functions that support table-valued parameters.  
   
- [ODBC Table-Valued Parameter Programming Examples](http://msdn.microsoft.com/en-US/library/bb510470(SQL.130).aspx)  
+ [ODBC Table-Valued Parameter Programming Examples](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
  Describes how to perform common tasks.  
   
 ## See Also  

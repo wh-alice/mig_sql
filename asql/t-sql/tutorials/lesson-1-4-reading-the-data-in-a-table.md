@@ -80,7 +80,7 @@ For information about some functions that you can use to work with data in SELEC
 |||  
 |-|-|  
 |[String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)|[Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)|[Text and Image Functions &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/ms188353(SQL.130).aspx)|  
+|[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)|[Text and Image Functions &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
   
 ## Next Task in Lesson  
 [Summary: Creating Database Objects](../../t-sql/tutorials/lesson-1-5-summary-creating-database-objects.md)  

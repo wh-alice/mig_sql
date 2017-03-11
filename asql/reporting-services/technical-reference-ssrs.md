@@ -29,11 +29,11 @@ manager: "erikre"
  ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Feature Reference**  
  [Report Designer F1 Help](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Report Manager F1 Help](http://msdn.microsoft.com/en-US/library/ms189690(SQL.130).aspx)  
+ [Report Manager F1 Help](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Report Wizard Help](http://msdn.microsoft.com/en-US/library/ms186558(SQL.130).aspx)  
+ [Report Wizard Help](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
  [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   

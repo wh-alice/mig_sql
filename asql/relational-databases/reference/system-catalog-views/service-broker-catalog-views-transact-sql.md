@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/catalog-views-transact-sql.md)   
- [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/ms177862(SQL.130).aspx)   
+ [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [sys.service_broker_endpoints &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.service-broker-endpoints-transact-sql.md)   
  [sys.service_queues &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.service-queues-transact-sql.md)  
   

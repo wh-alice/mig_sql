@@ -72,6 +72,6 @@ manager: "jhubbard"
 ## See Also  
  [Start SQL Server in Single-User Mode](../../../database-engine/configure/windows/start-sql-server-in-single-user-mode.md)   
  [Connect to SQL Server When System Administrators Are Locked Out](../../../database-engine/configure/windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)   
- [Start, Stop, or Pause the SQL Server Agent Service](../Topic/Start,%20Stop,%20or%20Pause%20the%20SQL%20Server%20Agent%20Service.md)  
+ [Start, Stop, or Pause the SQL Server Agent Service](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   

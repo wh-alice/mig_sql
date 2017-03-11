@@ -180,6 +180,6 @@ A [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsn
  [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Configure SSL Connections on a Native Mode Report Server](../../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configure Windows Service Accounts and Permissions](../../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md)   
- [Quick-Start Installation of SQL Server 2016](http://msdn.microsoft.com/en-US/library/bb500433(SQL.130).aspx)  
+ [Quick-Start Installation of SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   

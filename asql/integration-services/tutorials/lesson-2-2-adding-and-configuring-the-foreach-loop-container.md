@@ -91,8 +91,8 @@ After you have made these modifications to the package, when the package is run,
 [Step 3: Modifying the Flat File Connection Manager](../../integration-services/tutorials/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## See Also  
-[Configure a Foreach Loop Container](http://msdn.microsoft.com/en-US/library/ms140016(SQL.130).aspx)  
-[Use Variables in Packages](http://msdn.microsoft.com/en-US/library/ms140216(SQL.130).aspx)  
+[Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+[Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
   

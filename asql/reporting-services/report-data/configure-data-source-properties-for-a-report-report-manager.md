@@ -24,7 +24,7 @@ manager: "erikre"
   
 ### To configure an embedded data source  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Report Manager, navigate to the **Contents** page. Navigate to the report that you want to configure a report-specific data source for, and open the report.  
   
@@ -57,11 +57,11 @@ manager: "erikre"
  For more information about configuring credentials, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). For more information about the unattended execution account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## See Also  
- [Contents Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms186470(SQL.130).aspx)   
- [New Data Source Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms180077(SQL.130).aspx)   
+ [Contents Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [New Data Source Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
  [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms159863(SQL.130).aspx)   
- [Data Sources Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms190041(SQL.130).aspx)  
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Data Sources Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
   
   

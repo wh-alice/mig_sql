@@ -1,7 +1,7 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-21"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -50,7 +50,7 @@ helpviewer_keywords:
   - "manual startup state [SQL Server]"
   - "accounts [SQL Server], user"
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 204
+caps.latest.revision: 206
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
@@ -279,8 +279,9 @@ Managed service accounts, group managed service accounts, and virtual accounts a
 |**[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] VSS Writer:**<br /><br /> (All rights are granted to the per-service SID. Default or named instance: **NT Service\SQLWriter**. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] VSS Writer does not have a separate process for a named instance.)|The SQLWriter service runs under the LOCAL SYSTEM account which has all the required permissions. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup does not check or grant permissions for this service.| 
   |**[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Distributed Replay Controller:**|**Log on as a service** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Distributed Replay Client:**|**Log on as a service** (SeServiceLogonRight)|  
-|**Launchpad:**|**Log on as a service** (SeServiceLogonRight) <br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br />**Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br />**Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|  
-|**PolyBase Engine and DMS**| **Log on as a service**  |
+|**PolyBase Engine and DMS**| **Log on as a service**  |   
+|**Launchpad:**|**Log on as a service** (SeServiceLogonRight) <br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br />**Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br />**Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|     
+|**R Services:** **SQLRUserGroup**  |**Allow Log on locally** |   
 
  *The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service is disabled on instances of [!INCLUDE[ssExpress](../../../database-engine/configure/windows/includes/ssexpress-md.md)].  
   

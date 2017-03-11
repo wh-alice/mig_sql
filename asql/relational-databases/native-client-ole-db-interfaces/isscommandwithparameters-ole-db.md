@@ -33,7 +33,7 @@ manager: "jhubbard"
 |[ISSCommandWithParameters::SetParameterProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|Sets the parameter properties on a per parameter basis by ordinal, or sets bulk parameter properties by specifying an array of **SSPARAMPROPS** structures.|  
   
 ## See Also  
- [Interfaces &#40;OLE DB&#41;](http://msdn.microsoft.com/en-US/library/ms130820(SQL.130).aspx)   
+ [Interfaces &#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
  [Using XML Data Types](../../relational-databases/native-client/features/using-xml-data-types.md)   
  [Using User-Defined Types](../../relational-databases/native-client/features/using-user-defined-types.md)  
   

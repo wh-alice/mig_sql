@@ -193,7 +193,7 @@ manager: "jhubbard"
 |SQL Server Setup Control|/INSTALLSHAREDWOWDIR<br /><br /> **Optional**|Specifies a nondefault installation directory for 32-bit shared components. Supported only on a 64-bit system.<br /><br /> Default is %Program Files(x86)%\\[!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]SQL Server<br /><br /> Cannot be set to %Program Files%\\[!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]SQL Server|  
 |SQL Server Setup Control|/INSTANCEDIR<br /><br /> **Optional**|Specifies a nondefault installation directory for instance-specific components.|  
 |SQL Server Setup Control|/INSTANCEID<br /><br /> **Optional**|Specifies a nondefault value for an [InstanceID](#InstanceID).|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual.|  
@@ -321,7 +321,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |SQL Server Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for installation parameters.|  
 |SQL Server Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file is piped to the console.|  
 |SQL Server Setup Control|/INSTANCEID<br /><br /> Prior to [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] Service Pack 1 Cumulative Update 2 (January 2013) **Required**<br /><br /> Beginning with [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] Service Pack 1 Cumulative Update 2 **Optional**|Use the Instance ID specified during the prepare image step.<br /><br /> Supported Values: InstanceID of a Prepared Instance.|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> Prior to [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] Service Pack 1 Cumulative Update 2 (January 2013) **Required**<br /><br /> Beginning with [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] Service Pack 1 Cumulative Update 2 **Optional**|Specifies a SQL Server instance name for the instance that is being completed.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> Prior to [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] Service Pack 1 Cumulative Update 2 (January 2013) **Required**<br /><br /> Beginning with [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] Service Pack 1 Cumulative Update 2 **Optional**|Specifies a SQL Server instance name for the instance that is being completed.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual.|  
@@ -391,7 +391,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |SQL Server Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
 |SQL Server Setup Control|/ INSTANCEDIR<br /><br /> **Optional**|Specifies a nondefault installation directory for shared components.|  
 |SQL Server Setup Control|/INSTANCEID<br /><br /> **Required when you upgrade from [!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)]** or later.<br /><br /> **Optional when you upgrade from [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)]**|Specifies a nondefault value for an [InstanceID](#InstanceID).|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |SQL Server Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of SQL Server. If this parameter is not specified, Evaluation is used.|  
 |SQL Server Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |SQL Server Setup Control|/UIMODE<br /><br /> **Optional**|Specifies whether to present only the minimum number of dialog boxes during setup. <br />                **/UIMode** can only be used with the **/ACTION=INSTALL** and **UPGRADE** parameters. Supported values:<br /><br /> **/UIMODE=Normal** is the default for non-Express editions and presents all setup dialog boxes for the selected features.<br /><br /> **/UIMODE=AutoAdvance** is the default for Express editions and skips nonessential dialog boxes.<br /><br /> Note that the **UIMode** setting cannot be used with the **/Q** or **/QS** parameters.|  
@@ -421,7 +421,7 @@ Setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |SQL Server Setup Control|/ACTION<br /><br /> **Required**|Required to indicate the repair workflow.<br /><br /> Supported values: **Repair**|  
 |SQL Server Setup Control|/ENU<br /><br /> **Optional**|Use this parameter to install the English version of SQL Server on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|  
 |SQL Server Setup Control|/FEATURES<br /><br /> **Required**|Specifies [components](#Feature) to repair.|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual.|  
@@ -443,7 +443,7 @@ Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |SQL Server Setup Control|/ACTION<br /><br /> **Required**|Required to indicate the rebuild database workflow.<br /><br /> Supported values: **Rebuilddatabase**|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |SQL Server Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |[!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Optional**|Specifies a new server-level collation.<br /><br /> The default value is based on the locale of your Windows operating system. For more information, see [Collation Settings in Setup](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
 |[!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **Required when /SECURITYMODE=SQL was specified during Installation of the Instance.**|Specifies the password for SQL SA account.|  
@@ -466,7 +466,7 @@ Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |SQL Server Setup Control|/FEATURES<br /><br /> **Required**|Specifies [components](#Feature) to uninstall.|  
 |SQL Server Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for the parameters.|  
 |SQL Server Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |SQL Server Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |SQL Server Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies that the console window is hidden or closed.|  
   
@@ -524,7 +524,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |SQL Server Setup Control|/INSTALLSHAREDWOWDIR<br /><br /> **Optional**|Specifies a nondefault installation directory for 32-bit shared components. Supported only on a 64-bit system.<br /><br /> Default is %Program Files(x86)%\\[!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]SQL Server<br /><br /> Cannot be set to %Program Files%\\[!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]SQL Server|  
 |SQL Server Setup Control|/INSTANCEDIR<br /><br /> **Optional**|Specifies nondefault installation directory for instance-specific components.|  
 |SQL Server Setup Control|/INSTANCEID<br /><br /> **Optional**|Specifies a nondefault value for an [InstanceID](#InstanceID).|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |SQL Server Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of SQL Server. If this parameter is not specified, Evaluation is used.|  
 |SQL Server Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |SQL Server Setup Control|/QS<br /><br /> **Optional**|Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages.|  
@@ -604,7 +604,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |SQL Server Setup Control|/INSTALLSHAREDWOWDIR<br /><br /> **Optional**|Specifies a nondefault installation directory for 32-bit shared components. Supported only on a 64-bit system.<br /><br /> Default is %Program Files(x86)%\\[!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]SQL Server<br /><br /> Cannot be set to %Program Files%\\[!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]SQL Server|  
 |SQL Server Setup Control|/INSTANCEDIR<br /><br /> **Optional**|Specifies nondefault installation directory for instance specific components.|  
 |SQL Server Setup Control|/INSTANCEID<br /><br /> **Optional**|Specifies a nondefault value for an [InstanceID](#InstanceID).|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual.|  
@@ -662,7 +662,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |SQL Server Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Has no effect in SQL Server 2016. <br/><br/>To manage how error feedback is sent to Microsoft, see [How to configure SQL Server 2016 to send feedback to Microsoft](http://support.microsoft.com/kb/3153756). <br/><br/>In older versions this specifies the error reporting for SQL Server.<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |SQL Server Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for the parameters.|  
 |SQL Server Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |SQL Server Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of SQL Server. If this parameter is not specified, Evaluation is used.|  
 |SQL Server Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |SQL Server Setup Control|/QS<br /><br /> **Optional**|Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages.|  
@@ -729,7 +729,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |SQL Server Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
 |SQL Server Setup Control|/ INSTANCEDIR<br /><br /> **Optional**|Specifies a nondefault installation directory for shared components.|  
 |SQL Server Setup Control|/INSTANCEID<br /><br /> **Required when you upgrade from [!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)] or higher.**<br /><br /> **Optional when you upgrade from [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)]**|Specifies a nondefault value for an [InstanceID](#InstanceID).|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |SQL Server Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of SQL Server. If this parameter is not specified, Evaluation is used.|  
 |SQL Server Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |SQL Server Setup Control|/SQMREPORTING<br /><br /> **Optional**|Has no effect in SQL Server 2016. In older versions this specifies feature usage reporting for SQL Server.<br /><br />Supported values:<br /><br /> 0=disabled<br /><br /> 1=enabled|  
@@ -756,7 +756,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |SQL Server Setup Control|/CONFIGURATIONFILE<br /><br /> **Optional**|Specifies the [ConfigurationFile](../../../database-engine/install/windows/install-sql-server-2016-using-a-configuration-file.md) to use.|  
 |SQL Server Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for the parameters.|  
 |SQL Server Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual.|  
@@ -797,7 +797,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 |SQL Server Setup Control|/CONFIGURATIONFILE<br /><br /> **Optional**|Specifies the [ConfigurationFile](../../../database-engine/install/windows/install-sql-server-2016-using-a-configuration-file.md) to use.|  
 |SQL Server Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for the parameters.|  
 |SQL Server Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
-|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).|  
+|SQL Server Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a SQL Server instance name.<br /><br /> For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |SQL Server Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |SQL Server Setup Control|/QS<br /><br /> **Optional**|Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages.|  
 |SQL Server Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies that the console window is hidden or closed.|  

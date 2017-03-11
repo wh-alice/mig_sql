@@ -92,7 +92,7 @@ WHERE ProductID=771
 ```  
   
 ## See Also  
- [SQL Server XQuery Extension Functions](http://msdn.microsoft.com/en-US/library/ms186364(SQL.130).aspx)   
+ [SQL Server XQuery Extension Functions](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Compare Typed XML to Untyped XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Create Instances of XML Data](../relational-databases/xml/create-instances-of-xml-data.md)   

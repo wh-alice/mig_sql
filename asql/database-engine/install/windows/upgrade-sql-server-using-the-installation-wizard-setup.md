@@ -106,7 +106,7 @@ manager: "jhubbard"
   
      When you are finished specifying login information for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services, click **Next**.  
   
-15. On the Full-Text Search Upgrade Options page, specify the upgrade options for the databases being upgraded. For more information, see [Full-Text Search Upgrade Options](http://msdn.microsoft.com/en-US/library/cc645981(SQL.130).aspx).  
+15. On the Full-Text Search Upgrade Options page, specify the upgrade options for the databases being upgraded. For more information, see [Full-Text Search Upgrade Options](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 16. The Feature Rules window will automatically advance if all rules pass.  
   
@@ -129,6 +129,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Upgrade to SQL Server 2016](../../../database-engine/install/windows/upgrade-sql-server.md)   
- [Backward Compatibility_deleted](../Topic/Backward%20Compatibility_deleted.md)  
+ [Backward Compatibility_deleted](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

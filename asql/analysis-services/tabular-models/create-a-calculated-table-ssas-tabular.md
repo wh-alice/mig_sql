@@ -67,7 +67,7 @@ There is one CalculatedTableColumn for each column returned by the expression, w
   
 ## See Also  
  [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Data Analysis Expressions &#40;DAX&#41; in Analysis Services](http://msdn.microsoft.com/en-US/library/mt238289(SQL.130).aspx)   
+ [Data Analysis Expressions &#40;DAX&#41; in Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [Understanding DAX in Tabular Models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

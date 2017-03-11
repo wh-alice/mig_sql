@@ -65,7 +65,7 @@ manager: "jhubbard"
  [Finding More SQL Server Native Client Information](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  
  Provides additional resources about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client, including links to external resources and getting further assistance.  
   
- [SQL Server Native Client Errors](http://msdn.microsoft.com/en-US/library/ee342156(SQL.130).aspx)  
+ [SQL Server Native Client Errors](http://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
  Contains topics about runtime errors associated with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
   
 ## See Also  

@@ -60,7 +60,7 @@ manager: "erikre"
   
  [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
- [Power Pivot Gallery](http://msdn.microsoft.com/en-US/library/(SQL.130).aspx)  
+ [Power Pivot Gallery](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)  
   
  [Power Pivot Data Access](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)  
   
@@ -79,7 +79,7 @@ manager: "erikre"
   
  [PowerShell Reference for Power Pivot for SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
- [Example License Topologies and Costs  for SQL Server 2016 Business Intelligence](http://msdn.microsoft.com/en-US/library/dn305848(SQL.130).aspx)  
+ [Example License Topologies and Costs  for SQL Server 2016 Business Intelligence](http://msdn.microsoft.com/library/682b8711-407a-48d1-9807-415d4c24dad6)  
   
 ## See Also  
  [Power Pivot Planning and Deployment](http://go.microsoft.com/fwlink/?linkID=220972)   

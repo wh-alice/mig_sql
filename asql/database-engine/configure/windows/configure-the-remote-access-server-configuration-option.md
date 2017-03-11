@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   [Connect to a Registered Server &#40;SQL Server Management Studio&#41;](../../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)  
   
--   [Connect to Any SQL Server Component from SQL Server Management Studio](../Topic/Connect%20to%20Any%20SQL%20Server%20Component%20from%20SQL%20Server%20Management%20Studio.md)  
+-   [Connect to Any SQL Server Component from SQL Server Management Studio](http://msdn.microsoft.com/library/5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e)  
   
 -   [Connect to the Database Engine With sqlcmd](../../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)  
   

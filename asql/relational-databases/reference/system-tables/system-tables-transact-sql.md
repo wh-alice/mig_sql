@@ -55,7 +55,7 @@ manager: "jhubbard"
 |[Backup and Restore Tables &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-tables/backup-and-restore-tables-transact-sql.md)|[Log Shipping Tables &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-tables/log-shipping-tables-transact-sql.md)|  
 |[Change Data Capture Tables &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-tables/change-data-capture-tables-transact-sql.md)|[Replication Tables &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-tables/replication-tables-transact-sql.md)|  
 |[Database Maintenance Plan Tables &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-tables/database-maintenance-plan-tables-transact-sql.md)|[SQL Server Agent Tables &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-tables/sql-server-agent-tables-transact-sql.md)|  
-|[SQL Server Extended Events Tables &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/ff929206(SQL.130).aspx)|[sys.sysoledbusers &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-compatibility-views/sys.sysoledbusers-transact-sql.md)|  
+|[SQL Server Extended Events Tables &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)|[sys.sysoledbusers &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-compatibility-views/sys.sysoledbusers-transact-sql.md)|  
 |[Integration Services Tables &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-tables/integration-services-tables-transact-sql.md)|[systranschemas &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-views/systranschemas-transact-sql.md)|  
   
 ## See Also  

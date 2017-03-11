@@ -44,7 +44,7 @@ manager: "erikre"
 > [!NOTE]  
 >  Some properties are set automatically when the cube is created and cannot be changed.  
   
- For more information about how to set cube properties, see [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/en-US/library/ms188152(SQL.130).aspx).  
+ For more information about how to set cube properties, see [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96).  
   
 |Property|Description|  
 |--------------|-----------------|  

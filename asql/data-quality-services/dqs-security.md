@@ -35,6 +35,6 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to create a user and grant DQS roles using SQL Server Management Studio.|[Manage DQS Users in SSMS](http://msdn.microsoft.com/en-US/library/hh510409(SQL.130).aspx)|  
+|Describes how to create a user and grant DQS roles using SQL Server Management Studio.|[Manage DQS Users in SSMS](http://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
   
   

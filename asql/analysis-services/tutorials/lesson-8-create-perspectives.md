@@ -1,7 +1,7 @@
 ---
 title: "Lesson 9 Create Perspectives | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,7 +12,7 @@ ms.topic: "get-started-article"
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
-caps.latest.revision: 21
+caps.latest.revision: 22
 ms.author: "owend"
 manager: "erikre"
 ---
@@ -42,7 +42,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
     ![as-tabular-lesson8-perspectives](../../analysis-services/tutorials/media/as-tabular-lesson8-perspectives.png)
   
-    In Lesson 11, you will use the Analyze in Excel feature to test this perspective. The Excel PivotTable Field List will include each table except the DimCustomer table.  
+    In Lesson 12, you will use the Analyze in Excel feature to test this perspective. The Excel PivotTable Field List will include each table except the DimCustomer table.  
  
   
   

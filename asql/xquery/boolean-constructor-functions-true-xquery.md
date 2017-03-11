@@ -88,6 +88,6 @@ go
 ```  
   
 ## See Also  
- [Boolean Constructor Functions &#40;XQuery&#41;](http://msdn.microsoft.com/en-US/library/ms191521(SQL.130).aspx)  
+ [Boolean Constructor Functions &#40;XQuery&#41;](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

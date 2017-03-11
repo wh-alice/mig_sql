@@ -167,7 +167,7 @@ ForEach ($subscription in $subscriptions)
  [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Configure Report Manager &#40;Native Mode&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)   
- [Security Properties Page, Items &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms180265(SQL.130).aspx)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Security Properties Page, Items &#40;Report Manager&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   

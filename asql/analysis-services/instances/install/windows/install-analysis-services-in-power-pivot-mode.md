@@ -69,7 +69,7 @@ manager: "erikre"
   
      **Note:** The instance name must be POWERPIVOT.  
   
-5.  Review [Hardware and Software Requirements for Analysis Services Server in SharePoint Mode](http://msdn.microsoft.com/en-US/library/jj590636(SQL.130).aspx).  
+5.  Review [Hardware and Software Requirements for Analysis Services Server in SharePoint Mode](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f).  
   
 6.  Review the release notes at [SQL Server 2016 Release Notes](../../../../sql-server/sql-server-2016-release-notes.md).  
   

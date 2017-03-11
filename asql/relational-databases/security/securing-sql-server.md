@@ -120,7 +120,7 @@ GO
   
 |For information about|See|  
 |---------------------------|---------|  
-|Connecting to, configuring, and controlling [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|[Use SQL Server Management Studio](../Topic/Use%20SQL%20Server%20Management%20Studio.md)|  
+|Connecting to, configuring, and controlling [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|[Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
 |Connecting to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and running queries at the command prompt|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
 |Network configuration and control for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|[SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)|  
 |Enabling and disabling features by using Policy-Based Management|[Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  

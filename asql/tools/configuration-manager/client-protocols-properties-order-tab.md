@@ -52,6 +52,6 @@ manager: "jhubbard"
 >  If the protocol is specified through a prefix or as part of the connection string, only the specified protocol is attempted.  
   
 ## See Also  
- [Choosing a Network Protocol](../Topic/Choosing%20a%20Network%20Protocol.md)  
+ [Choosing a Network Protocol](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

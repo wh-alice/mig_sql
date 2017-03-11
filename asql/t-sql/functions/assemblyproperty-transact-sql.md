@@ -60,7 +60,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
  **sql_variant**  
   
 ## Examples  
- The following example assumes a `HelloWorld` assembly is registered in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. For more information, see [Hello World Sample](http://msdn.microsoft.com/en-US/library/ff878250(SQL.130).aspx).  
+ The following example assumes a `HelloWorld` assembly is registered in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. For more information, see [Hello World Sample](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
   
 ```  
 USE AdventureWorks2012;  

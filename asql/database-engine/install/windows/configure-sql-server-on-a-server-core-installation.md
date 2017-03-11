@@ -257,6 +257,6 @@ $Tcp
   
 ## See Also  
  [Install SQL Server 2016 on Server Core](../../../database-engine/install/windows/install-sql-server-on-server-core.md)   
- [Installation How-to Topics](http://msdn.microsoft.com/en-US/library/cc281837(SQL.130).aspx)  
+ [Installation How-to Topics](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

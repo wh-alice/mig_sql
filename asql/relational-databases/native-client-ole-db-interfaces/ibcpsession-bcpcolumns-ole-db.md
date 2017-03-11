@@ -51,7 +51,7 @@ HRESULT BCPColumns(
  The method succeeded.  
   
  E_FAIL  
- A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](http://msdn.microsoft.com/en-US/library/ms131458(SQL.130).aspx) interface.  
+ A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the **BCPInit** method was not called before calling this method. Also occurs when this method is called more than once for a bulk copy operation.  

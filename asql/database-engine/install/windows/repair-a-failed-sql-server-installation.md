@@ -74,6 +74,6 @@ manager: "jhubbard"
   
 ## See Also  
  [View and Read SQL Server Setup Log Files](../../../database-engine/install/windows/view-and-read-sql-server-setup-log-files.md)   
- [Installation How-to Topics](http://msdn.microsoft.com/en-US/library/cc281837(SQL.130).aspx)  
+ [Installation How-to Topics](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

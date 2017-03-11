@@ -24,7 +24,7 @@ manager: "jhubbard"
 # SQL Server Error Detail
 [!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider defines the provider-specific error interface [ISQLServerErrorInfo](http://msdn.microsoft.com/en-US/library/ms131458(SQL.130).aspx). The interface returns more detail about a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error and is valuable when command execution or rowset operations fail.  
+  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider defines the provider-specific error interface [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1). The interface returns more detail about a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error and is valuable when command execution or rowset operations fail.  
   
  There are two ways to obtain access to **ISQLServerErrorInfo** interface.  
   

@@ -1,7 +1,7 @@
 ---
 title: "R and SQL Data Types and Data Objects (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-10"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ dev_langs:
   - "R"
   - "SQL"
 ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: 6
+caps.latest.revision: 7
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
@@ -27,11 +27,11 @@ In this step, you'll learn about some common issues that arise when moving data 
 
 ## Always return R data as a data frame
 
-When your script returns results from R to SQL Server, it must return the data as a **data.frame**. Any other type of object that you generate in your script  -- whether that be a list, factor, vector, or binary data -- must be converted to a data frame if you want to output it as part of the stored procedure results. Fortunately, there are multiple R functions for doing this. You'll see in a later example how to serialize a binary model and return it in a data frame.
+When your script returns results from R to SQL Server, it must return the data as a **data.frame**. Any other type of object that you generate in your script — whether that be a list, factor, vector, or binary data — must be converted to a data frame if you want to output it as part of the stored procedure results. Fortunately, there are multiple R functions to support changing other objects to a data frame. You can even serialize a binary model and return it in a data frame, which you'll do later in this tutorial.
 
-In this section, you'll experiment with changing objects such as vectors, matrices, and lists to data frames, and see how this affects the output passed to SQL Server. 
+First, let'll experiment with some R basic R objects — vectors, matrices, and lists — and see how conversion to a data frame changes the output passed to SQL Server. 
 
-For example, compare these two Hello World R scripts, which look almost identical.  However, the first returns a single column of three values, and the second returns three columns with a single value each.   
+Compare these two Hello World R scripts, which look almost identical.  The first returns a single column of three values, and the second returns three columns with a single value each.   
     
 ```sql    
 # Example 1
@@ -50,13 +50,12 @@ EXECUTE sp_execute_external_script
 	  ;  
   ```    
  
-
     
 ## Identifying the schema and data types of R data 
 
 Why are the results so different? 
 
-The answer can usually be found by using the R `str()` command. Add the function `str(object_name)` anywhere in your R script to have the data schema of the specified R object returned as an informational message. Such messages are output separately, in the **Messages** pane of Visual Studio Code, or the **Messages** tab in SSMS.
+The answer can usually be found by using the R `str()` command. Add the function `str(object_name)` anywhere in your R script to have the data schema of the specified R object returned as an informational message. To view messages, see in the **Messages** pane of Visual Studio Code, or the **Messages** tab in SSMS.
 
 To figure out why Example 1 and Example 2 have such different results, insert the line `str(OutputDataSet)` at the end of the _@script_ variable definition in each statement, like this:    
         
@@ -99,9 +98,9 @@ Now, review the text in **Messages** to see why the output is different.
  
 *$ c..world..: Factor w/ 1 level "world": 1*
     
-As you can see, a slight change in R syntax had a big effect on the schema of the results. We won't go into why, because it is more properly an R topic. For more information about R data types, we recommend this article by Hadley Wickham on [R Data Structures](http://adv-r.had.co.nz/Data-structures.html).
+As you can see, a slight change in R syntax had a big effect on the schema of the results. We won't go into why, because the differences in R data types are explained more thoroughly in this article by Hadley Wickham on [R Data Structures](http://adv-r.had.co.nz/Data-structures.html).
 
-For now, just be aware that you need to be check the expected results when coercing R objects into data frames. 
+For now, just be aware that you need to check the expected results when coercing R objects into data frames. 
 
 > [!TIP]
 > You can also use R identity functions (`is.matrix`, `is.vector`, etc.). 
@@ -162,7 +161,7 @@ Why? In this case, because the two arguments can be handled as vectors of the sa
 
 ## Merge or multiply columns of different length    
     
-R provides a lot of flexibility for working with vectors of different sizes, and for combining thee column-like structures into data frames. The result can look like a table, but without following the rules that govern most database tables.
+R provides a lot of flexibility for working with vectors of different sizes, and for combining these column-like structures into data frames. Lists of vectors can look like a table, but they don't follow all the rules that govern database tables.
 
 For example, the following script defines a numeric array of length 6 and stores it in the R variable `df1`. The numeric array is then combined with the integers of the RTestData table, which contains 3 values, to make a new data frame, `df2`.  
 
@@ -191,7 +190,7 @@ To fill out the data frame, R repeats the elements retrieved from RTestData as m
 |10|5|    
 |100|6|    
     
-Remember that a data frame only looks similar to a table, and is in fact a list of vectors.  
+Remember that a data frame only looks like a table, and is actually a list of vectors.  
 
 > [!TIP] 
 > See this article for more help on navigating R data frames: [15 Easy Solutions to Your Data Frame Problems in R](https://www.datacamp.com/community/tutorials/15-easy-solutions-data-frame-problems-r#gs.B206djs)
@@ -203,7 +202,7 @@ R and SQL Server don't use the same data types, so when you run a query in SQL S
 - SQL Server pushes the data from the query to the R process managed by the Launchpad service and converts it to an internal representation.    
 - The R runtime loads the data into a data.frame variable and performs its own operations on the data.   
 - The database engine returns the data to SQL Server using a secured internal connection and presents the data in terms of SQL Server data types.
-- You get the data by connecting to SQL Server using a clilent or network library that can issue SQL queries and handle tabular data sets, potentially affecting the data in other ways.  
+- You get the data by connecting to SQL Server using a client or network library that can issue SQL queries and handle tabular data sets. This client application can potentially affect the data in other ways.  
     
 To see how this works, run a query such as this one on the AdventureWorksDW data warehouse. This view returns sales data used in creating forecasts.
 
@@ -219,7 +218,6 @@ SELECT ReportingDate
 
 > [!NOTE]
 > Any version of AdventureWorks will do, or you can use a query of your own. The point is to try to handle some data containing text, datetime and numeric values.
-
 
 Now, try pasting this query into an R script wrapper. If you get an error, you'll probably need to make some edits to the query text. For example, the string predicate in the WHERE clause must be enclosed by two sets of single quotation marks.  
   
@@ -256,11 +254,16 @@ From this, you can see a couple of changes in even a small query:
 
 ### Summary
 
-Some SQL Server data types are not supported by R. To avoid errors, specify columns in your input data source individually and cast columns as necessary.  For more information on supported and unsupported data types, see [Working with R Data Types](../../../advanced-analytics/r-services/working-with-r-data-types.md).
+Some SQL Server data types are not supported by R. To avoid errors:
 
-Test your data in advance and verify columns or values in your schema that could be  a problem when passed to R code.
++ Test your data in advance and verify columns or values in your schema that could be  a problem when passed to R code.
++ Specify columns in your input data source individually, rather than using `SELECT *`, and know how each column will be handled.
++ Perform explicit casts as necessary when preparing your input data, to avoid surprises.  
 
-Run-time conversion of strings to numerical factors can affect performance. For more information, see [SQL Server R Services Performance Tuning](../../../advanced-analytics/r-services/sql-server-r-services-performance-tuning.md).    
+
+For more information on supported and unsupported data types, see [Working with R Data Types](../../../advanced-analytics/r-services/working-with-r-data-types.md).
+
+For information about the performance impact of run-time conversion of strings to numerical factors, see [SQL Server R Services Performance Tuning](../../../advanced-analytics/r-services/sql-server-r-services-performance-tuning.md).    
    
 
 ## Next Step

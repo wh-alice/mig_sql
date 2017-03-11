@@ -49,7 +49,7 @@ manager: "erikre"
   
 ## See Also  
  [Install Analysis Services](../../analysis-services/instances/install/windows/install-analysis-services.md)   
- [Install Analysis Services in Multidimensional and Data Mining Mode](http://msdn.microsoft.com/en-US/library/ms143708(SQL.130).aspx)   
+ [Install Analysis Services in Multidimensional and Data Mining Mode](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Power Pivot for SharePoint 2010 Installation](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Tabular Model Solutions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   

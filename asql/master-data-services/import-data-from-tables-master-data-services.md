@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 2.  Open [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and connect to the Database Engine instance for your [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database.  
   
-     For more information, see [SQL Server Management Studio](../Topic/SQL%20Server%20Management%20Studio.md).  
+     For more information, see [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
   
 3.  Import data into the staging tables by using the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export wizard.  
   

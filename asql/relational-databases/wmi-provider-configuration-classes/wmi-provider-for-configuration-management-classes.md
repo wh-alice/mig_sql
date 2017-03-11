@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  [ServerSettingsGeneralFlag Class](../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md)  
   
- [SInstance Class](http://msdn.microsoft.com/en-US/library/ms186397(SQL.130).aspx)  
+ [SInstance Class](http://msdn.microsoft.com/library/ddda92fa-5bb9-45dd-b421-243b02db4caf)  
   
  [SqlErrorLogEvent Class](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
   

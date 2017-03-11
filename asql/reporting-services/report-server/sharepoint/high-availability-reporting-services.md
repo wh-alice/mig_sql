@@ -36,6 +36,6 @@ manager: "erikre"
   
 ## See Also  
  [High Availability Solutions &#40;SQL Server&#41;](../../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Scale-out Deployment  - Reporting Services Native mode &#40;Configuration Manager&#41;](http://msdn.microsoft.com/en-US/library/ms181357(SQL.130).aspx)  
+ [Scale-out Deployment  - Reporting Services Native mode &#40;Configuration Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)  
   
   

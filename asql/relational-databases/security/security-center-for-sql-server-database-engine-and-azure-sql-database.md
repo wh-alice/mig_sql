@@ -92,7 +92,7 @@ manager: "jhubbard"
  [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
  [Strong Passwords](../../relational-databases/security/strong-passwords.md)   
  [TRUSTWORTHY Database Property](../../relational-databases/security/trustworthy-database-property.md)   
- [Database Engine Features and Tasks](http://msdn.microsoft.com/en-US/library/bb500155(SQL.130).aspx)  
+ [Database Engine Features and Tasks](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
  [Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   
   

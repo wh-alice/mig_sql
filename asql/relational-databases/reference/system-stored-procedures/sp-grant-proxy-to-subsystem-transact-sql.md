@@ -117,7 +117,7 @@ GO
 ```  
   
 ## See Also  
- [Implement SQL Server Agent Security](../Topic/Implement%20SQL%20Server%20Agent%20Security.md)   
+ [Implement SQL Server Agent Security](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
  [sp_revoke_proxy_from_subsystem &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-delete-proxy-transact-sql.md)   

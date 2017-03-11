@@ -180,7 +180,7 @@ To learn more about the Transact-SQL query language, see [Transact-SQL Reference
  **SQLStatement**  
  Type the SQL statement to execute in the option box, or click the browse button (…) to type the SQL statement in the **Enter SQL Query** dialog box, or click **Build Query** to compose the statement using the **Query Builder** dialog box.  
   
- **Related Topics:** [Query Builder](http://msdn.microsoft.com/en-US/library/ms186906(SQL.130).aspx)  
+ **Related Topics:** [Query Builder](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### SQLSourceType = File connection  
  **FileConnection**  
@@ -192,7 +192,7 @@ To learn more about the Transact-SQL query language, see [Transact-SQL Reference
  **SourceVariable**  
  Select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## Parameter Mapping Page - Execute SQL Task Editor
 Use the **Parameter Mapping** page of the **Execute SQL Task Editor** dialog box to map variables to parameters in the SQL statement.  
@@ -442,7 +442,7 @@ This section describes how to use a parameterized SQL statement in the Execute S
     |ODBC|1, 2, 3, …|  
     |EXCEL and OLE DB|0, 1, 2, 3, …|  
   
-10. From the **Variable Name** list, select a variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/en-US/library/ms141670(SQL.130).aspx).  
+10. From the **Variable Name** list, select a variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
 11. In the **Direction** list, specify if the parameter is an input, an output, or a return value.  
   
@@ -551,7 +551,7 @@ This section describes how to create a mapping between a result set and a variab
   
 8.  To add a result set mapping, click **Add**.  
   
-9. From the **Variables Name** list, select a variable or create a new variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/en-US/library/ms141670(SQL.130).aspx).  
+9. From the **Variables Name** list, select a variable or create a new variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
 10. In the **Result Name** list, optionally, modify the name of the result set.  
   

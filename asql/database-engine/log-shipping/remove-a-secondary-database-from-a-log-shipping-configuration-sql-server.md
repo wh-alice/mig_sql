@@ -71,7 +71,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  If there are no other secondary databases with the same secondary ID, **sp_delete_log_shipping_secondary_primary** is invoked from **sp_delete_log_shipping_secondary_database** and deletes the entry for the secondary ID and the copy and restore jobs.  
   
-3.  On the secondary server, disable the copy and restore jobs. For more information, see [Disable or Enable a Job](../Topic/Disable%20or%20Enable%20a%20Job.md).  
+3.  On the secondary server, disable the copy and restore jobs. For more information, see [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

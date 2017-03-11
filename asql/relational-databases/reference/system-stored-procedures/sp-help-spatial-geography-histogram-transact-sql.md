@@ -83,6 +83,6 @@ EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = S
 ```  
   
 ## See Also  
- [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/cc645724(SQL.130).aspx)  
+ [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

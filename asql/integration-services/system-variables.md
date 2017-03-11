@@ -101,6 +101,6 @@ manager: "jhubbard"
  This rule applies to user-defined variables as well. But, whereas the data types of system variables cannot be changed and you have to tailor your use of these variables to fit the data types, user-defined are more flexible. The user-defined variables that are used in parameter bindings are usually defined with data types that are compatible with the data types of parameters to which they are mapped.  
   
 ## Related Tasks  
- [Map Query Parameters to Variables in an Execute SQL Task](http://msdn.microsoft.com/en-US/library/ms140355(SQL.130).aspx)  
+ [Map Query Parameters to Variables in an Execute SQL Task](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

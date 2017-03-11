@@ -171,6 +171,6 @@ manager: "jhubbard"
  [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/change-tracking-functions-transact-sql.md)   
  [Change Data Capture Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Change Data Capture Tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/change-data-capture-tables-transact-sql.md)   
- [Change Data Capture Related Dynamic Management Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/bb522478(SQL.130).aspx)  
+ [Change Data Capture Related Dynamic Management Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   

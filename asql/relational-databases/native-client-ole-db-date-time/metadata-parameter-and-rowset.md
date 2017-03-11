@@ -141,6 +141,6 @@ manager: "jhubbard"
  A new flag DBCOLUMNFLAGS_SS_ISVARIABLESCALE is provided in *dwFlags* to allow an application to determine the server type of columns, where *wType* is DBTYPE_DBTIMESTAMP. *bScale* must also be used to identify the server type.  
   
 ## See Also  
- [Metadata &#40;OLE DB&#41;](http://msdn.microsoft.com/en-US/library/bb677232(SQL.130).aspx)  
+ [Metadata &#40;OLE DB&#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

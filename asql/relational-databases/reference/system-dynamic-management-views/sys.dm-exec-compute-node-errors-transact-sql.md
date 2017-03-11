@@ -43,7 +43,7 @@ manager: "jhubbard"
 |details|nvarchar(4000)|Full description of the details of the error.||  
   
 ## See Also  
- [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/en-US/library/mt146389(SQL.130).aspx)   
+ [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)   
  [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

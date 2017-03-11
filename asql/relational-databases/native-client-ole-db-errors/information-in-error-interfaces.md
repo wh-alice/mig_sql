@@ -41,7 +41,7 @@ manager: "jhubbard"
 |Member function|Description|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Fills an ERRORINFO structure with basic information about an error. An ERRORINFO structure contains members that identify the HRESULT return value for the error, and the provider and interface to which the error applies.|  
-|**GetCustomErrorObject**|Returns a reference on interfaces **ISQLErrorInfo,** and [ISQLServerErrorInfo](http://msdn.microsoft.com/en-US/library/ms131458(SQL.130).aspx).|  
+|**GetCustomErrorObject**|Returns a reference on interfaces **ISQLErrorInfo,** and [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).|  
 |**GetErrorInfo**|Returns a reference on an **IErrorInfo** interface.|  
 |**GetErrorParameters**|The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider does not return parameters to the consumer through **GetErrorParameters**.|  
 |**GetRecordCount**|Count of error records available.|  

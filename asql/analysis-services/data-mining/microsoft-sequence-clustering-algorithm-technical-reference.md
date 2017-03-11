@@ -49,7 +49,7 @@ manager: "jhubbard"
 |Sequence Clustering|Not used|Feature selection is not invoked; however, you can control the behavior of the algorithm by setting the value of the parameters MINIMUM_SUPPORT and MINIMUM_PROBABILIITY.|  
 |Clustering|Interestingness score|Although the clustering algorithm may use discrete or discretized algorithms, the score of each attribute is calculated as a distance and is continuous; therefore the interestingness score is used.|  
   
- For more information, see [Feature Selection](http://msdn.microsoft.com/en-US/library/ms143786(SQL.130).aspx).  
+ For more information, see [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70).  
   
 ### Optimizing Performance  
  The Microsoft Sequence Clustering algorithm supports various ways to optimize processing:  

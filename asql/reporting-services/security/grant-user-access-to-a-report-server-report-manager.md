@@ -47,7 +47,7 @@ manager: "erikre"
   
 ### To add a user or group to a system role  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Click **Site Settings**.  
   
@@ -84,8 +84,8 @@ manager: "erikre"
   
 ## See Also  
  [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms179929(SQL.130).aspx)   
- [Security Properties Page, Items &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms180265(SQL.130).aspx)   
+ [New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+ [Security Properties Page, Items &#40;Report Manager&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
  [Role Assignments](../../reporting-services/security/role-assignments.md)   
  [Role Definitions](../../reporting-services/security/role-definitions.md)  
   

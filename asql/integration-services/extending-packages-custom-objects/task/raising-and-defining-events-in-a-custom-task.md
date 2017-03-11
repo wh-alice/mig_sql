@@ -194,6 +194,6 @@ Nothing,  bFireOnBeforeIncrement)
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Event Handlers](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [Add an Event Handler to a Package](http://msdn.microsoft.com/en-US/library/ms139744(SQL.130).aspx)  
+ [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

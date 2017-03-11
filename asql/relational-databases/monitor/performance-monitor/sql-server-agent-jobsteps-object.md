@@ -47,8 +47,8 @@ manager: "jhubbard"
 |**TSQL**|Information for job steps that execute [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].|  
   
 ## See Also  
- [Manage Job Steps](../Topic/Manage%20Job%20Steps.md)   
- [Use Performance Objects](../Topic/Use%20Performance%20Objects.md)   
+ [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
+ [Use Performance Objects](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../../relational-databases/monitor/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

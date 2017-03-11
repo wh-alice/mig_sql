@@ -36,8 +36,8 @@ manager: "erikre"
 |[ProtocolCapabilities Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/protocolcapabilities-element-xmla.md)|Uses the SOAP header in a SOAP request message to identify protocol capabilities between an instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] and a client application.|  
   
 ## See Also  
- [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/en-US/library/ms186656(SQL.130).aspx)   
+ [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [XML Data Types &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/en-US/library/ms186656(SQL.130).aspx)  
+ [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
   
   

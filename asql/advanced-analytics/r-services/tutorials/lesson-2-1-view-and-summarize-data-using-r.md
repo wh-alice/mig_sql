@@ -53,7 +53,7 @@ To get data from  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/
 
 1. The R script that you downlaoded uses SQL logins. For this tutorial, we've provided examples of both SQL logins and Windows integrated authentication. We recommend that you use Windows authentication where possible, to avoid saving paswords in your R code.
 
-    Regardless of which credentials you use, the account that you use must have permissions to read data and to create new tables in the specified database. For information about how to add users to the SQL database and give them the correct permissions, see [Post-Installation Server Configuration &#40;SQL Server R Services&#41;](http://msdn.microsoft.com/en-US/library/mt590536(SQL.130).aspx). 
+    Regardless of which credentials you use, the account that you use must have permissions to read data and to create new tables in the specified database. For information about how to add users to the SQL database and give them the correct permissions, see [Post-Installation Server Configuration &#40;SQL Server R Services&#41;](http://msdn.microsoft.com/library/b32d43de-7e9c-4ae4-a110-d8d56b514172). 
 
     ```R  
     # SQL authentication  

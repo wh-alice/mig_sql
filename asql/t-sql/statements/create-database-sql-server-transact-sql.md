@@ -496,7 +496,7 @@ Some database features depend on features or capabilities present in the file sy
  Unless FOR ATTACH is specified, each new database inherits the database option settings from the model database. For example, the database option auto shrink is set to **true** in model and in any new databases you create. If you change the options in the model database, these new option settings are used in any new databases you create. Changing operations in the model database does not affect existing databases. If FOR ATTACH is specified on the CREATE DATABASE statement, the new database inherits the database option settings of the original database.  
   
 ## Viewing Database Information  
- You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups. For more information, see [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/ms177862(SQL.130).aspx).  
+ You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups. For more information, see [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ## Permissions  
  Requires CREATE DATABASE, CREATE ANY DATABASE, or ALTER ANY DATABASE permission.  

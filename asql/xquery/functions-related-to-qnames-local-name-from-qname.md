@@ -73,6 +73,6 @@ FROM T
 ```  
   
 ## See Also  
- [Functions Related to QNames &#40;XQuery&#41;](http://msdn.microsoft.com/en-US/library/ms188701(SQL.130).aspx)  
+ [Functions Related to QNames &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

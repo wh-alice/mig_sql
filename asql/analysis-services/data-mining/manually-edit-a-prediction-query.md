@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Mining Queries](../../analysis-services/data-mining/data-mining-queries.md)   
- [Prediction Query Builder &#40;Data Mining&#41;](http://msdn.microsoft.com/en-US/library/ms178300(SQL.130).aspx)   
- [Lesson 6: Creating and Working with Predictions &#40;Basic Data Mining Tutorial&#41;](http://msdn.microsoft.com/en-US/library/cc879289(SQL.130).aspx)  
+ [Prediction Query Builder &#40;Data Mining&#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
+ [Lesson 6: Creating and Working with Predictions &#40;Basic Data Mining Tutorial&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
   
   

@@ -26,7 +26,7 @@ manager: "erikre"
 |[Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)|This topic provides information about the different data sources that you can import data from.|  
 |[Data Types Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)|This topic provides information about the various data types that are supported in a Tabular Model.|  
 |[Impersonation &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)|This topic provides information about impersonation, which provides logon credentials that are used by Analysis Services when connecting to a data source to import and refresh data.|  
-|[Import Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/en-US/library/hh230968(SQL.130).aspx)|Tasks in this section describe how to import data from different data sources.|  
+|[Import Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)|Tasks in this section describe how to import data from different data sources.|  
 |[Process Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)|Tasks in this section describe how to process (refresh) or change data that has already been imported into a model.|  
 |[Edit an Existing Data Source Connection &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/edit-an-existing-data-source-connection-ssas-tabular.md)|Describes how to edit a data source connection that has already been created and used to import data from a source.|  
   

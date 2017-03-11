@@ -121,7 +121,7 @@ manager: "erikre"
  If you plan to run the report servers in a load-balanced server cluster, additional configuration is required. For more information, see [Configure a Report Server on a Network Load Balancing Cluster](../../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 ## See Also  
- [Configure a Service Account &#40;SSRS Configuration Manager&#41;](http://msdn.microsoft.com/en-US/library/bb522727(SQL.130).aspx)   
+ [Configure a Service Account &#40;SSRS Configuration Manager&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
  [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/configure-a-url-ssrs-configuration-manager.md)   
  [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/configure-report-server-urls-ssrs-configuration-manager.md)   

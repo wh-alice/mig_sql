@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Interfaces &#40;OLE DB&#41;](http://msdn.microsoft.com/en-US/library/ms130820(SQL.130).aspx)  
+-   [Interfaces &#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
 ## See Also  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

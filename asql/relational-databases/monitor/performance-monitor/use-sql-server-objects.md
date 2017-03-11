@@ -137,7 +137,7 @@ manager: "jhubbard"
  Use of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] objects depends on Windows permissions, except **SQLAgent:Alerts**. Users must be a member of the **sysadmin** fixed server role to use **SQLAgent:Alerts**.  
   
 ## See Also  
- [Use Performance Objects](../Topic/Use%20Performance%20Objects.md)   
+ [Use Performance Objects](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-performance-counters-transact-sql.md)  
   
   

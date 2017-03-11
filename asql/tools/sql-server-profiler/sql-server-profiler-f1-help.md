@@ -107,7 +107,7 @@ manager: "jhubbard"
  Data columns  
  Specify traced data columns by checking the box that corresponds with the event and the data column you need. All relevant event columns are checked by default for each event included in the trace.  
   
- Specify filters by clicking the data column heading and entering the filter criteria. Filtered data columns are indicated by a filter icon to the left of the column label in the **Edit Filter** dialog box. For more information, see [SQL Server Profiler - Edit Filter](http://msdn.microsoft.com/en-US/library/ms188017(SQL.130).aspx).  
+ Specify filters by clicking the data column heading and entering the filter criteria. Filtered data columns are indicated by a filter icon to the left of the column label in the **Edit Filter** dialog box. For more information, see [SQL Server Profiler - Edit Filter](http://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
   
  **Show all events**  
  Show all available events. By default, only rows in the **Events Selection** grid that are selected display. Uncheck this box to hide all unselected events in the **Events Selection** grid.  

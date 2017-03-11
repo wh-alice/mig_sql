@@ -1,7 +1,7 @@
 ---
 title: "Manage the Database Engine Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -66,7 +66,7 @@ manager: "jhubbard"
 |[Set an Instance of SQL Server to Start Automatically &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/scm-services-set-an-instance-to-start-automatically.md)|[Configure File System Permissions for Database Engine Access](../../../database-engine/configure/windows/configure-file-system-permissions-for-database-engine-access.md)|  
   
 ## Related Content  
- [Configure SQL Server Agent](../Topic/Configure%20SQL%20Server%20Agent.md)  
+ [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
   
  [Logging In to SQL Server](../../../database-engine/configure/windows/logging-in-to-sql-server.md)  
   

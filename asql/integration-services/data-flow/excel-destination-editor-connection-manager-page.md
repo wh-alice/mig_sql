@@ -39,7 +39,7 @@ manager: "jhubbard"
 |Option|Description|  
 |------------|-----------------|  
 |Table or view|Loads data into a worksheet or named range in the Excel data source.|  
-|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](http://msdn.microsoft.com/en-US/library/ms140216(SQL.130).aspx)|  
+|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL command|Load data into the Excel destination by using an SQL query.|  
   
  **Name of the Excel sheet**  

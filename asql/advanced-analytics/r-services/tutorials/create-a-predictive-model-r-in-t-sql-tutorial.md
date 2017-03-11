@@ -1,7 +1,7 @@
 ---
 title: "Create a Predictive Model (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-10"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,16 +13,16 @@ dev_langs:
   - "R"
   - "SQL"
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 9
+caps.latest.revision: 11
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Create a Predictive Model (R in T-SQL Tutorial)
-In this step, you'll learn how to train a model using R, and then save the model to a table in SQL Server. You'll create a simple model that predicts the stopping distance of a car based on speed.
+In this step, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple regression model that predicts the stopping distance of a car based on speed. You'll use the `cars` dataset already included with R, because it is small and easy to understand.
 
 ## Create the source data
 
-First, create a table to save the training data. You'll use the `cars` dataset included with R, because it is small and easy to understand. Of course, you could read the `cars` data directly from R, but to demonstrate integration with SQL Server, let's save the data to a table first. 
+First, create a table to save the training data. 
 
 ```
 CREATE TABLE CarSpeed ([speed] int not null, [distance] int not null)
@@ -33,25 +33,20 @@ EXEC sp_execute_external_script
         , @input_data_1 = N''
         , @output_data_1_name = N'car_speed'
 ```
-Note that we are not using temporary tables. Some R clients will disconnect sessions between batches, making it difficult to use temporary tables. 
 
-> [!TIP]
-> Many datasets, small and large, are included with the R runtime. To get a list of datasets installed with R,  type `library(help="datasets")` from an R command prompt.
++ If you want to use temporary tables, be aware that some R clients will disconnect sessions between batches. 
++ Many datasets, small and large, are included with the R runtime. To get a list of datasets installed with R,  type `library(help="datasets")` from an R command prompt.
 
 ## Create a regression model
 
-The car speed data has two columns, both numeric, `dist` and`speed`, with multiple observations of some speeds. Assuming some linear relationship between car speed and the distance required to stop a car, you will create a linear regression model. 
+The car speed data contains two columns, both numeric, `dist` and`speed`. There are multiple observations of some speeds. From this data, you will create a linear regression model that describes some relationship between car speed and the distance required to stop a car. 
 
 The requirements of a linear model are simple:
 + Define a formula that describes the relationship between the dependent variable `speed` and the independent variable `distance`
 + Provide input data to use in training the model
 
-> [!TIP]
-> Need a refresher on linear models? 
->
-> This ScaleR tutorial describes the process of fitting a linear models using rxLInMod: [Fitting Linear Models](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-linear-model). 
-> 
->  This article covers the concepts well: [R Tutorial Series: Creating a Linear Regression Model](https://www.r-bloggers.com/r-tutorial-series-simple-linear-regression/)
+If you need a refresher on linear models, see this tutorial, which describes the process of fitting a linear models using rxLInMod: [Fitting Linear Models](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-linear-model). 
+
 
 To actually build the model, you define the formula inside your R code, and pass the data as an input parameter.
 
@@ -80,13 +75,14 @@ GO
 
 Now you'll store the model so you can retrain or use it for prediction. 
 
-The output of an R package that creates a model is usually a **binary object**. Therefore, your table must contain a column of **varbinary** data.
+The output of an R package that creates a model is usually a **binary object**. Therefore, the table where you store the model must provide a column of **varbinary** type.
 
 ```sql
 CREATE TABLE stopping_distance_models (
 	model_name varchar(30) not null default('default model') primary key,
 	model varbinary(max) not null);
 ```
+## Save the model
 
 To save the model, run the following Transact-SQL statement to call the stored procedure, generate the model, and save it to a table.
 
@@ -95,9 +91,11 @@ INSERT INTO stopping_distance_models (model)
 EXEC generate_linear_model;
 ```
 
-Note that if you run this a second time, you'll get the error: "Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models"
+Note that if you run this a second time, you'll get this error: 
 
-One way to get around this is to run an UPDATE statement to change the model name, and insert something descriptive about the model, such as the model type, the day you created it, etc.
+*Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models*
+
+One option for avoiding this error is to update the name for each new model. For example, you could change the name to something more descriptive, and include the model type, the day you created it, and so forth.
 
 ```sql
 UPDATE stopping_distance_models 
@@ -108,11 +106,11 @@ WHERE model_name = 'default model'
 
 ## Output additional variables
 
-In SQL Server 2016, the output of R from the stored procedure [sp_execute_external_script](../../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md) is limited to a single data frame. (This limitation might be removed in future.)   
+Generally, the output of R from the stored procedure [sp_execute_external_script](../../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md) is limited to a single data frame. (This limitation might be removed in future.)   
 
 However, you can return outputs of other types, such as scalars, in addition to the data frame. 
 
-For example, suppose you want to train a model but immediately view a table of coefficients from the model. You could create the table of coefficients as the main result set, and output the trained model in a SQL variable, to either re-use or save to a table. 
+For example, suppose you want to train a model but immediately view a table of coefficients from the model. You could create the table of coefficients as the main result set, and output the trained model in a SQL variable. You could immediately re-use the model by callings variable, or you could save it to a table as shown here. 
 
 
 ```sql

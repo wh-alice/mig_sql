@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in the **Union All Transformation Editor** dialog box, see [Union All Transformation Editor](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md).  
   
- For more information about the properties that you can set programmatically, see [Common Properties](http://msdn.microsoft.com/en-US/library/ms135950(SQL.130).aspx).  
+ For more information about the properties that you can set programmatically, see [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
  For more information about how to set properties, click one of the following topics:  
   

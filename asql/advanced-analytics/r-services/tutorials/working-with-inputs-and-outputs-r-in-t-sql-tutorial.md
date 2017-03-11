@@ -1,7 +1,7 @@
 ---
 title: "Working with Inputs and Outputs (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-10"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ dev_langs:
   - "R"
   - "SQL"
 ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
-caps.latest.revision: 6
+caps.latest.revision: 7
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
@@ -41,10 +41,11 @@ SELECT * FROM RTestData
 
 **Results**  
   
-col1
-*1*   
-*10*   
-*100*   
+|col1|
+|------|
+|*1*|   
+|*10*|   
+|*100*|   
   
     
 ## Get the same data using R script    
@@ -74,20 +75,30 @@ EXECUTE sp_execute_external_script
 
 The preceding example used the default input and output variable names, _InputDataSet_ and _OutputDataSet_. To define the input data associated with  _InputDatSet_, you use the *@input_data_1*  variable.
 
-In this example, the names of the output and input variables have been changed to *SQLout* and *SQLin*: 
+In this example, the names of the output and input variables for the stored procedure have been changed to *SQL_Out* and *SQL_In*: 
 
 ```sql    
 EXECUTE sp_execute_external_script    
   @language = N'R'      
-  , @script = N' SQLout <- SQLin;'    
+  , @script = N' SQL_out <- SQL_in;'    
   , @input_data_1 = N' SELECT 12 as Col;'    
-  , @input_data_1_name  = N'SQLIn'    
-  , @output_data_1_name =  N'SQLOut'    
+  , @input_data_1_name  = N'SQL_In'    
+  , @output_data_1_name =  N'SQL_Out'    
   WITH RESULT SETS (([NewColName] int NOT NULL));    
 ```
 
-**Notes**    
-- R is case-sensitive! You'll get an error such as "variable not found" if you type *SQLIN* instead of *SQLin*.  
+Did you get this error? 
+
+  *Error in eval(expr, envir, enclos) : object 'SQL_in' not found*
+
+That's because R is case-sensitive! In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*. 
+
+Try correcting only the *SQL_In* variable and re-run the stored procedure. Now you get a different eror:
+
+  *EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.*
+
+This is a generic error that you'll see often while testing your R code. It means that the R script ran successfully, but SQL Server got back no data, or got back wrong or unexpected data. In this case, the output schema (the line beginning with **WITH**) specifies that one column of integer data should be returned, but since R put the data in a different variable, nothing came back to SQL Server; hence, the error.  
+
 - Variable names must follow the rules for valid SQL identifiers. 
 - The order of the parameters is important. You must specify the required parameters *@input_data_1* and *@output_data_1* first, in order to use the optional parameters *@input_data_1_name* and *@output_data_1_name*.     
 - Only one input dataset can be passed as a parameter, and you can return only one dataset. However, you can call other datasets from inside your R code and you can return outputs of other types in addition to the dataset. You can also add the OUTPUT keyword to any parameter to have it returned with the results. There is a simple example later in this tutorial.      

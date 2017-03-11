@@ -70,7 +70,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  Using the [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) function in the **WHERE** clause returns only cases that are associated with the node that is specified by the NODE_UNIQUE_NAME column of the schema rowset.  
   
 ## Examples  
- The following examples are based on the mining structure Targeted Mailing, which is based on the [!INCLUDE[ssSampleDBDWobject](../analysis-services/data-mining/includes/sssampledbdwobject-md.md)]database and its associated mining models. For more information, see [Basic Data Mining Tutorial](http://msdn.microsoft.com/en-US/library/ms167167(SQL.130).aspx).  
+ The following examples are based on the mining structure Targeted Mailing, which is based on the [!INCLUDE[ssSampleDBDWobject](../analysis-services/data-mining/includes/sssampledbdwobject-md.md)]database and its associated mining models. For more information, see [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### Example 1: Drillthrough to Model Cases and Structure Columns  
  The following example returns the columns for all the cases that were used to test the Targeted Mailing model. If the mining structure on which the model is built does not have a holdout test data set, this query would return 0 cases. You can use the expression list to return only the columns that you need.  

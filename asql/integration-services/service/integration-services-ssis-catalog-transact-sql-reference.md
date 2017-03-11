@@ -19,4 +19,4 @@ manager: "jhubbard"
   
  [Stored Procedures &#40;Integration Services Catalog&#41;](../../integration-services/system/stored-procedures/stored-procedures-integration-services-catalog.md)  
   
- [Functions &#40;Integration Services Catalog&#41;](http://msdn.microsoft.com/en-US/library/hh230988(SQL.130).aspx) 
+ [Functions &#40;Integration Services Catalog&#41;](http://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f) 

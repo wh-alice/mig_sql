@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## Create and Publish Business Rules  
  Business rules are **If/Then/Else** statements that you create in [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)]. If an attribute value meets a specified condition, then an action is taken, otherwise a Else action is taken. Possible actions include setting a default value or changing a value. These actions can be combined with sending an email notification.  
   
- Business rules can be based on specific attribute values (for example, take action if Color=Blue), or when attribute values change (for example, take action if the value of the Color attribute changes). For more information about tracking non-specific changes, see [Change Tracking &#40;Master Data Services&#41;](http://msdn.microsoft.com/en-US/library/hh479624(SQL.130).aspx).  
+ Business rules can be based on specific attribute values (for example, take action if Color=Blue), or when attribute values change (for example, take action if the value of the Color attribute changes). For more information about tracking non-specific changes, see [Change Tracking &#40;Master Data Services&#41;](http://msdn.microsoft.com/library/5e879c65-0d38-454f-9a20-62a6e72c89f7).  
   
  To use business rules you must first create and publish your rules, then apply the published rules to data. You can apply rules to subsets of data or to all data for a version by validating the version. A version cannot be committed until all attributes pass business rule validation.  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
 |Create and publish a new business rule.|[Create and Publish a Business Rule &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |Add multiple conditions to a business rule.|[Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |Create a business rule to require that attributes have values.|[Require Attribute Values &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|Create a business rule to take an action based on changes to attribute values.|[Initiate Actions Based on Attribute Value Changes &#40;Master Data Services&#41;](http://msdn.microsoft.com/en-US/library/ff486979(SQL.130).aspx)|  
+|Create a business rule to take an action based on changes to attribute values.|[Initiate Actions Based on Attribute Value Changes &#40;Master Data Services&#41;](http://msdn.microsoft.com/library/5e4402ce-31db-4774-a2a1-552335f87693)|  
 |Create a business rule to take user-defined script as a condition|[Business Rules Extension &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
 |Create a business rule to take a user-defined script as an action|[Business Rules Extension &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
 |Change the name of an existing business rule.|[Change a Business Rule Name &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
@@ -90,6 +90,6 @@ manager: "jhubbard"
   
 -   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Change Tracking &#40;Master Data Services&#41;](http://msdn.microsoft.com/en-US/library/hh479624(SQL.130).aspx)  
+-   [Change Tracking &#40;Master Data Services&#41;](http://msdn.microsoft.com/library/5e879c65-0d38-454f-9a20-62a6e72c89f7)  
   
   

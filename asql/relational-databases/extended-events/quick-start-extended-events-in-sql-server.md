@@ -412,7 +412,7 @@ Specific scenarios for event sessions aimed at assessing locks are described in 
 - [Find the Objects That Have the Most Locks Taken on Them](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - This scenario uses the target package0.histogram, which processes the raw event data before displaying it to you.
 - [Determine Which Queries Are Holding Locks](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - This scenario uses the [target package0.pair_matching](http://msdn.microsoft.com/en-US/library/ff878062(SQL.130).aspx), where the pair of events is sqlserver.lock_acquire and lock_release.
+  - This scenario uses the [target package0.pair_matching](http://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3), where the pair of events is sqlserver.lock_acquire and lock_release.
 
 
 ## Terms and concepts in extended events

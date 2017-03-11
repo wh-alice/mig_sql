@@ -48,7 +48,7 @@ manager: "erikre"
  Describes how to integrate [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report navigation into your existing business applications using URL access.  
   
 ## See Also  
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Choosing Between URL Access and SOAP](../../reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [Technical Reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)  

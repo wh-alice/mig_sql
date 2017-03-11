@@ -29,6 +29,6 @@ manager: "jhubbard"
  The number of seconds between auto-refresh attempts. Defaults to 60 seconds. Refreshes every 5 seconds when set to 5 or less.  
   
 ## See Also  
- [Monitor Job Activity](../Topic/Monitor%20Job%20Activity.md)  
+ [Monitor Job Activity](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
   
   

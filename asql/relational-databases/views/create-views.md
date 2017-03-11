@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 8.  In the **Choose Name** dialog box, enter a name for the new view and click **OK**.  
   
-     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](../Topic/Query%20and%20View%20Designer%20Tools%20\(Visual%20Database%20Tools\).md).  
+     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

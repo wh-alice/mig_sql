@@ -147,6 +147,6 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [srv_wsendmsg &#40;Extended Stored Procedure API&#41;](http://msdn.microsoft.com/en-US/library/ms164667(SQL.130).aspx)  
+ [srv_wsendmsg &#40;Extended Stored Procedure API&#41;](http://msdn.microsoft.com/library/f2153076-32c9-4a52-8e1b-fc9618153543)  
   
   

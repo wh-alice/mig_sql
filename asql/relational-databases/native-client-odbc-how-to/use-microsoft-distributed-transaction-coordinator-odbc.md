@@ -44,6 +44,6 @@ manager: "jhubbard"
 >  You can also call [SQLSetConnectAttr](../../relational-databases/extended-stored-procedures-reference/sqlsetconnectattr.md) and [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) in turn for each SQL Server instead of calling them as suggested earlier in Steps 4 and 5.  
   
 ## See Also  
- [Performing Transactions &#40;ODBC&#41;](http://msdn.microsoft.com/en-US/library/ms131706(SQL.130).aspx)  
+ [Performing Transactions &#40;ODBC&#41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

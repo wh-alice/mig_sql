@@ -83,7 +83,7 @@ WHERE ProductModelID=7
  The query returns all the <`Location`> element children of the <`root`> element.  
   
 ## See Also  
- [Functions on Nodes](http://msdn.microsoft.com/en-US/library/ms175545(SQL.130).aspx)   
+ [Functions on Nodes](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [namespace-uri Function &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   
   

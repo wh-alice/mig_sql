@@ -26,11 +26,11 @@ manager: "erikre"
   The following tutorials introduce you to the use of Data Mining Extensions (DMX) statements with data mining structures and models.  
   
 ## In This Section  
- [Bike Buyer DMX Tutorial](http://msdn.microsoft.com/en-US/library/ms345287(SQL.130).aspx)  
+ [Bike Buyer DMX Tutorial](http://msdn.microsoft.com/library/4b634cc1-86dc-42ec-9804-a19292fe8448)  
   
  In this tutorial, you will learn how to create, train, and explore mining models by using the DMX query language. You will then use these mining models to create predictions about whether a customer is likely to purchase a specific product.  
   
- [Market Basket DMX Tutorial](http://msdn.microsoft.com/en-US/library/ms345326(SQL.130).aspx)  
+ [Market Basket DMX Tutorial](http://msdn.microsoft.com/library/6e262a1d-c89e-4033-8368-46cf25168ef5)  
   
  In this tutorial, you will learn how to create a mining model that predicts which products tend to be purchased at the same time. This tutorial also demonstrates the use of nested tables in data mining.  
   
@@ -48,6 +48,6 @@ manager: "erikre"
   
 ## See Also  
  [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Basic Data Mining Tutorial](http://msdn.microsoft.com/en-US/library/ms167167(SQL.130).aspx)  
+ [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
   
   

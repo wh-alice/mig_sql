@@ -25,12 +25,12 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Graphical Query Designer User Interface
-  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides both a graphical query designer and a text-based query designer for creating queries to retrieve data from a relational database for a report dataset in Report Designer. Use the graphical query designer to interactively build a query and view the results for data source types [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], Oracle, OLE DB, and ODBC. Use the text-based query designer to specify multiple [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, complex query or command syntax, and expression-based queries. For more information, see [Text-based Query Designer User Interface](http://msdn.microsoft.com/en-US/library/cc281378(SQL.130).aspx). For more information about working with specific data source types, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides both a graphical query designer and a text-based query designer for creating queries to retrieve data from a relational database for a report dataset in Report Designer. Use the graphical query designer to interactively build a query and view the results for data source types [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], Oracle, OLE DB, and ODBC. Use the text-based query designer to specify multiple [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, complex query or command syntax, and expression-based queries. For more information, see [Text-based Query Designer User Interface](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c). For more information about working with specific data source types, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
  .  
   
 ## Graphical Query Designer  
- This graphical query designer supports three types of query commands: **Text**, **StoredProcedure**, or **TableDirect**. Before you create a query for your dataset, you must select a command type option on the Query page of the [Dataset Properties](http://msdn.microsoft.com/en-US/library/ms178261(SQL.130).aspx) dialog box.  
+ This graphical query designer supports three types of query commands: **Text**, **StoredProcedure**, or **TableDirect**. Before you create a query for your dataset, you must select a command type option on the Query page of the [Dataset Properties](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) dialog box.  
   
  The following options are available for query type:  
   
@@ -61,7 +61,7 @@ manager: "erikre"
   
  When you change information in any one of the first three panes, those changes will appear in the other panes. For example, if you add a table in the Diagram pane, it will automatically be added to the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query in the SQL pane. Adding a field to the query in the SQL pane will automatically add the field to the list in the Grid pane and update the table in the Diagram pane.  
   
- For more information, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](../Topic/Query%20and%20View%20Designer%20Tools%20\(Visual%20Database%20Tools\).md).  
+ For more information, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
   
 #### Toolbar for the Graphical Query Designer  
  The graphical query designer toolbar provides buttons to help you design [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] queries using the graphical interface.  
@@ -149,6 +149,6 @@ EXEC uspGetEmployeeManagers '1';
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Oracle Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)   
  [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../Topic/Design%20Queries%20and%20Views%20How-to%20Topics%20\(Visual%20Database%20Tools\).md)  
+ [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
   
   

@@ -550,7 +550,7 @@ manager: "erikre"
 ## See Also  
  [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver.config.md)   
  [Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
- [Customize Style Sheets for HTML Viewer and Report Manager](http://msdn.microsoft.com/en-US/library/ms345247(SQL.130).aspx)   
+ [Customize Style Sheets for HTML Viewer and Report Manager](http://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)   
  [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   

@@ -47,7 +47,7 @@ manager: "jhubbard"
  [What's New in CLR Integration](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  Describes the new features in this release.  
   
- [Architecture of CLR Integration](http://msdn.microsoft.com/en-US/library/ms131095(SQL.130).aspx)  
+ [Architecture of CLR Integration](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  Describes the design goals of CLR integration.  
   
  [Enabling CLR Integration](../../relational-databases/clr-integration/clr-integration-enabling.md)  

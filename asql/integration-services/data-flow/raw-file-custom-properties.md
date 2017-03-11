@@ -50,6 +50,6 @@ manager: "jhubbard"
  For more information, see [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  
   
 ## See Also  
- [Common Properties](http://msdn.microsoft.com/en-US/library/ms135950(SQL.130).aspx)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

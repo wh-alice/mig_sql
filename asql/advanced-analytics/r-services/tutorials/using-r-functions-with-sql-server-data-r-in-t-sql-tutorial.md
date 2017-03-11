@@ -1,7 +1,7 @@
 ---
 title: "Using R Functions with SQL Server Data (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-10"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,17 +13,18 @@ dev_langs:
   - "R"
   - "SQL"
 ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: 6
+caps.latest.revision: 8
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Using R Functions with SQL Server Data (R in T-SQL Tutorial)
-Now that you're familiar with basic operations, it's time to have some fun with R. For example, many advanced statistical functions can be run using a single line of R code, but might be very complicated to implement using T-SQL.  With R Services, it's easy to embed R utility scripts in a stored procedure.   
-In this step, you'll use some R mathematical and utility functions in SQL Server and embed the calls in a stored procedure.
+Now that you're familiar with basic operations, it's time to have some fun with R. For example, many advanced statistical functions might be complicated to implement using T-SQL, but require only a single line of R code.  With R Services, it's easy to embed R utility scripts in a stored procedure.  
+ 
+In these examples, you'll embed R mathematical and utility functions in a SQL Server stored procedure.
 
 ## Create a stored procedure to generate random numbers  
   
-To keep this example simple, we'll use the R `stats` package, which is installed and loaded by default with R Services. The package contains hundreds of functions for common statistical tasks, among them the `rnorm` function, which generates some number of random numbers in a normal distribution, given a standard deviation and mean.    
+For simplicity, we'll use the R `stats` package, which is installed and loaded by default with R Services. The package contains hundreds of functions for common statistical tasks, among them the `rnorm` function, which generates a specified number of random numbers using the normal distribution, given a standard deviation and mean.    
 
 For example, this R code returns 100 numbers on a mean of 50, given a standard deviation of 3. 
 
@@ -31,7 +32,7 @@ For example, this R code returns 100 numbers on a mean of 50, given a standard d
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-To call this line of R from T-SQL, you can provide the function and its arguments in a stored procedure call like this one: 
+To call this line of R from T-SQL, run sp_execute_external_script and add the R function in the R script parameter, like this: 
    
 ```sql    
 EXEC sp_execute_external_script    
@@ -42,8 +43,9 @@ EXEC sp_execute_external_script
       WITH RESULT SETS (([Density] float NOT NULL));    
 ```    
 
-But you'd like to make it easier to generate a different set of random numbers. To do this, create another stored procedure, add the preceding call to sp_execute_external_script, and pass in the arguments to  `rnorm`. 
+What if you'd like to make it easier to generate a different set of random numbers? 
 
+Easy: define a stored procedure that gets the arguments from the user. Then, pass those arguments into the R script as variables. 
 
 ```sql
 CREATE PROCEDURE MyRNorm (@param1 int, @param2 int, @param3 int)
@@ -59,11 +61,11 @@ AS
 	, @mysd = @param3
     WITH RESULT SETS (([Density] float NOT NULL));   
 ```
-+ The first line defines each of the input parameters required when the stored procedure is executed. 
++ The first line defines each of the SQL input parameters that are required when the stored procedure is executed. 
 + The line beginning with `@params` defines all variables used by the R code, and the corresponding SQL data types. 
-+ You then map all the SQL parameter names to the corresponding R variable names.
++ The lines that immediately follow map the SQL parameter names to the corresponding R variable names.
 
-By wrapping the R function in a stored procedure, you can easily call any well-defined R function from SQL code and pass in different values, like this:
+Now that you've wrapped the R function in a stored procedure, you can easily call the function and pass in different values, like this:
 
 ```sql
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
@@ -71,7 +73,7 @@ EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 **Notes**
 
-+ If you need to install new packages, see [Installing and Managing R packages](../../../advanced-analytics/r-services/installing-and-managing-r-packages.md). 
++ Want to install more R packages, to get more advanced statistical functions? See [Installing and Managing R packages](../../../advanced-analytics/r-services/installing-and-managing-r-packages.md). 
 + The R Services team created an R package to help you convert your standalone R code to a format that can be easily parameterized using SQL Server stored procedures. For more information, see [How to Create a Stored Procedure using sqlrutils](../../../advanced-analytics/r-services/how-to-create-a-stored-procedure-using-sqlrutils.md). 
     
 ## Use R utility functions for troubleshooting 
@@ -91,16 +93,14 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (([Col1] int not null));    
 ```    
 
+You might also use the system timing functions in R, such as `system.time` and `proc.time`,  to capture the time used by R processes and analyze performance issues. 
 
-> [!TIP] 
-> You can use the system timing functions in R, such as `system.time` and `proc.time`,  to capture the time used by R processes and analyze performance issues. 
-> 
-> For an example, see this tutorial: [Create Data Features](https://msdn.microsoft.com/library/mt634286.aspx). In this walkthrough, R timing functions are used to compare the performance of two feature engineering methods: using R functions, or using T-SQL functions. 
+For an example, see this tutorial: [Create Data Features](https://msdn.microsoft.com/library/mt634286.aspx). In this walkthrough, R timing functions are embedded in the solution to compare the performance of two methods for creating features from data: R functions vs. T-SQL functions. 
 
 
 ## Next Step
 
-Next, it's time to build some predictive models using R in SQL Server.
+Next, you'll build a predictive model using R in SQL Server.
 
 [Create a Predictive Model](../../../advanced-analytics/r-services/tutorials/create-a-predictive-model-r-in-t-sql-tutorial.md)
 

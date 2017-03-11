@@ -78,7 +78,7 @@ The download location for [!INCLUDE[ssCurrent](../../../advanced-analytics/r-ser
 |[Install SQL Server Database Engine](../../../database-engine/install/windows/install-sql-server-database-engine.md)|Describes how to install and configure the [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)].|  
 |[Install SQL Server Replication](../../../database-engine/install/windows/install-sql-server-replication.md)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication.|  
 |[Install Distributed Replay - Overview](../../../tools/distributed-replay/install-distributed-replay-overview.md)|Lists down the topics to install the Distributed Replay feature.|  
-|[Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/en-US/library/bb500441(SQL.130).aspx)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] management tools.|  
+|[Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] management tools.|  
 |[Install SQL Server PowerShell](../../../database-engine/install/windows/install-sql-server-powershell.md)|Describes the considerations for installing [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell components.|  
   
 

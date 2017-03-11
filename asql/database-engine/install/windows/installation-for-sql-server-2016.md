@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   Connectivity components  
   
- Starting with SQL Server 2016, SQL Server Management Tools is no longer installed from  the main feature tree; for details see [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/en-US/library/bb500441(SQL.130).aspx)  
+ Starting with SQL Server 2016, SQL Server Management Tools is no longer installed from  the main feature tree; for details see [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)  
   
  You can install each component individually or select a combination of the components listed above. To make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md) and [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
  [Install SQL Server 2016](../../../database-engine/install/windows/install-sql-server.md)  
  Describes installation options for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
   
- [SQL Server Setup User Interface Reference](http://msdn.microsoft.com/en-US/library/cc281727(SQL.130).aspx)  
+ [SQL Server Setup User Interface Reference](http://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
  Describes the installation options presented by the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Installation Wizard.  
   
  [Upgrade to SQL Server 2016](../../../database-engine/install/windows/upgrade-sql-server.md)  
@@ -72,7 +72,7 @@ manager: "jhubbard"
  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] features that are part of the Microsoft BI platform include [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], and several client applications used for creating or working with analytical data. This section of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup documentation explains how to install [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].  
   
 ## More Informaiton  
- [Install SQL Server BI Features with SharePoint &#40;Power Pivot and Reporting Services&#41;](http://msdn.microsoft.com/en-US/library/hh231671(SQL.130).aspx)  
+ [Install SQL Server BI Features with SharePoint &#40;Power Pivot and Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  This section explains how to install [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] features in a SharePoint environment. It identifies which [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] features are available given a specific version and edition of SharePoint. It also includes installation procedures for [!INCLUDE[ssGemini](../../../analysis-services/includes/ssgemini-md.md)] for SharePoint and Reporting Services in SharePoint mode.  
   
  ![ssrs_fyi_note](../../../analysis-services/instances/install/windows/media/ssrs-fyi-note.png) Install the new sample database, [Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx). 

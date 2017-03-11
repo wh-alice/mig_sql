@@ -131,7 +131,7 @@ manager: "jhubbard"
 -   [SQLTables](../../relational-databases/extended-stored-procedures-reference/sqltables.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;ODBC&#41; Reference](http://msdn.microsoft.com/en-US/library/ms130842(SQL.130).aspx)   
+ [SQL Server Native Client &#40;ODBC&#41; Reference](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [Building Applications with SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

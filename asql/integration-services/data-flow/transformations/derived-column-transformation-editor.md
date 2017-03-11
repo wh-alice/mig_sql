@@ -59,7 +59,7 @@ manager: "jhubbard"
  If adding data to a new column, the **Derived Column TransformationEditor** dialog box automatically sets code page for the DT_STR data type. You can update **Code Page**.  
   
  **Configure error output**  
- Specify how to handle errors by using the [Configure Error Output](http://msdn.microsoft.com/en-US/library/ms183481(SQL.130).aspx) dialog box.  
+ Specify how to handle errors by using the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   

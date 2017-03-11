@@ -74,6 +74,6 @@ manager: "jhubbard"
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)   
  [Replication Related Dynamic Management Views &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [Change Data Capture Related Dynamic Management Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/bb522478(SQL.130).aspx)  
+ [Change Data Capture Related Dynamic Management Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   

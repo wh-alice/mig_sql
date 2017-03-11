@@ -136,7 +136,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_TRACE_EVENT_CATEGORIES Rowset](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Returns a list of available categories.|  
 |[DISCOVER_TRACES Rowset](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|Returns a list of traces actively running on the current connection.|  
 |[DISCOVER_TRANSACTIONS Rowset](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|Returns a list of transactions actively running on the current connection.|  
-|[DISCOVER_XEVENT_TRACE_DEFINITION Rowset](http://msdn.microsoft.com/en-US/library/hh270267(SQL.130).aspx)|Returns a list of xevent traces actively running on the current connection.|  
+|[DISCOVER_XEVENT_TRACE_DEFINITION Rowset](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|Returns a list of xevent traces actively running on the current connection.|  
 |[DMSCHEMA_MINING_COLUMNS Rowset](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Lists the individual columns of all mining models available on the current connection.|  
 |[DMSCHEMA_MINING_FUNCTIONS Rowset](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Returns a list of functions supported by the data mining algorithms on the server.|  
 |[DMSCHEMA_MINING_MODEL_CONTENT Rowset](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Returns a rowset consisting of columns that describe the current model.|  

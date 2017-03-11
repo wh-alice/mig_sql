@@ -26,7 +26,7 @@ manager: "erikre"
  Snapshots in report history are identified by the date and time that they were created. The date and time is based on when the query executed.  
   
 ## Creating Snapshots in Report History  
- Snapshots can be created manually or at scheduled intervals for any report that can run unattended. To run unattended, the report must use stored credentials or no credentials at all. Furthermore, if the report uses parameters, you must specify default values to use when the report runs. You can specify stored credentials and parameter values in the property pages for the report. For more information, see [Parameters Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms189700(SQL.130).aspx).  
+ Snapshots can be created manually or at scheduled intervals for any report that can run unattended. To run unattended, the report must use stored credentials or no credentials at all. Furthermore, if the report uses parameters, you must specify default values to use when the report runs. You can specify stored credentials and parameter values in the property pages for the report. For more information, see [Parameters Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
   
  When you create a report snapshot, the following elements are stored along with the report snapshot in the report server database:  
   
@@ -59,7 +59,7 @@ manager: "erikre"
   
 ## See Also  
  [Create Report History &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Add a Snapshot to Report History &#40;Report Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Limit Report History &#40;Report Manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  

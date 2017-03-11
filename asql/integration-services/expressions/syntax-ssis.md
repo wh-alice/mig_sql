@@ -73,7 +73,7 @@ manager: "jhubbard"
  For more information, see [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## Related Tasks  
- [Use an Expression in a Data Flow Component](http://msdn.microsoft.com/en-US/library/ms141007(SQL.130).aspx)  
+ [Use an Expression in a Data Flow Component](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## Related Content  
   

@@ -161,7 +161,7 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../../t-sql/queries/select-transact-sql.md)   
- [Configure WMI to Show Server Status in SQL Server Tools](../Topic/Configure%20WMI%20to%20Show%20Server%20Status%20in%20SQL%20Server%20Tools.md)   
+ [Configure WMI to Show Server Status in SQL Server Tools](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)   
  [SQL Server Configuration Manager](../../../relational-databases/sql-server-configuration-manager.md)   
  [Configuration Functions &#40;Transact-SQL&#41;](../../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Server-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)  

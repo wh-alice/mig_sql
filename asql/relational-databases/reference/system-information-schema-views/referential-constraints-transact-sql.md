@@ -42,7 +42,7 @@ manager: "jhubbard"
 |**DELETE_RULE**|**varchar(**11**)**|Action taken when a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement violates referential integrity defined by this constraint. Returns one of the following: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> If NO ACTION is specified on ON DELETE for this constraint, the delete on the primary key that is referenced in the constraint will not be propagated to the foreign key. If such a delete of a primary key will cause a referential integrity violation because at least one foreign key contains the same value, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will not make any change to the parent and referring tables. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] also will raise an error.<br /><br /> If CASCADE is specified on ON DELETE on this constraint, any change to the primary key value is automatically propagated to the foreign key value.|  
   
 ## See Also  
- [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/ms177862(SQL.130).aspx)   
+ [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Information Schema Views &#40;Transact-SQL&#41;](../Topic/Information%20Schema%20Views%20\(Transact-SQL\).md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.objects-transact-sql.md)   

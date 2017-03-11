@@ -24,13 +24,13 @@ manager: "erikre"
   
  The **Dataset Properties** dialog box includes the following:  
   
--   [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd207135(SQL.130).aspx)  
+-   [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
   
--   [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220483(SQL.130).aspx)  
+-   [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
   
 -   [Dataset Properties Dialog Box, Options &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
   
--   [Dataset Properties Dialog Box, Filters &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220504(SQL.130).aspx)  
+-   [Dataset Properties Dialog Box, Filters &#40;Report Builder&#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
   
  For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
@@ -72,11 +72,11 @@ manager: "erikre"
  Type the number of seconds until the query times out. The default is 30 seconds. The value for **Time out** must be empty or greater than zero. If it is empty, the query does not time out.  
   
  **Refresh Fields**  
- Run the query command to update the list of fields in the [Dataset Properties Dialog Box, Fields](http://msdn.microsoft.com/en-US/library/dd220483(SQL.130).aspx) page.  
+ Run the query command to update the list of fields in the [Dataset Properties Dialog Box, Fields](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) page.  
   
 ## See Also  
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Query Designers &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220438(SQL.130).aspx)  
+ [Query Designers &#40;Report Builder&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

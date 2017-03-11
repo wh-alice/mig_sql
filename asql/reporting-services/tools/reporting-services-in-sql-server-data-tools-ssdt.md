@@ -92,7 +92,7 @@ manager: "erikre"
   
  Use the Properties pane to:  
   
--   Set properties for the currently selected item on the design surface. Some properties provide a drop-down list of values. You can also type the value directly in the cell. Some properties contain a collection of values, indicated by the value **(Collection)**. Most properties can accept an expression; complex expressions are indicated by the value **\<Expression>**. Click **\<Expression>** to open the **Expression** dialog box. For more information, see [Expression Dialog Box](http://msdn.microsoft.com/en-US/library/ms189719(SQL.130).aspx).  
+-   Set properties for the currently selected item on the design surface. Some properties provide a drop-down list of values. You can also type the value directly in the cell. Some properties contain a collection of values, indicated by the value **(Collection)**. Most properties can accept an expression; complex expressions are indicated by the value **\<Expression>**. Click **\<Expression>** to open the **Expression** dialog box. For more information, see [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Use the Properties pane toolbar buttons to change the grid from category view to alphabetical view. In category view, you may need to expand a category to see all the properties under it. To open an item's Properties dialog box, click the **Property Pages** button on the toolbar or by right-click the item and click **Properties**.  
   
@@ -306,7 +306,7 @@ manager: "erikre"
   
 ## See Also  
 [Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
- [Solution Explorer](../Topic/Solution%20Explorer.md)   
+ [Solution Explorer](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
  [Reporting Services Reports &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
  [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

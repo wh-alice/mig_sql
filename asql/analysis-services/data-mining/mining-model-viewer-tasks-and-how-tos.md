@@ -44,7 +44,7 @@ manager: "jhubbard"
 -   [Change the Colors Used in the Data Mining Viewer](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## See Also  
- [Basic Data Mining Tutorial](http://msdn.microsoft.com/en-US/library/ms167167(SQL.130).aspx)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](http://msdn.microsoft.com/en-US/library/ms181176(SQL.130).aspx)  
+ [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
   
   

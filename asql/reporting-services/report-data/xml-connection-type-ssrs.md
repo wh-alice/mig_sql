@@ -33,7 +33,7 @@ manager: "erikre"
 |XML document|`http://localhost/XML/Customers.xml`|  
 |Embedded XML document|*Empty*|  
   
- For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/en-US/library/dd220525(SQL.130).aspx).  
+ For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ##  <a name="Credentials"></a> Credentials  
  Credentials are required to run queries, to preview the report locally, and to preview the report from the report server.  
@@ -48,7 +48,7 @@ manager: "erikre"
   
  Stored and prompted credentials are not supported. Remember that if you disable Windows integrated security, you cannot use it to retrieve data. If you specify stored or prompted credentials, an error will occur at run time.  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](http://msdn.microsoft.com/en-US/library/dd220515(SQL.130).aspx).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ##  <a name="Query"></a> Queries  
  A query specifies which data to retrieve for a report dataset. The columns in the result set for a query populate the field collection for a dataset. A report processes only the first result set retrieved by a query.  
@@ -134,7 +134,7 @@ manager: "erikre"
 ##  <a name="Parameters"></a> Parameters  
  The query is not analyzed to identify parameters.  
   
- To add parameters, you must create them manually through the **Parameter** page on the [Dataset Properties](http://msdn.microsoft.com/en-US/library/dd207135(SQL.130).aspx) dialog box.  
+ To add parameters, you must create them manually through the **Parameter** page on the [Dataset Properties](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) dialog box.  
   
 ##  <a name="Remarks"></a> Remarks  
  The XML data extension supports reporting from XML data that is tabular and not hierarchical. For more information, see [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
@@ -156,7 +156,7 @@ manager: "erikre"
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Provides an overview of accessing data for your report.  
   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/en-US/library/dd220525(SQL.130).aspx)  
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Provides information about data connections and data sources.  
   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

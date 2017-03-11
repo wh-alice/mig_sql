@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 4.  In **Registered Server**, enter a server name and optional description.  
   
-5.  From the **Connection Properties** tab, review or modifiy the network  and connection properties. For more information, see [Connect to Server &#40;Connection Properties Page&#41; Database Engine](../Topic/Connect%20to%20Server%20\(Connection%20Properties%20Page\)%20Database%20Engine.md)  
+5.  From the **Connection Properties** tab, review or modifiy the network  and connection properties. For more information, see [Connect to Server &#40;Connection Properties Page&#41; Database Engine](http://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)  
   
 6.  Click **Test**, to test the connection.  
   

@@ -42,6 +42,6 @@ manager: "jhubbard"
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
 ## See Also  
- [Automated Administration Tasks &#40;SQL Server Agent&#41;](../Topic/Automated%20Administration%20Tasks%20\(SQL%20Server%20Agent\).md)  
+ [Automated Administration Tasks &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
   
   

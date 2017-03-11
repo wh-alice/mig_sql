@@ -299,7 +299,7 @@ For information about the Business Intelligence Client features supported by the
 > [![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
   
 ## See Also  
- [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/en-US/library/ms143287(SQL.130).aspx)   
+ [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Installation for SQL Server 2016](../database-engine/install/windows/installation-for-sql-server-2016.md)  
   
   

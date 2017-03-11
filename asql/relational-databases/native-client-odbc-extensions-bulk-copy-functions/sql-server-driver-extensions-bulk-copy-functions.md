@@ -69,7 +69,7 @@ manager: "jhubbard"
 -   [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)  
   
 ## See Also  
- [SQL Server Driver Extensions](http://msdn.microsoft.com/en-US/library/ms130928(SQL.130).aspx)   
+ [SQL Server Driver Extensions](http://msdn.microsoft.com/library/1043bc93-965d-4939-bd1c-21e9d8d3e9ac)   
  [Performing Bulk Copy Operations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  **Preparing for SMO**  
   
--   [Preparing for SMO](http://msdn.microsoft.com/en-US/library/ms162155(SQL.130).aspx) provides information about system requirements, installation, and comparisons with SQL-DMO.  
+-   [Preparing for SMO](http://msdn.microsoft.com/library/05018a4d-2339-4ecf-8769-414ec781c535) provides information about system requirements, installation, and comparisons with SQL-DMO.  
   
  **Object Model**  
   

@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 3.  On the log shipping primary server, execute **sp_delete_log_shipping_primary_database** to delete information about the log shipping configuration from the primary server. This also deletes the backup job.  
   
-4.  On the log shipping primary server, disable the backup job. For more information, see [Disable or Enable a Job](../Topic/Disable%20or%20Enable%20a%20Job.md).  
+4.  On the log shipping primary server, disable the backup job. For more information, see [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 5.  On the log shipping secondary server, disable the copy and restore jobs.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 -   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Disable or Enable a Job](../Topic/Disable%20or%20Enable%20a%20Job.md)  
+-   [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
 ## See Also  
  [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

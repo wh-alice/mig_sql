@@ -208,7 +208,7 @@ SELECT @g.ToString(), @g.STLength();
 
 - [Spatial Data (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [geometry Data Type Method Reference](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [geography Data Type Method Reference](http://msdn.microsoft.com/en-US/library/bb933802(SQL.130).aspx)   
+- [geography Data Type Method Reference](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves &#40;geometry Data Type&#41;](../../t-sql/spatial/geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;geography Data Type&#41;](../../t-sql/spatial/geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;geometry Data Type&#41;](../../t-sql/spatial/geometry/stgeomfromtext-geometry-data-type.md)   

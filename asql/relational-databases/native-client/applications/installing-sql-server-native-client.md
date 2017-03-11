@@ -66,6 +66,6 @@ You can also get sqlncli.msi from the SQL Server 2012 Feature Pack web page. To 
   
 ## See Also  
  [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Installation How-to Topics](http://msdn.microsoft.com/en-US/library/cc281837(SQL.130).aspx)  
+ [Installation How-to Topics](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

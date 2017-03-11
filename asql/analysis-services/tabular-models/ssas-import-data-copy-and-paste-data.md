@@ -85,7 +85,7 @@ manager: "erikre"
  Shows a sample of the Clipboard contents. The existing data in the destination table will be deleted and the new rows will be inserted into the table.  
   
 ## See Also  
- [Import Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/en-US/library/hh230968(SQL.130).aspx)   
+ [Import Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)   
  [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Set the Data Type of a Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   

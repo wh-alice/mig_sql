@@ -29,6 +29,6 @@ manager: "jhubbard"
   
 4.  [Change the Database Compatibility Mode and Use the Query Store](../../../database-engine/install/windows/change-the-database-compatibility-mode-and-use-the-query-store.md) One of the steps to take after your databases have been upgraded to [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] is to enable new features by changing the database compatibility mode and then using the query store to monitor performance. This topic discusses this process and provides a recommended workflow.  
   
-5.  [Take Advantage of New SQL Server 2016 Features](http://msdn.microsoft.com/en-US/library/mt566934(SQL.130).aspx) Finally, after you have completed the previous steps, you are ready to explore taking advantage of specific new database engine enhancements. This topic suggests a few of these enhancements and provides links for more information.  
+5.  [Take Advantage of New SQL Server 2016 Features](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16) Finally, after you have completed the previous steps, you are ready to explore taking advantage of specific new database engine enhancements. This topic suggests a few of these enhancements and provides links for more information.  
   
   

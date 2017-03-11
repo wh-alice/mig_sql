@@ -30,7 +30,7 @@ manager: "jhubbard"
 |Value|Description|  
 |-----------|-----------------|  
 |XML file location|Retrieve data from an XML file.|  
-|XML file from variable|Specify the XML file name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](http://msdn.microsoft.com/en-US/library/ms140216(SQL.130).aspx)|  
+|XML file from variable|Specify the XML file name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |XML data from variable|Retrieve XML data from a variable.|  
   
  **Use inline schema**  

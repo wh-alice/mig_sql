@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Configuration (R Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-01"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 12
+caps.latest.revision: 13
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
@@ -54,7 +54,7 @@ For more information, see the following documents:
 
 * [Enable Compression on a Table or Index](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-* [Columnstore Indexes Guide](Columnstore%20Indexes%20Guide.md)
+* [Columnstore Indexes Guide](https://msdn.microsoft.com/library/gg492088.aspx)
 
 ## Paging File
 

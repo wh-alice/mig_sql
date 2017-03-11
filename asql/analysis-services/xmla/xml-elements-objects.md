@@ -33,8 +33,8 @@ manager: "erikre"
 |[ExecuteResponse Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|Contains the information returned by an instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] in response to an [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) method call.|  
   
 ## See Also  
- [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/en-US/library/ms186656(SQL.130).aspx)   
+ [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [XML Data Types &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/en-US/library/ms186656(SQL.130).aspx)  
+ [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
   
   

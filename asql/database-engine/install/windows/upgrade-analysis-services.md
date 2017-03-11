@@ -142,7 +142,7 @@ manager: "erikre"
   
 3.  Save and rebuild or deploy the model.  
   
-4.  Turn **DirectQuery** back on. See [DirectQuery for Tabular 1200 models](http://msdn.microsoft.com/en-US/library/mt674773(SQL.130).aspx) for more guidance.  
+4.  Turn **DirectQuery** back on. See [DirectQuery for Tabular 1200 models](http://msdn.microsoft.com/library/4227977e-7368-4d45-b78f-24076882e7a8) for more guidance.  
   
 ## See Also  
  [DirectQuery Mode &#40;SSAS Tabular&#41;](../../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
@@ -150,7 +150,7 @@ manager: "erikre"
  [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
  [Planning a SQL Server Installation](../../../sql-server/install/planning-a-sql-server-installation.md)   
  [Upgrade Power Pivot for SharePoint](../../../database-engine/install/windows/upgrade-power-pivot-for-sharepoint.md)   
- [Install Analysis Services in Multidimensional and Data Mining Mode](http://msdn.microsoft.com/en-US/library/ms143708(SQL.130).aspx)   
+ [Install Analysis Services in Multidimensional and Data Mining Mode](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../../database-engine/install/windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

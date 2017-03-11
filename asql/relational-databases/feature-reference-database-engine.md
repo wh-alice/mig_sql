@@ -34,7 +34,7 @@ manager: "jhubbard"
  [SQL Server Profiler F1 Help](../tools/sql-server-profiler/sql-server-profiler-f1-help.md)  
  Provides help for [!INCLUDE[ssSqlProfiler](../analysis-services/data-mining/includes/sssqlprofiler-md.md)] and its related dialog boxes.  
   
- [Visual Database Tools F1 Help](../Topic/Visual%20Database%20Tools%20F1%20Help.md)  
+ [Visual Database Tools F1 Help](http://msdn.microsoft.com/library/79d15b47-6759-4f48-b9ac-2c86a3cd9980)  
  Provides help for the Database Diagram Designer, Table Designer, and Query and View Designer tools and related dialog boxes.  
   
   

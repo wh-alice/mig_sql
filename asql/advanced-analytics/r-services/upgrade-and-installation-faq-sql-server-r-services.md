@@ -2,7 +2,7 @@
 title: "Upgrade and Installation FAQ (SQL Server R Services) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-02-10"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,7 +11,7 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
-caps.latest.revision: 54
+caps.latest.revision: 57
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
@@ -92,36 +92,54 @@ Another option is to set up a replica on a different SQL Server instance for the
 
 ## Launchpad service cannot be started  
 
-There are several issues that can prevent LaunchPad from starting.
-+ **8dot3 notation not enabled**.  To install R Services (In-Database), the drive where the feature is installed must support creation of short file names using the **8dot3** notation.  An 8.3 filename is also called a short filename and is used for compatibility with older versions of Microsoft Windows prior or as an alternate filename to the long filename. 
+There are several issues that can prevent Launchpad from starting.
 
-  If the volume where you are installing [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] does not support the short filenames, the processes that launch R from SQL Server might not be able to locate the correct executable and the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] will not start.  
+### **8dot3 notation is not enabled**.  
+
+To install R Services (In-Database), the drive where the feature is installed must support creation of short file names using the **8dot3** notation.  An 8.3 filename is also called a short filename and is used for compatibility with older versions of Microsoft Windows prior or as an alternate filename to the long filename. 
+
+If the volume where you are installing [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] does not support the short filenames, the processes that launch R from SQL Server might not be able to locate the correct executable and the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] will not start.  
   
-   As a workaround, you should enable the 8dot3 notation on the volume where SQL Server is installed and R Services is installed. You must then provide the short name for the working directory in the R Services configuration file. 
+As a workaround, you should enable the 8dot3 notation on the volume where SQL Server is installed and R Services is installed. You must then provide the short name for the working directory in the R Services configuration file. 
 
-    1. To enable 8dot3 notation, run the **fsutil** utility with the *8dot3name* argument as described here: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
-    2. After the 8dot3 notation is enabled, open the file  RLauncher.config. In a default installation, the file RLauncher.config is located in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn
-    3. Make a note of the property for WORKING_DIRECTORY.
-    4. Use the fsutil utility with the *file* argument to specify a short file path for the folder specified in WORKING_DIRECTORY.
-    5. Edit the configuration file to use the short name for WORKING_DIRECTORY.   
+1. To enable 8dot3 notation, run the **fsutil** utility with the *8dot3name* argument as described here: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
+2. After the 8dot3 notation is enabled, open the file  RLauncher.config. In a default installation, the file RLauncher.config is located in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn
+3. Make a note of the property for WORKING_DIRECTORY.
+4. Use the fsutil utility with the *file* argument to specify a short file path for the folder specified in WORKING_DIRECTORY.
+5. Edit the configuration file to use the short name for WORKING_DIRECTORY.   
      
 Alternatively, you can specify a different directory for WORKING_DIRECTORY that has a path compatible with the 8dot3 notation.     
    
-   > [!NOTE]
-   > This restriction will be removed in a later release. 
+> [!NOTE]
+> This restriction has been removed in later releases. If you experience this issue,  please install one of the following:
+>
+>    + SQL Server 2016 SP1 and CU1: [Cumulative Update 1 for SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)
+>    + SQL Server 2016 RTM, Service Pack 3, and this [hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), available on demand  
  
-+ **The account that runs Launchpad has been changed or necessary permissions have been removed.** By default, [!INCLUDE[rsql_launchpad_md](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] uses the following account on startup, which is configured by [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup to have all necessary permissions:  NT Service\MSSQLLaunchpad
+### **The account that runs Launchpad has been changed or necessary permissions have been removed.** 
 
-  Therefore, if you assign a different account to the Launchpad or the right is removed by a policy on the SQL Server machine, the account might not have necessary permissionsand you might see this error: *ERROR_LOGON_TYPE_NOT_GRANTED
+By default, [!INCLUDE[rsql_launchpad_md](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] uses the following account on startup, which is configured by [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup to have all necessary permissions:  `NT Service\MSSQLLaunchpad`
+
+Therefore, if you assign a different account to the Launchpad or the right is removed by a policy on the SQL Server machine, the account might not have necessary permissions, and you might see this error: 
+
+*ERROR_LOGON_TYPE_NOT_GRANTED
 1385 (0x569) Logon failure: the user has not been granted the requested logon type at this computer.*
 
-  To give the necessary permissions to the new service account, use the **Local Security Policy** application and update the permissions on the account to include these permissions:
+To give the necessary permissions to the new service account, use the **Local Security Policy** application and update the permissions on the account to include these permissions:
   + Adjust memory quotas for a process (SeIncreaseQuotaPrivilege)
   + Bypass traverse checking (SeChangeNotifyPrivilege)
   + Log on as a service (SeServiceLogonRight)
   + Replace a process-level token (SeAssignPrimaryTokenPrivilege)
 
-  For more information about permissions to run SQL Server services, see [Configure Windows Service Accounts and Permissions](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
+### **User group for Launchpad is missing system right "Allow log in locally"**
+
+During setup of R Services, SQL Server creates the Windows user group,  **SQLRUserGroup**, and by default provisions it with all rights necesssary for Launchpad to connect to SQL Server and run external script jobs.  
+    
+However, in organizations where more restrictive security policies are enforced, this right might be manually removed, or revoked by policy. If this happens, Launchpad can no longer connect to SQL Server, and R Services will be unable to function.
+    
+To correct the problem, ensure that the group **SQLRUserGroup** has the system right **Allow log on locally**.
+
+For more information, see [Configure Windows Service Accounts and Permissions](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
   
 ## Side by side installation not supported  
  Do not create a side-by-side installation using another version of R or other releases from Revolution Analytics.  
@@ -169,7 +187,7 @@ To enable implied authentication, you must give this group of worker accounts pe
     
 1. Open [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] as an administrator on the instance where you will run R code. 
 
-2. Run the following script. Be sureto edit the user group name, if you changed the default, and the computer and instance name.
+2. Run the following script. Be sure to edit the user group name, if you changed the default, and the computer and instance name.
     ```sql
     USE [master]
     GO
@@ -185,7 +203,7 @@ For more information and the steps for doing this using the [!INCLUDE[ssManStudi
 
 It is important that you uninstall previous versions of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] and its related R components in the correct order, particularly if you installed any of the pre-reelease versions.
 
-### 1. Run script to deregister Windows user group and components before uninstalling previous components
+### Step 1. Run script to deregister Windows user group and components before uninstalling previous components
 If you installed a pre-release version of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], you must first run run the script `RegisteREext.exe` with the `/uninstall` argument.
 
 By doing so, you deregister old components and remove the Windows user group associated with Launchpad. If you do not do this, you will be unable to create the Windows user group required for any new instances that you install.
@@ -204,25 +222,35 @@ RegisterRExt.exe /UNINSTALL /INSTANCE:<instancename>
 
 You might need to run the script more than once to remove all components.
 
-> [!NOTE]
-> The default location for this script is different, depending on the pre-release version you installed. If you try to run the wrong version of the script, you might get an error. 
-> 
->  + If you have CTP 3.1, 3.2, or 3.3, before you can uninstall components, you must download an updated version of the post-installation configuration script from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=723194). The updated script supports de-registration of older components. Click the link and select **Save As** to save the script to a local folder. Rename the existing script, and then copy the new script into the folder where the script will be executed. 
->  + For RC0, the correct script file was installed, and is located in this folder:  `C:\Program Files\Microsoft\MRO-for-RRE\8.0\R-3.2.2\library\RevoScaleR\rxLibs\x64`  
->  + For release versions (13.0.1601.5 or later), no script is needed to install or configure components. The script should be used solely for removing older components. 
+**Important**: The default location for this script is different, depending on the pre-release version you installed. If you try to run the wrong version of the script, you might get an error. 
+
++ **CTP 3.1, 3.2, or 3.3**
+    
+    Additional steps are required to uninstall existing components. 
+    1. First, download an updated version of the post-installation configuration script from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=723194). The updated script supports de-registration of older components. 
+    2. Click the link and select **Save As** to save the script to a local folder. 
+    3. Rename the existing script, and then copy the new script into the folder where the script will be executed. 
+
++ **RC0**
+    
+    The script file is located in this folder:  `C:\Program Files\Microsoft\MRO-for-RRE\8.0\R-3.2.2\library\RevoScaleR\rxLibs\x64`  
+
++ **Release versions (13.0.1601.5 or later)**
+
+    No script is needed to install or configure components. The script should be used solely for removing older components. 
 
 
-### 2. Uninstall any older versions of the Revolution Enterprise tools, including components installed with CTP releases.
+### Step 2. Uninstall any older versions of the Revolution Enterprise tools, including components installed with CTP releases.
 
 The order of uninstallation of the R components is critical. Always uninstall [!INCLUDE[rsql_rre-noversion](../../advanced-analytics/r-services/includes/rsql-rre-noversion-md.md)] first. Then, uninstall [!INCLUDE[rsql_rro-noversion](../../advanced-analytics/r-services/includes/rsql-rro-noversion-md.md)].  
 
  If you mistakenly uninstall R Open first and then get an error when trying to uninstall Revolution R Enterprise, one workaround is to reinstall Revolution R Open or Microsoft R Open, and then uninstall both components in the correct order.  
 
-### 3. Uninstall any other version of Microsoft R Open.
+### Step 3. Uninstall any other version of Microsoft R Open.
 
 Finally, uninstall all other versions of Microsoft R Open.
  
-### 4. Upgrade SQL Server  
+### Step 4. Upgrade SQL Server  
   
 After all pre-release components have been uninstalled, restart the computer. This is a requirement of SQL Server setup and you will not be able to proceed with an updated installation until a restart is completed.     
 

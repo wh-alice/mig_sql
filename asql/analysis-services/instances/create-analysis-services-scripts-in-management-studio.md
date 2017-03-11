@@ -65,6 +65,6 @@ manager: "erikre"
   
 ## See Also  
  [Script Administrative Tasks in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
- [XMLA Query Editor &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/en-US/library/ms178525(SQL.130).aspx)  
+ [XMLA Query Editor &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

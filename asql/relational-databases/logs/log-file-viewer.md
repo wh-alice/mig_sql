@@ -50,6 +50,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
- [SQL Server Agent Error Log](../Topic/SQL%20Server%20Agent%20Error%20Log.md)  
+ [SQL Server Agent Error Log](http://msdn.microsoft.com/library/0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41)  
   
   

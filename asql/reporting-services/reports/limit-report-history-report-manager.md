@@ -42,10 +42,10 @@ manager: "erikre"
   
 3.  Click the **History** tab.  
   
-4.  Select the options for your report and click **Apply**. For details about each option, see [Snapshot Options Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms189952(SQL.130).aspx).  
+4.  Select the options for your report and click **Apply**. For details about each option, see [Snapshot Options Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).  
   
 ## See Also  
  [Add a Snapshot to Report History &#40;Report Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

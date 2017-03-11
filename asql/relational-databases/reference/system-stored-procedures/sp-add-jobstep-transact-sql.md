@@ -97,7 +97,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >   
 >  `$(ESCAPE_` *macro name* `(DATE))`  
   
- For more information about these tokens and updating your job steps to use the new token syntax, see [Use Tokens in Job Steps](../Topic/Use%20Tokens%20in%20Job%20Steps.md).  
+ For more information about these tokens and updating your job steps to use the new token syntax, see [Use Tokens in Job Steps](http://msdn.microsoft.com/library/105bbb66-0ade-4b46-b8e4-f849e5fc4d43).  
   
 > [!IMPORTANT]  
 >  Any Windows user with write permissions on the Windows Event Log can access job steps that are activated by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent alerts or WMI alerts. To avoid this security risk, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent tokens that can be used in jobs activated by alerts are disabled by default. These tokens are: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., and **WMI(***property***)**. Note that in this release, use of tokens is extended to all alerting.  
@@ -200,7 +200,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../Topic/SQL%20Server%20Agent%20Fixed%20Database%20Roles.md).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  The creator of the job step must have access to the proxy for the job step. Members of the **sysadmin** fixed server role have access to all proxies. Other users must be explicitly granted access to a proxy.  
   
@@ -224,7 +224,7 @@ GO
 ```  
   
 ## See Also  
- [View or Modify Jobs](../Topic/View%20or%20Modify%20Jobs.md)   
+ [View or Modify Jobs](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
  [sp_add_job &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   

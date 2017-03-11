@@ -43,7 +43,7 @@ manager: "erikre"
  For complete descriptions of the standard XML data types, see the World Wide Web Consortium (WC3) candidate recommendation.  
   
 ## See Also  
- [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/en-US/library/ms186656(SQL.130).aspx)   
+ [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [XML for Analysis  &#40;XMLA&#41; Reference](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   
   

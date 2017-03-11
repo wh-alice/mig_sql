@@ -35,13 +35,13 @@ manager: "jhubbard"
   
 6.  Select **Integration Services Package** for the job step type.  
   
-7.  In the **Run as** list, select **SQL Server Agent Service Account** or select a proxy account that has the credentials that the job step will use. For information about creating a proxy account, see [Create a SQL Server Agent Proxy](../Topic/Create%20a%20SQL%20Server%20Agent%20Proxy.md).  
+7.  In the **Run as** list, select **SQL Server Agent Service Account** or select a proxy account that has the credentials that the job step will use. For information about creating a proxy account, see [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
   
      Using a proxy account instead of the **SQL Server Agent Service Account** may resolve common issues that can occur when executing a package using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent. For more information about these issues, see the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Knowledge Base article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760).  
   
     > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
   
-     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](../Topic/Set%20the%20Service%20Startup%20Account%20for%20SQL%20Server%20Agent%20\(SQL%20Server%20Configuration%20Manager\).md).  
+     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](http://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
   
 8.  In the **Package Source** list box, click the source of the package and then configure the options for the job step.  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
     >   
     >  The server environment that contains the variable is not selected in the list box on the **Configuration** tab.  
   
-10. To create a schedule for a job step, click **Schedules** in the **Select a page** pane. For information on how to configure a schedule, see [Schedule a Job](../Topic/Schedule%20a%20Job.md).  
+10. To create a schedule for a job step, click **Schedules** in the **Select a page** pane. For information on how to configure a schedule, see [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c).  
   
     > [!TIP]  
     >  When you name the schedule, consider using a name that is unique and descriptive so you can more easily distinguish the schedule from other [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent schedules.  

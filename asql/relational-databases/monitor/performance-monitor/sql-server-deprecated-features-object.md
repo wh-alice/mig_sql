@@ -281,7 +281,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
  [Deprecation Announcement Event Class](../../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support Event Class](../../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [Discontinued Database Engine Functionality in SQL Server 2016](../../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Discontinued Full-Text Search Features in SQL Server 2016](http://msdn.microsoft.com/en-US/library/cc646001(SQL.130).aspx)   
+ [Discontinued Full-Text Search Features in SQL Server 2016](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [Use SQL Server Objects](../../../relational-databases/monitor/performance-monitor/use-sql-server-objects.md)  
   
   

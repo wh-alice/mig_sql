@@ -182,7 +182,7 @@ ALTER ASSEMBLY assembly_name
  The following example updates assembly `ComplexNumber` to the latest copy of the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] modules that hold its implementation.  
   
 > [!NOTE]  
->  Assembly `ComplexNumber` can be created by running the UserDefinedDataType sample scripts. For more information, see [User Defined Type](http://msdn.microsoft.com/en-US/library/ff878123(SQL.130).aspx).  
+>  Assembly `ComplexNumber` can be created by running the UserDefinedDataType sample scripts. For more information, see [User Defined Type](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
   
  `ALTER ASSEMBLY ComplexNumber`  
   

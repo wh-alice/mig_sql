@@ -130,7 +130,7 @@ GO
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)   
- [Query Notifications Related Dynamic Management Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/ms187407(SQL.130).aspx)   
+ [Query Notifications Related Dynamic Management Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

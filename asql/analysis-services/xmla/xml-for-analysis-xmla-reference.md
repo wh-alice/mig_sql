@@ -31,7 +31,7 @@ manager: "erikre"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/en-US/library/ms186656(SQL.130).aspx)|Describes elements in the XMLA specification.|  
+|[XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)|Describes elements in the XMLA specification.|  
 |[XML Data Types &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)|Describes data types in the XMLA specification.|  
 |[XML for Analysis Compliance &#40;XMLA&#41;](../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)|Describes the level of compliance with the XMLA 1.1 specification.|  
   

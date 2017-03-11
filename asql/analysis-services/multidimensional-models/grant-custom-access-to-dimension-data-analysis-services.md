@@ -88,7 +88,7 @@ manager: "erikre"
 ## Advanced dimension security  
  If you have MDX expertise, another approach is to write MDX expressions that set the criteria for which members are allowed or denied access. Click **Create Role** | **Dimension Data** | **Advanced** to provide the script.  
   
- You can the MDX Builder to write the MDX statement. See [MDX Builder &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/en-US/library/ms190166(SQL.130).aspx) for details. The **Advanced** tab has the following options:  
+ You can the MDX Builder to write the MDX statement. See [MDX Builder &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f) for details. The **Advanced** tab has the following options:  
   
  **Attribute**  
  Select the attribute for which you want to manage member security.  

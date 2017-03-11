@@ -180,6 +180,6 @@ select @x.query('declare namespace CustOrders="Customers";
 -   [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] requires the argument type of **id()** to be a subtype of xs:IDREF*.  
   
 ## See Also  
- [Functions on Sequences](http://msdn.microsoft.com/en-US/library/ms187870(SQL.130).aspx)  
+ [Functions on Sequences](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

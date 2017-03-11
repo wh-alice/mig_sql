@@ -61,6 +61,6 @@ manager: "jhubbard"
  [Expressions Page](../../integration-services/expressions/expressions-page.md)   
  [Script Task Examples](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)   
  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
- [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/en-US/library/ms141670(SQL.130).aspx)  
+ [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)  
   
   

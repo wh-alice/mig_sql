@@ -90,6 +90,6 @@ manager: "jhubbard"
 |Describes how Parameters are used in a stored procedure.|[Parameters](../../../relational-databases/reference/stored-procedures/parameters.md)|  
   
 ## Related Content  
- [CLR Stored Procedures](http://msdn.microsoft.com/en-US/library/ms131094(SQL.130).aspx)  
+ [CLR Stored Procedures](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

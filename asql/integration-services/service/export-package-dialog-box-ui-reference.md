@@ -56,7 +56,7 @@ manager: "jhubbard"
  Click the browse button **(…)** and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../integration-services/packages/package-and-project-protection-level-dialog-box.md).  
   
 ## See Also  
- [Save Copy of Package](http://msdn.microsoft.com/en-US/library/ms186803(SQL.130).aspx)   
+ [Save Copy of Package](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Import Package Dialog Box UI Reference](../../integration-services/service/import-package-dialog-box-ui-reference.md)   
  [Save Packages](../../integration-services/save-packages.md)   
  [Import and Export Packages &#40;SSIS Service&#41;](../../integration-services/service/import-and-export-packages-ssis-service.md)  

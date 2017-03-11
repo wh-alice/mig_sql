@@ -47,6 +47,6 @@ manager: "jhubbard"
 ## See Also  
  [Prevent Automatic Startup of an Instance of SQL Server &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/scm-services-prevent-automatic-startup-of-an-instance.md)   
  [Connect to Another Computer &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/scm-services-connect-to-another-computer.md)   
- [Configure WMI to Show Server Status in SQL Server Tools](../Topic/Configure%20WMI%20to%20Show%20Server%20Status%20in%20SQL%20Server%20Tools.md)  
+ [Configure WMI to Show Server Status in SQL Server Tools](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)  
   
   

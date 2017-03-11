@@ -169,6 +169,6 @@ manager: "jhubbard"
 -   Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
 ## See Also  
- [Use Variables in Packages](http://msdn.microsoft.com/en-US/library/ms140216(SQL.130).aspx)  
+ [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

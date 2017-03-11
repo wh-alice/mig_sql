@@ -88,13 +88,13 @@ manager: "erikre"
   
  Credentials are not saved in the report definition. They are managed independently from the report on the report server or SharePoint site and on the report authoring client.  
   
- At report design time, credentials are used to run dataset queries and preview the report. At run time, credentials are used to run the report and cache query results. You can also cache shared dataset query results independently. Design time and run time credentials might differ. For more information, see [Specify Credentials in Report Builder](http://msdn.microsoft.com/en-US/library/dd220515(SQL.130).aspx).  
+ At report design time, credentials are used to run dataset queries and preview the report. At run time, credentials are used to run the report and cache query results. You can also cache shared dataset query results independently. Design time and run time credentials might differ. For more information, see [Specify Credentials in Report Builder](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
  For more information about securing data, see the following topic in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- For more information about data sources, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/en-US/library/dd220525(SQL.130).aspx).  
+ For more information about data sources, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
   
 ##  <a name="Models"></a> Understanding Models and Security Filters  
@@ -114,7 +114,7 @@ manager: "erikre"
   
   
 ## See Also  
- [Install and Uninstall Report Builder](http://msdn.microsoft.com/en-US/library/dd207038(SQL.130).aspx)   
+ [Install and Uninstall Report Builder](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

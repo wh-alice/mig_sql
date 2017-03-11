@@ -54,7 +54,7 @@ manager: "jhubbard"
   
  If **Source** is set to **Variable**, select an existing variable, or click **\<New variable...>** to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 ## OperationType Dynamic Options  
   
@@ -115,7 +115,7 @@ manager: "jhubbard"
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 ### OperationType = XSLT  
  Specify options for the XSLT operation.  
@@ -133,7 +133,7 @@ manager: "jhubbard"
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -161,7 +161,7 @@ manager: "jhubbard"
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 ### OperationType = XPATH  
  Specify options for the XPath operation.  
@@ -179,7 +179,7 @@ manager: "jhubbard"
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -207,7 +207,7 @@ manager: "jhubbard"
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **PutResultInOneNode**  
  Specify whether the result is written to a single node.  
@@ -242,7 +242,7 @@ manager: "jhubbard"
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  When you use an XPath statement to identify the merge location in the source document, this statement is expected to return a single node. If the statement returns multiple nodes, only the first node is used. The contents of the second document are merged under the first node that the XPath query returns.  
   
@@ -259,7 +259,7 @@ manager: "jhubbard"
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -287,7 +287,7 @@ manager: "jhubbard"
   
  If **SecondOperandType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ### OperationType = Diff  
  Specify options for the Diff operation.  
@@ -334,7 +334,7 @@ manager: "jhubbard"
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -362,7 +362,7 @@ manager: "jhubbard"
   
  If **SecondOperandType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ### OperationType = Patch  
  Specify options for the Patch operation.  
@@ -380,7 +380,7 @@ manager: "jhubbard"
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -408,7 +408,7 @@ manager: "jhubbard"
   
  If **SecondOperandType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   

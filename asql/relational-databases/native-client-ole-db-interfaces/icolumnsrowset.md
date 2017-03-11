@@ -20,6 +20,6 @@ manager: "jhubbard"
   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client adds the DBCOLUMN_BASETABLEINSTANCE column to IColumnsRowset::GetColumnRowset. This column returns DBTYPE_I2 and is reserved for use by Microsoft. The information in this column is subject to change in future releases.  
   
 ## See Also  
- [Interfaces &#40;OLE DB&#41;](http://msdn.microsoft.com/en-US/library/ms130820(SQL.130).aspx)  
+ [Interfaces &#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
   

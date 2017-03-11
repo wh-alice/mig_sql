@@ -183,8 +183,8 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   
- [geometry Data Type Method Reference](http://msdn.microsoft.com/en-US/library/bb933973(SQL.130).aspx)   
- [geography Data Type Method Reference](http://msdn.microsoft.com/en-US/library/bb933802(SQL.130).aspx)   
+ [geometry Data Type Method Reference](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)   
+ [geography Data Type Method Reference](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
  [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

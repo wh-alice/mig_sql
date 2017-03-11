@@ -127,7 +127,7 @@ manager: "jhubbard"
 >  Data files are always expected to be found in a child directory named Data. For example, specify C:\Program Files\\[!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]\MSSQL13.\<InstanceName>\ to specify the root path to the data directory of the system databases during upgrade when data files are found under C:\Program Files\\[!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]\MSSQL13.\<InstanceName>\MSSQL\Data.  
   
 ## See Also  
- [Database Engine Configuration - Data Directories](http://msdn.microsoft.com/en-US/library/cc281941(SQL.130).aspx)   
- [Analysis Services Configuration - Data Directories](http://msdn.microsoft.com/en-US/library/cc281997(SQL.130).aspx)  
+ [Database Engine Configuration - Data Directories](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
+ [Analysis Services Configuration - Data Directories](http://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
   
   

@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   CLR functions. For more information, see [Create CLR Functions](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   CLR stored procedures. For more information, see [CLR Stored Procedures](http://msdn.microsoft.com/en-US/library/ms131094(SQL.130).aspx).  
+-   CLR stored procedures. For more information, see [CLR Stored Procedures](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
   
 -   CLR triggers. For more information, see [Create CLR Triggers](../../relational-databases/triggers/create-clr-triggers.md).  
   

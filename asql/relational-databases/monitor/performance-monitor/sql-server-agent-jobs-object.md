@@ -41,8 +41,8 @@ manager: "jhubbard"
 |**Schedules**|Information for jobs started by schedules.|  
   
 ## See Also  
- [Implement Jobs](../Topic/Implement%20Jobs.md)   
- [Use Performance Objects](../Topic/Use%20Performance%20Objects.md)   
+ [Implement Jobs](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [Use Performance Objects](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../../relational-databases/monitor/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

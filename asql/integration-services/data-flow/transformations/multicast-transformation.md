@@ -35,7 +35,7 @@ manager: "jhubbard"
   
  For information about the properties that you can set in the **Multicast Transformation Editor** dialog box, see [Multicast Transformation Editor](../../../integration-services/data-flow/transformations/multicast-transformation-editor.md).  
   
- For information about the properties that you can set programmatically, see [Common Properties](http://msdn.microsoft.com/en-US/library/ms135950(SQL.130).aspx).  
+ For information about the properties that you can set programmatically, see [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
 ## Related Tasks  
  For information about how to set properties of this component, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  

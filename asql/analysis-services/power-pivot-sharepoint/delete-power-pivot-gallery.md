@@ -49,6 +49,6 @@ manager: "erikre"
 5.  Under Permissions and Management, click **Delete this library**.  
   
 ## See Also  
- [Power Pivot Gallery](http://msdn.microsoft.com/en-US/library/(SQL.130).aspx)  
+ [Power Pivot Gallery](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)  
   
   

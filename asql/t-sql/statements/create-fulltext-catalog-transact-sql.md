@@ -117,6 +117,6 @@ GO
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Full-Text Search](../../relational-databases/search/full-text-search.md)   
- [New Full-Text Catalog &#40;General Page&#41;](http://msdn.microsoft.com/en-US/library/ms183531(SQL.130).aspx)  
+ [New Full-Text Catalog &#40;General Page&#41;](http://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91)  
   
   

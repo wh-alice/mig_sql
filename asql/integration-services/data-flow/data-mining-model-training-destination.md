@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/en-US/library/ms135950(SQL.130).aspx)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Data Mining Model Training Destination Custom Properties](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   

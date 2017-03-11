@@ -39,7 +39,7 @@ manager: "jhubbard"
 |Value|Description|  
 |-----------|-----------------|  
 |Table or view|Retrieve data from a worksheet or named range in the Excel file.|  
-|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](http://msdn.microsoft.com/en-US/library/ms140216(SQL.130).aspx)|  
+|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL command|Retrieve data from the Excel file by using a SQL query. For information about query syntax, see [Excel Source](../../integration-services/data-flow/excel-source.md).|  
 |SQL command from variable|Specify the SQL query text in a variable.|  
   

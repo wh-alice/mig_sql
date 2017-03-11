@@ -69,7 +69,7 @@ manager: "jhubbard"
   
     -   CollectorSchedule_Every_6h  
   
-     If you do not want to use one of the schedules that are provided, you can create a new schedule and use it for the collection set. For more information, see [Create and Attach Schedules to Jobs](../Topic/Create%20and%20Attach%20Schedules%20to%20Jobs.md).  
+     If you do not want to use one of the schedules that are provided, you can create a new schedule and use it for the collection set. For more information, see [Create and Attach Schedules to Jobs](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
 ### Define and create a collection item  
   
@@ -159,7 +159,7 @@ GO
   
 ## See Also  
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Manage Schedules](../Topic/Manage%20Schedules.md)   
+ [Manage Schedules](http://msdn.microsoft.com/library/f56c0736-dccc-41d2-afcf-71344aff143a)   
  [Start or Stop a Collection Set](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
   

@@ -221,6 +221,6 @@ GO
 ```  
   
 ## See Also  
- [Managing text and image Columns How-to Topics &#40;ODBC&#41;](http://msdn.microsoft.com/en-US/library/ms403341(SQL.130).aspx)  
+ [Managing text and image Columns How-to Topics &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Lesson 2: Add Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,7 +12,7 @@ ms.topic: "get-started-article"
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
-caps.latest.revision: 30
+caps.latest.revision: 32
 ms.author: "owend"
 manager: "jhubbard"
 ---
@@ -32,13 +32,13 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 #### To create a connection to a the AdventureWorksDW2012 database  
   
-1.  In **Tabular Model Explorer**, right-click **Data Sources**, and then click **Import from Data Source**.  
+1.  In Tabular Model Explorer, right-click **Data Sources**, and then click **Import from Data Source**.  
   
     This launches the Table Import Wizard, which guides you through setting up a connection to a data source. If you don't see Tabular Model Explorer, double click **Model.bim** in **Solution Explorer** to open the model in the designer. 
     
     ![as-tabular-lesson2-tme](../../analysis-services/tutorials/media/as-tabular-lesson2-tme.png) 
   
-2.  In the **Table Import Wizard**, under **Relational Databases**, click **Microsoft SQL Server**, and then click **Next**.  
+2.  In the Table Import Wizard, under **Relational Databases**, click **Microsoft SQL Server**, and then click **Next**.  
   
 3.  In the **Connect to a Microsoft SQL Server Database** page, in **Friendly Connection Name**, type **Adventure Works DB from SQL**.  
   
@@ -130,7 +130,7 @@ The DimCustomer table that you're importing from the sample database contains a 
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
-    **DimInternetSales**
+    **FactInternetSales**
   
       |Column|  
       |------------------|  
@@ -138,9 +138,9 @@ The DimCustomer table that you're importing from the sample database contains a 
       |**DueDateKey**|  
       |**ShipDateKey**|  
   
-Now that you've previewed and filtered out unnecessary data, you can import the data. Go to the next section **Import the Selected Tables and Column Data**.  
+Now that you've previewed and filtered out unnecessary data, you can import the data. .  
   
-## <a name="Import"></a>Import the Selected Tables and Column Data  
+## <a name="Import"></a>Import the selected tables and column data  
 You can now import the selected data. The wizard imports the table data along with any relationships between tables. New tables and columns are created in the model and data that you filtered out will not be imported.  
   
 #### To import the selected tables and column data  

@@ -78,6 +78,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  Large data can be bound or retrieved by using the **ISequentialStream** interface. For bound columns, the status flag indicates if the data is truncated by setting DBSTATUS_S_TRUNCATED.  
   
 ## See Also  
- [Fetching BLOB Data Using IRow](http://msdn.microsoft.com/en-US/library/ms131399(SQL.130).aspx)  
+ [Fetching BLOB Data Using IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

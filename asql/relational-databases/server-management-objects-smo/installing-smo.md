@@ -24,6 +24,6 @@ manager: "jhubbard"
  By default, the SMO assemblies are installed in the C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\ directory.  
   
 ## See Also  
- [Quick-Start Installation of SQL Server 2016](http://msdn.microsoft.com/en-US/library/bb500433(SQL.130).aspx)  
+ [Quick-Start Installation of SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   

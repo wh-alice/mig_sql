@@ -1,7 +1,7 @@
 ---
 title: "Failover Cluster Instance Administration and Maintenance | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

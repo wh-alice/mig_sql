@@ -41,7 +41,7 @@ manager: "jhubbard"
  Type the package path, or click the browse button **(…)** and locate the package to copy.  
   
 ## See Also  
- [Save Copy of Package](http://msdn.microsoft.com/en-US/library/ms186803(SQL.130).aspx)   
+ [Save Copy of Package](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Import Package Dialog Box UI Reference](../integration-services/service/import-package-dialog-box-ui-reference.md)   
  [Export Package Dialog Box UI Reference](../integration-services/service/export-package-dialog-box-ui-reference.md)   
  [Save Packages](../integration-services/save-packages.md)   

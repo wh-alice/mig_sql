@@ -396,6 +396,6 @@ In this example the `Sales` database will be copied and created as `SalesCopy` o
   
 ## More information! 
  [Upgrade a Database Using Detach and Attach &#40;Transact-SQL&#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)   
- [Create a SQL Server Agent Proxy](../Topic/Create%20a%20SQL%20Server%20Agent%20Proxy.md)  
+ [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)  
   
   

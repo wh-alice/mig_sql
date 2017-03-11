@@ -30,7 +30,7 @@ manager: "jhubbard"
 ## Data Type Support  
  The source converts any data type that does not map to a specific [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data type to the DT_NTEXT [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data type. This conversion occurs even if the data type is **System.Object**.  
   
- You can change the DT_NTEXT data type to the DT_WSTR data type, or the change DT_WSTR to DT_NTEXT. You change data types by setting the **DataType** property in the **Advanced Editor** dialog box of the ADO NET source. For more information, see [Common Properties](http://msdn.microsoft.com/en-US/library/ms135950(SQL.130).aspx).  
+ You can change the DT_NTEXT data type to the DT_WSTR data type, or the change DT_WSTR to DT_NTEXT. You change data types by setting the **DataType** property in the **Advanced Editor** dialog box of the ADO NET source. For more information, see [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
  The DT_NTEXT data type can also be converted to the DT_BYTES or DT_STR data type by using a Data Conversion transformation after the ADO NET source. For more information, see [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/en-US/library/ms135950(SQL.130).aspx)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [ADO NET Custom Properties](../../integration-services/data-flow/ado-net-custom-properties.md)  
   

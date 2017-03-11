@@ -124,7 +124,7 @@ sp_update_schedule
  [ **@active_start_date =** ]  *active_start_date*  
  The date on which execution of a job can begin. *active_start_date*is **int**, with a default of NULL, which indicates today's date. The date is formatted as YYYYMMDD. If *active_start_date* is not NULL, the date must be greater than or equal to 19900101.  
   
- After the schedule is created, review the start date and confirm that it is the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../Topic/Create%20and%20Attach%20Schedules%20to%20Jobs.md).  
+ After the schedule is created, review the start date and confirm that it is the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
  [ **@active_end_date =** ] *active_end_date*  
  The date on which execution of a job can stop. *active_end_date*is **int**, with a default of **99991231**, which indicates December 31, 9999. Formatted as YYYYMMDD.  
@@ -156,7 +156,7 @@ sp_update_schedule
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../Topic/SQL%20Server%20Agent%20Fixed%20Database%20Roles.md).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  Only members of **sysadmin** can modify a schedule owned by another user.  
   
@@ -175,9 +175,9 @@ GO
 ```  
   
 ## See Also  
- [Create and Attach Schedules to Jobs](../Topic/Create%20and%20Attach%20Schedules%20to%20Jobs.md)   
- [Schedule a Job](../Topic/Schedule%20a%20Job.md)   
- [Create a Schedule](../Topic/Create%20a%20Schedule.md)   
+ [Create and Attach Schedules to Jobs](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
+ [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
+ [Create a Schedule](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
  [SQL Server Agent Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobschedule &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   

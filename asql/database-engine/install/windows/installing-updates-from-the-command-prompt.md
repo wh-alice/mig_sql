@@ -57,6 +57,6 @@ manager: "jhubbard"
  *You cannot specify this parameter to apply an update to a prepared instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You must specify the /instanceID parameter instead.  
   
 ## See Also  
- [Overview of SQL Server Servicing Installation](http://msdn.microsoft.com/en-US/library/dd638062(SQL.130).aspx)  
+ [Overview of SQL Server Servicing Installation](http://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e)  
   
   

@@ -22,7 +22,7 @@ manager: "erikre"
   
  To create an embedded data source, you must have connection information to the external source of data and you must know which permissions you need to access the data. This information usually comes from the owner of the data source. You can test the connection to verify that the credentials that are specified are sufficient.  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/en-US/library/dd220525(SQL.130).aspx) and [Specify Credentials in Report Builder](http://msdn.microsoft.com/en-US/library/dd220515(SQL.130).aspx).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) and [Specify Credentials in Report Builder](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
@@ -56,7 +56,7 @@ manager: "erikre"
   
 5.  Click **Details**, and use the information to correct the issue.  
   
-     For more information, see [Specify Credentials in Report Builder](http://msdn.microsoft.com/en-US/library/dd220515(SQL.130).aspx).  
+     For more information, see [Specify Credentials in Report Builder](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
   
@@ -64,6 +64,6 @@ manager: "erikre"
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/en-US/library/dd220525(SQL.130).aspx)  
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
   
   

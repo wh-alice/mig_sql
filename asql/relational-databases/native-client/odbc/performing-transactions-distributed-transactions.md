@@ -32,6 +32,6 @@ manager: "jhubbard"
  When enlisted in a distributed transaction, and then enlist in a second distributed transaction, the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC Driver defects from the original distributed transaction and enlists in the new transaction. For more information, see [DTC Programmer's Reference](http://msdn.microsoft.com/library/ms686108\(VS.85\).aspx).  
   
 ## See Also  
- [Performing Transactions &#40;ODBC&#41;](http://msdn.microsoft.com/en-US/library/ms131706(SQL.130).aspx)  
+ [Performing Transactions &#40;ODBC&#41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

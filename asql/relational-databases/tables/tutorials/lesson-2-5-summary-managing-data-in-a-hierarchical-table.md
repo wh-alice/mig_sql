@@ -26,7 +26,7 @@ The **hierarchyid** data type lets you easily create tables that reflect hierarc
   
 ## See Also  
 [Hierarchical Data &#40;SQL Server&#41;](../../../relational-databases/hierarchical-data-sql-server.md)  
-[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/en-US/library/bb677193(SQL.130).aspx)  
+[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
   
   
   

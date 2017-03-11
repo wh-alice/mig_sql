@@ -129,6 +129,6 @@ SELECT @bind_token AS Token;
 ## See Also  
  [sp_bindsession &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [srv_getbindtoken &#40;Extended Stored Procedure API&#41;](http://msdn.microsoft.com/en-US/library/ms164625(SQL.130).aspx)  
+ [srv_getbindtoken &#40;Extended Stored Procedure API&#41;](http://msdn.microsoft.com/library/c947d011-08ac-4fb8-b925-3da6e0999277)  
   
   

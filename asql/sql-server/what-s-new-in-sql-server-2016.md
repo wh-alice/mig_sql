@@ -70,4 +70,4 @@ Links to individual topics:
 + [Features supported by Editions of SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
  + [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
  + [Install SQL Server 2016 from the Installtion Wizard](../database-engine/install/windows/install-sql-server-from-the-installation-wizard-setup.md)
- [Setup and Servicing Installation](http://msdn.microsoft.com/en-US/library/dn236449(SQL.130).aspx)    
+ [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    

@@ -75,7 +75,7 @@ shared data source icon
   
  **To create a shared data source in Report Manager**  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Report Manager, navigate to the **Contents** page.  
   
@@ -227,13 +227,13 @@ shared data source icon
      For report models, the list of dependent items shows the reports that were created in Report Builder. For shared data sources, the dependent items list can include both reports and report models.  
   
 ## See Also  
- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/en-US/library/bb283152(SQL.130).aspx)   
+ [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)   
- [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/en-US/library/dd239381(SQL.130).aspx)   
- [Data Sources Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms190041(SQL.130).aspx)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms159863(SQL.130).aspx)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [Data Sources Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

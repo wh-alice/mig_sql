@@ -32,7 +32,7 @@ manager: "erikre"
   
 ### To upload a file or report  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Report Manager, navigate to the **Contents** page. Navigate to the folder to which you want to add an item.  
   
@@ -47,9 +47,9 @@ manager: "erikre"
 7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
   
 ## See Also  
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms159863(SQL.130).aspx)   
- [Contents Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms186470(SQL.130).aspx)   
- [Upload File Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms187015(SQL.130).aspx)   
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Contents Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Upload File Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Upload Files to a Folder](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
   

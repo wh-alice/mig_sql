@@ -29,9 +29,9 @@ manager: "erikre"
  Type the password to log on to the data source.  
   
 ## See Also  
- [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/en-US/library/dd220525(SQL.130).aspx)   
- [Data Source Properties Dialog Box, General &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220566(SQL.130).aspx)   
- [Specify Credentials in Report Builder](http://msdn.microsoft.com/en-US/library/dd220515(SQL.130).aspx)   
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Data Source Properties Dialog Box, General &#40;Report Builder&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)   
+ [Specify Credentials in Report Builder](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)   
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

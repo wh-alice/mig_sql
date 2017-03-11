@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   [Using Cursors &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [Performing Transactions &#40;ODBC&#41;](http://msdn.microsoft.com/en-US/library/ms131706(SQL.130).aspx)  
+-   [Performing Transactions &#40;ODBC&#41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
 -   [Handling Errors and Messages](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 -   [Sparse Columns Support &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;ODBC&#41; Reference](http://msdn.microsoft.com/en-US/library/ms130842(SQL.130).aspx)  
+-   [SQL Server Native Client &#40;ODBC&#41; Reference](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
   
 -   [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   

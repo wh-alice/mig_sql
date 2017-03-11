@@ -45,6 +45,6 @@ manager: "jhubbard"
 |[IBCPSession::BCPWriteFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)|Writes format information for each column to the format file.|  
   
 ## See Also  
- [Interfaces &#40;OLE DB&#41;](http://msdn.microsoft.com/en-US/library/ms130820(SQL.130).aspx)  
+ [Interfaces &#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
   

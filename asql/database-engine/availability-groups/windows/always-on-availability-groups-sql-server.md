@@ -146,7 +146,7 @@ manager: "jhubbard"
   
 -   [Service Broker](../../../database-engine/configure/windows/sql-server-service-broker.md)  
   
--   [SQL Server Agent](../Topic/SQL%20Server%20Agent.md)  
+-   [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)  
   
 -   [Reporting Services](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)  
   

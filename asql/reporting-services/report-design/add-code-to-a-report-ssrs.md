@@ -56,7 +56,7 @@ manager: "erikre"
      If you add this expression to a table cell that displays category values, whenever the word "Bike" is in the dataset field for that row, the table cell value displays the word "Bicycle" instead.  
   
 ## See Also  
- [Report Properties Dialog Box, Code](http://msdn.microsoft.com/en-US/library/ms187703(SQL.130).aspx)   
+ [Report Properties Dialog Box, Code](http://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   

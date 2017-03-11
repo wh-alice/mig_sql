@@ -1,7 +1,7 @@
 ---
 title: "Create a New SQL Server Failover Cluster (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -118,7 +118,7 @@ manager: "jhubbard"
   
 10. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup runs one more set of rules that are based on the features you selected to validate your configuration.  
   
-11. On the Instance Configuration page, specify whether to install a default or a named instance. For more information, see [Instance Configuration](http://msdn.microsoft.com/en-US/library/ms143531(SQL.130).aspx).  
+11. On the Instance Configuration page, specify whether to install a default or a named instance. For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).  
   
      **[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Network Name** — Specify a network name for the new [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] failover cluster. This is the name that is used to identify your failover cluster on the network.  
   
@@ -165,7 +165,7 @@ manager: "jhubbard"
   
 17. On the Server Configuration — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install.  
   
-     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services, or you can configure each service account individually. The startup type is set to manual for all cluster-aware services, including full-text search and [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent, and cannot be changed during installation. [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have complete their tasks. For more information, see [Server Configuration - Service Accounts](http://msdn.microsoft.com/en-US/library/cc281953(SQL.130).aspx) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md).  
+     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services, or you can configure each service account individually. The startup type is set to manual for all cluster-aware services, including full-text search and [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent, and cannot be changed during installation. [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have complete their tasks. For more information, see [Server Configuration - Service Accounts](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md).  
   
      To specify the same logon account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], provide credentials in the fields at the bottom of the page.  
   

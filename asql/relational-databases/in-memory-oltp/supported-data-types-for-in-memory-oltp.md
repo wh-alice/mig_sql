@@ -87,7 +87,7 @@ These LOBs can be the return type from a natively compiled scalar UDF (user-defi
 
 |Other Types|For more information|  
 |-----------------|--------------------------|  
-|table types|[Memory-Optimized Table Variables](http://msdn.microsoft.com/en-US/library/dn535766(SQL.130).aspx)|  
+|table types|[Memory-Optimized Table Variables](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|  
   
 ## See Also  
  [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   

@@ -1,7 +1,7 @@
 ---
 title: "Lesson 1: Create a New Tabular Model Project | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,7 +12,7 @@ ms.topic: "get-started-article"
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: 31
+caps.latest.revision: 32
 ms.author: "owend"
 manager: "erikre"
 ---
@@ -55,11 +55,15 @@ Now that you’ve created a new tabular model project, let’s take a moment to 
   
 After your project is created, it opens in SSDT. In **Tabular Model Explorer**, you'll see a tree view of the objects in your model. Since you haven't yet imported data, the folders will be empty. You can right-click an object folder to perform actions, similar you to the menu bar. As you step through this tutorial, you'll use the Tabular Model Explorer to navigate different objects in your project.
 
+![as-tabular-lesson1-tme](../../analysis-services/tutorials/media/as-tabular-lesson1-tme.png)
+
 Click on the **Solution Explorer** tab, then click **AW Internet Sales Tabular Model**. Notice in the **Properties** window, in **Project File**, you will see **AW Internet Sales Tabular Model.smproj**. This is the project file name, and in **Project Folder**, you will see the project file location. In Solution Explorer, you'll see your **Model.bim** file. If you don’t see the designer (the empty window with the Model.bim tab), in **Solution Explorer**, under **AW Internet Sales Tabular Model**, double click the **Model.bim** file.  
   
 In **Solution Explorer**, right-click the **AW Internet Sales Tabular Model** project, and then click **Properties**. The **AW Internet Sales Tabular Model Property Pages** dialog box appears. These are the advanced project properties. You will set some of these properties later when you are ready to deploy your model.  
   
 Now, let’s look at the model properties. In **Solution Explorer**, click **Model.bim**. In the **Properties** window, you'll now see the model properties, most important of which is the **DirectQuery Mode** property. This property specifies whether or not the model is deployed in In-Memory mode (Off) or DirectQuery mode (On). For this tutorial, you will author and deploy your model in In-Memory mode.  
+
+![as-tabular-lesson1-properties](../../analysis-services/tutorials/media/as-tabular-lesson1-properties.png)
   
 When you create a new model, certain model properties are set automatically according to the Data Modeling settings that can be specified in the Tools > Options dialog box. Data Backup, Workspace Retention, and Workspace Server properties specify how and where the workspace database (your model authoring database) is backed up, retained in-memory, and built. You can change these settings later if necessary, but for now, just leave these properties as they are.  
   

@@ -48,7 +48,7 @@ manager: "erikre"
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> To Create a File Share Subscription  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigate to the report you want to subscribe to. Click the report menu and click **Subscribe**.  
   
@@ -95,7 +95,7 @@ manager: "erikre"
   
 ###  <a name="bkmk_create_email_subscription"></a> To Create an E-mail Subscription  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigate to the report you want to subscribe to. Click the report menu and click **Subscribe**.  
   
@@ -163,7 +163,7 @@ manager: "erikre"
 ##  <a name="bkmk_delete_subscription"></a> To Delete a Subscription  
  To delete a subscription”  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Report Manager, click **My Subscriptions** on the toolbar and navigate to the subscription you want to modify or delete.  
   
@@ -182,7 +182,7 @@ manager: "erikre"
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Use My Subscriptions &#40;Native Mode Report Server&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

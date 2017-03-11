@@ -68,6 +68,6 @@ manager: "erikre"
 |[Set the Data Type of a Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Describes how to change the data type of a column. The data type defines how data in the column is stored and presented.|  
 |[Hide or Freeze Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Describes how to hide columns that you don’t want to display and how to keep an area of a model visible while you scroll to another area of the model by freezing (locking) specific columns in one area.|  
 |[Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)|Topics in this section describe how you can use calculated columns to add aggregated data to your model.|  
-|[Filter and Sort Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/en-US/library/hh230961(SQL.130).aspx)|Topics in this section describe how you can filter or sort data by using controls in the model designer.|  
+|[Filter and Sort Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|Topics in this section describe how you can filter or sort data by using controls in the model designer.|  
   
   

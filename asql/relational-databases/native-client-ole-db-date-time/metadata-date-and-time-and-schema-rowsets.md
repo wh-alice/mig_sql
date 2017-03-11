@@ -90,6 +90,6 @@ manager: "jhubbard"
  OLE DB only defines MINIMUM_SCALE and MAXIMUM_SCALE for numeric and decimal types, so [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client's use of these columns for time, datetime2 and datetimeoffset is non-standard.  
   
 ## See Also  
- [Metadata &#40;OLE DB&#41;](http://msdn.microsoft.com/en-US/library/bb677232(SQL.130).aspx)  
+ [Metadata &#40;OLE DB&#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

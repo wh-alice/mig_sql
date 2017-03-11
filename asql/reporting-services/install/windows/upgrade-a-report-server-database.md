@@ -65,7 +65,7 @@ manager: "erikre"
 ## See Also  
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md)   
  [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-report-server-create-a-report-server-database.md)   
- [Change Database Wizard &#40;Configuration Manager&#41;](http://msdn.microsoft.com/en-US/library/bb630434(SQL.130).aspx)   
+ [Change Database Wizard &#40;Configuration Manager&#41;](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
  [Upgrade and Migrate Reporting Services](../../../reporting-services/install/windows/upgrade-and-migrate-reporting-services.md)   
  [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../../reporting-services/install/windows/migrate-a-reporting-services-installation-native-mode.md)  
   

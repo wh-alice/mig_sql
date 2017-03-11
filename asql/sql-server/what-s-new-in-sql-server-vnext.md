@@ -80,6 +80,6 @@ This topic is a summary of what is new in the most recent Community Technical Pr
  + [[Installation hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)](Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md)
  + [Installation Wizard](../database-engine/install/windows/install-sql-server-from-the-installation-wizard-setup.md)
  
- + [Setup and Servicing Installation](http://msdn.microsoft.com/en-US/library/dn236449(SQL.130).aspx)
+ + [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
  
  ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

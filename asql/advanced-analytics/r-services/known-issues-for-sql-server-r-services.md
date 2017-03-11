@@ -2,7 +2,7 @@
 title: "Known Issues for SQL Server R Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-12-20"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,7 +11,7 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: 50
+caps.latest.revision: 52
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
@@ -53,10 +53,11 @@ As a workaround, you can install the service release by using the command line a
 
 To get the latest CAB files, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md).
 
-### Windows group created for LaunchPad must have an account in the SQL Server instance
- On installation of SQL Server R Services, a Windows user group is created with the default name **SQLRUsers** that is used by the Trusted Launchpad to run R jobs. If you need to run R jobs from a remote client using Windows integrated authentication, you must give this Windows user group permission to log into the SQL Server instance where R is enabled.
+### SQLRUserGroup for Launchpad must have an account in the SQL Server instance
 
-In an environment where the group **SQLRUsers** does not have this permission, you might see the following errors:  
+ When SQL Server R Services is installed, setup creates a new Windows user group, with the default name **SQLRUserGroup**, which is used by Launchpad to run R jobs. If you need to run R jobs from a remote client using Windows integrated authentication, you must give this Windows user group permission to log into the SQL Server instance where R is enabled.
+
+In an environment where the group **SQLRUserGroup** does not have this permission, you might see the following errors:  
   
 -   When trying to run R scripts:  
   

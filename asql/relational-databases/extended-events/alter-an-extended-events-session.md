@@ -50,6 +50,6 @@ manager: "jhubbard"
   
 ## See Also  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
- [Create an Extended Events Session Using Query Editor](http://msdn.microsoft.com/en-US/library/ff878413(SQL.130).aspx)  
+ [Create an Extended Events Session Using Query Editor](http://msdn.microsoft.com/library/cba0e02b-b201-4863-bf1b-9164e68e5fa8)  
   
   

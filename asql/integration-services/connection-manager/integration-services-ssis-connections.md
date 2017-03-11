@@ -240,7 +240,7 @@ Use the **Add SSIS Connection Manager** dialog box to select the type of connect
   
 1.  In the **Connection Managers** area, right-click the connection manager that you want to create a parameter for and then click **Parameterize**.  
   
-2.  Configure the parameter settings in the **Parameterize** dialog box. For more information, see [Parameterize Dialog Box](http://msdn.microsoft.com/en-US/library/hh213412(SQL.130).aspx).  
+2.  Configure the parameter settings in the **Parameterize** dialog box. For more information, see [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## Delete a connection manager 
 ###  <a name="DeletePackageLevel"></a> Delete a connection manager from a package  

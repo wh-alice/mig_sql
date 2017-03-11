@@ -64,13 +64,13 @@ manager: "jhubbard"
   
  **[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent Service:** Verify and perform the below additional actions for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent Service:  
   
--   Fix the registry settings if SQL Agent is configured for event forwarding. For more information, see [Designate an Events Forwarding Server &#40;SQL Server Management Studio&#41;](../Topic/Designate%20an%20Events%20Forwarding%20Server%20\(SQL%20Server%20Management%20Studio\).md).  
+-   Fix the registry settings if SQL Agent is configured for event forwarding. For more information, see [Designate an Events Forwarding Server &#40;SQL Server Management Studio&#41;](http://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   
 -   Fix the master server (MSX) and target servers (TSX) instance names when machines / cluster network name is renamed. For more information, see the following topics:  
   
-    -   [Defect Multiple Target Servers from a Master Server](../Topic/Defect%20Multiple%20Target%20Servers%20from%20a%20Master%20Server.md)  
+    -   [Defect Multiple Target Servers from a Master Server](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
   
-    -   [Create a Multiserver Environment](../Topic/Create%20a%20Multiserver%20Environment.md)  
+    -   [Create a Multiserver Environment](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
   
 -   Reconfigure the Log Shipping so that updated server name is used to backup and restore logs. For more information, see the following topics:  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
   
     -   [Remove Log Shipping &#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   Update the Jobsteps that depend on server name. For more information, see [Manage Job Steps](../Topic/Manage%20Job%20Steps.md).  
+-   Update the Jobsteps that depend on server name. For more information, see [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31).  
   
 ## See Also  
  [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../../database-engine/install/windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  

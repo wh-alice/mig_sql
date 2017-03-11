@@ -42,7 +42,7 @@ manager: "erikre"
   
 -   [Hyperion Essbase Query Designer](#Hyperion)  
   
- All of the query design tools run in the data design environment of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] when you work with a Report Server project template or Report Server Wizard project template. For more information about working with the query designers, see [Reporting Services Query Designers](http://msdn.microsoft.com/en-US/library/cc281346(SQL.130).aspx).  
+ All of the query design tools run in the data design environment of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] when you work with a Report Server project template or Report Server Wizard project template. For more information about working with the query designers, see [Reporting Services Query Designers](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
   
  The type of data source that you are working with determines the availability of a particular query designer.  
   
@@ -65,7 +65,7 @@ manager: "erikre"
   
  ![Generic query designer, for relational data query](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
   
- The text-based query designer is recommended for creating complex queries, using stored procedures, querying XML data, and for writing dynamic queries. Depending on the data source, you may be able to toggle the **Edit As Text** button on the toolbar to switch between the graphical query designer and the text-based query designer. For more information, see [Text-based Query Designer User Interface](http://msdn.microsoft.com/en-US/library/cc281378(SQL.130).aspx).  
+ The text-based query designer is recommended for creating complex queries, using stored procedures, querying XML data, and for writing dynamic queries. Depending on the data source, you may be able to toggle the **Edit As Text** button on the toolbar to switch between the graphical query designer and the text-based query designer. For more information, see [Text-based Query Designer User Interface](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c).  
   
 ##  <a name="Graphical"></a> Graphical Query Designer  
  The graphical query designer is used to create or modify [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] queries that run against a relational database. This query design tool is used in several [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] products and in other [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] components. Depending on the data source type, it supports Text, StoredProcedure, and TableDirect modes. The following image provides an illustration of the graphical query designer.  
@@ -115,6 +115,6 @@ manager: "erikre"
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/tutorials/reporting-services-tutorials-ssrs.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Create an Embedded or Shared Data Source &#40;SSRS&#41;](http://msdn.microsoft.com/en-US/library/ms159165(SQL.130).aspx)  
+ [Create an Embedded or Shared Data Source &#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
   
   

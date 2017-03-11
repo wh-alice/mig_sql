@@ -60,7 +60,7 @@ manager: "jhubbard"
  [Monitoring and Troubleshooting Managed Database Objects](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  Provides information about the tools that can be used to monitor and troubleshoot managed database objects and assemblies running in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
   
- [Usage Scenarios and Examples for Common Language Runtime &#40;CLR&#41; Integration](http://msdn.microsoft.com/en-US/library/ms131078(SQL.130).aspx)  
+ [Usage Scenarios and Examples for Common Language Runtime &#40;CLR&#41; Integration](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  Describes usage scenarios and code samples using CLR objects.  
   
 ## See Also  

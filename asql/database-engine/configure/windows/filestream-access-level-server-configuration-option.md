@@ -32,7 +32,7 @@ manager: "jhubbard"
 |2|Enables FILESTREAM for [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] and Win32 streaming access.|  
   
 ## See Also  
- [Database Engine Configuration - Filestream](http://msdn.microsoft.com/en-US/library/cc645996(SQL.130).aspx)   
+ [Database Engine Configuration - Filestream](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)   
  [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
   

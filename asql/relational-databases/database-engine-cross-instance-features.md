@@ -21,7 +21,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|[SQL Server Management Studio](../Topic/SQL%20Server%20Management%20Studio.md)|  
+|[SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)|  
 |[SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md)|  
 |[Administer Servers by Using Policy-Based Management](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |[Register Servers](../tools/sql-server-management-studio/register-servers.md)|  

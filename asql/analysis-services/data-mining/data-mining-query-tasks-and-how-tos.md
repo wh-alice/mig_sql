@@ -56,7 +56,7 @@ manager: "jhubbard"
  Describes how to create a query against mining model content by using the XMLA templates in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
   
 ## See Also  
- [Query and Expression Language Reference &#40;Analysis Services&#41;](http://msdn.microsoft.com/en-US/library/gg492188(SQL.130).aspx)   
+ [Query and Expression Language Reference &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/9597533d-35f4-4742-9d8c-7af392163527)   
  [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   

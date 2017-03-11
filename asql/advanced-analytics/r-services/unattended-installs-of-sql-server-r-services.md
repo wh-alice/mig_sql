@@ -57,6 +57,6 @@ Before beginning the installation process, note these requirements:
 3. Additional steps might be required if you have a custom security configuration, or if you will be using the SQL Server to support remote compute contexts. For more information, see [Upgrade and Installation FAQ](../../advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md). 
   
 ## See Also  
- [Troubleshooting R Services Setup](http://msdn.microsoft.com/en-US/library/mt695927(SQL.130).aspx)  
+ [Troubleshooting R Services Setup](http://msdn.microsoft.com/library/ce6b902b-a4fa-4b0a-ac0d-be47a59c2a78)  
   
   

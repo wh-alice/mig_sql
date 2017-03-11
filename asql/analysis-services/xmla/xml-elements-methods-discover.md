@@ -94,7 +94,7 @@ manager: "erikre"
  [XML Data Types &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [Execute Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [Methods &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   
- [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/en-US/library/ms186656(SQL.130).aspx)   
+ [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [Analysis Services Schema Rowsets](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

@@ -21,9 +21,9 @@ manager: "erikre"
 # Convert Data Sources (Report Builder and SSRS)
   Each data source in the Report Data pane is embedded and specific to the report or is shared. In Report Builder, a shared data source points to a published shared data source on a report server or SharePoint site. In Report Designer, a shared data source points to a shared data source in the **Shared Data Sources** folder in Solution Explorer.  
   
- For more information about the differences between embedded and shared data sources, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/en-US/library/dd239381(SQL.130).aspx).  
+ For more information about the differences between embedded and shared data sources, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56).  
   
- For more information on how to create a shared data source, see [Create an Embedded or Shared Data Source &#40;SSRS&#41;](http://msdn.microsoft.com/en-US/library/ms159165(SQL.130).aspx).  
+ For more information on how to create a shared data source, see [Create an Embedded or Shared Data Source &#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  

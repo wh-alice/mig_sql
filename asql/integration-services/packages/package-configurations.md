@@ -75,7 +75,7 @@ manager: "jhubbard"
   
 -   You cannot use the **/ConfigFile** option to load configurations that replace the configurations that you specified at design time.  
   
- For more information about these options, and how the behavior of these options differs between [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] and earlier versions, see [Behavior Changes to Integration Services Features in SQL Server 2016](http://msdn.microsoft.com/en-US/library/bb500430(SQL.130).aspx).  
+ For more information about these options, and how the behavior of these options differs between [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] and earlier versions, see [Behavior Changes to Integration Services Features in SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 ## Package Configuration Types  
  The following table describes the package configuration types.  

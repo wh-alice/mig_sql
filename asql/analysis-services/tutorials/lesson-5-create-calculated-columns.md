@@ -1,7 +1,7 @@
 ---
 title: "Lesson 6: Create Calculated Columns | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,7 +12,7 @@ ms.topic: "get-started-article"
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
-caps.latest.revision: 24
+caps.latest.revision: 25
 ms.author: "owend"
 manager: "erikre"
 ---
@@ -77,21 +77,20 @@ The DayOfWeek calculated column provides a sortable name for the day of week.
   
 #### Create a Product Subcategory Name calculated column in the Product table  
   
-1.  In the model designer, select the **DimProduct** table.  
   
-2.  Scroll to the far right of the table. Notice the right-most column is named **Add Column** (italicized), click the column heading.  
+1.  In the **DimProduct** table, scroll to the far right of the table. Notice the right-most column is named **Add Column** (italicized), click the column heading.  
   
-3.  In the formula bar, type the following formula.  
+2.  In the formula bar, type the following formula.  
     
     ```
     =RELATED('DimProductSubcategory'[EnglishProductSubcategoryName])  
     ```
   
-4.  Rename the column to **ProductSubcategoryName**.  
+3.  Rename the column to **ProductSubcategoryName**.  
   
-The ProductSubcategoryName calculated column is used to create a hierarchy in the DimProduct table which includes data from the EnglishProductSubcategoryName column in the Product Subcategory table. Hierarchies cannot span more than one table. You will create hierarchies later in Lesson 6.  
+The ProductSubcategoryName calculated column is used to create a hierarchy in the DimProduct table which includes data from the EnglishProductSubcategoryName column in the DimProductSubcategory table. Hierarchies cannot span more than one table. You will create hierarchies later in Lesson 6.  
   
-#### Create a ProductCategoryName calculated column in the Product table  
+#### Create a ProductCategoryName calculated column in the DimProduct table  
   
 1.  With the **DimProduct** table still active, click the **Column** menu, and then click **Add Column**.  
   
@@ -103,7 +102,7 @@ The ProductSubcategoryName calculated column is used to create a hierarchy in th
     
 3.  Rename the column to **ProductCategoryName**.  
   
-The ProductCategoryName calculated column is used to create a hierarchy in the Product table which includes data from the EnglishProductCategoryName column in the DimProductCategory table. Hierarchies cannot span more than one table.  
+The ProductCategoryName calculated column is used to create a hierarchy in the DimProduct table which includes data from the EnglishProductCategoryName column in the DimProductCategory table. Hierarchies cannot span more than one table.  
   
 #### Create a Margin calculated column in the FactInternetSales table  
   

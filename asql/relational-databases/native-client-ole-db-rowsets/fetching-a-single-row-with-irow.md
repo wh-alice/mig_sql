@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   [Using IRow::GetColumns](../../relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md)  
   
--   [Fetching BLOB Data Using IRow](http://msdn.microsoft.com/en-US/library/ms131399(SQL.130).aspx)  
+-   [Fetching BLOB Data Using IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
 ## See Also  
  [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

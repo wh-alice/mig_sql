@@ -167,7 +167,7 @@ GO
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Create and Manage Full-Text Indexes](../../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Query with Full-Text Search](../../../relational-databases/search/query-with-full-text-search.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](../Topic/Create%20Full-Text%20Search%20Queries%20\(Visual%20Database%20Tools\).md)   
+ [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [CONTAINS &#40;Transact-SQL&#41;](../../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../../t-sql/queries/freetext-transact-sql.md)   

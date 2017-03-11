@@ -47,9 +47,9 @@ manager: "erikre"
   
  Use the following links to set permissions:  
   
--   [Configure SQL Server Agent](../Topic/Configure%20SQL%20Server%20Agent.md)  
+-   [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
   
--   [SQL Server Agent Components](../Topic/SQL%20Server%20Agent.md#Components) suggests alternative fixed server roles if granting **sysadmin** permissions is not possible.  
+-   [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec) suggests alternative fixed server roles if granting **sysadmin** permissions is not possible.  
   
  After account permissions are configured, continue with these steps.  
   
@@ -90,7 +90,7 @@ manager: "erikre"
 2.  As a final step, modify the job to run on a schedule that you define, adding any alerts or notifications necessary to administer the job. You might also want to refine the processing script, or create multiple steps in the job to process objects independently.  
   
 ## See Also  
- [SQL Server Agent Components](../Topic/SQL%20Server%20Agent.md#Components)   
+ [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [Schedule SSAS Administrative Tasks with SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Batch Processing &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

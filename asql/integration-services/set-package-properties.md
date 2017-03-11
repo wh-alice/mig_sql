@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 ### To set package properties in the Properties window  
   
--   [Set the Properties of a Package](http://msdn.microsoft.com/en-US/library/ms137759(SQL.130).aspx)  
+-   [Set the Properties of a Package](http://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
   
 ## Properties by Category  
  The following tables list the package properties by category.  

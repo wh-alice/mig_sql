@@ -22,7 +22,7 @@ manager: "erikre"
   
 -   Enable features, set server defaults, and manage running jobs.  
   
--   View and create custom reports. In Object Explorer, many nodes display a set of standard reports that are installed with [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. You must have administrator permissions. The schema of a custom report must match the schema of the installed reports. For more information, see [Custom Reports in Management Studio](../Topic/Custom%20Reports%20in%20Management%20Studio.md) and [Find the Report Definition Schema Version &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   View and create custom reports. In Object Explorer, many nodes display a set of standard reports that are installed with [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. You must have administrator permissions. The schema of a custom report must match the schema of the installed reports. For more information, see [Custom Reports in Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979) and [Find the Report Definition Schema Version &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
  Report authors can use [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to:  
   
@@ -42,6 +42,6 @@ manager: "erikre"
   
 ## See Also  
  [Report Server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Introducing SQL Server Management Studio](../Topic/Use%20SQL%20Server%20Management%20Studio.md)  
+ [Introducing SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   

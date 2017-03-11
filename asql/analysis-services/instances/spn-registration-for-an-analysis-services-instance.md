@@ -1,7 +1,7 @@
 ---
 title: "SPN registration for an Analysis Services instance | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -90,7 +90,7 @@ manager: "jhubbard"
   
      For information about constraining the allowed values, see [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/), on the Master Data Services blog.  
   
-12. **Optional.** Select **Enable change tracking** to track changes to groups of attributes. For more information, see [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](http://msdn.microsoft.com/en-US/library/ff487060(SQL.130).aspx).  
+12. **Optional.** Select **Enable change tracking** to track changes to groups of attributes. For more information, see [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](http://msdn.microsoft.com/library/e153eb5f-70ca-4c6f-89d8-1f937ed3917d).  
   
 13. Click **Save**.  
   

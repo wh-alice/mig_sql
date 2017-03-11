@@ -62,6 +62,6 @@ manager: "jhubbard"
  Returns the filter settings back to the default settings.  
   
 ## See Also  
- [Monitor Job Activity](../Topic/Monitor%20Job%20Activity.md)  
+ [Monitor Job Activity](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
   
   

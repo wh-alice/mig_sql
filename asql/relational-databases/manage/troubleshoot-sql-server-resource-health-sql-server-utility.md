@@ -19,7 +19,7 @@ manager: "jhubbard"
   
  Note that if a database is in “emergency” state, the health state will display overutilized log file space.  
   
- For more information about failed data collection resulting in gray status icons in the managed instance list view on a UCP, see [Troubleshoot the SQL Server Utility](http://msdn.microsoft.com/en-US/library/ee210592(SQL.130).aspx). For more information about getting started with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+ For more information about failed data collection resulting in gray status icons in the managed instance list view on a UCP, see [Troubleshoot the SQL Server Utility](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453). For more information about getting started with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
  For more information about mitigating specific resource health issues identified by a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] UCP, see the following topics:  
   

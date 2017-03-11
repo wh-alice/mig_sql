@@ -40,7 +40,7 @@ manager: "jhubbard"
  The Transfer Jobs task raises an information event that reports the number of jobs transferred and a warning event when a job is overwritten. The task does not report incremental progress of the job transfer; it reports only 0% and 100% completion.  
   
 ## Execution Value  
- The execution value, defined in the **ExecutionValue** property of the task, returns the number of jobs that are transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Jobs task, information about the job transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/en-US/library/ms140216(SQL.130).aspx).  
+ The execution value, defined in the **ExecutionValue** property of the task, returns the number of jobs that are transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Jobs task, information about the job transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## Log Entries  
  The Transfer Jobs task includes the following custom log entries:  
@@ -72,7 +72,7 @@ manager: "jhubbard"
 ## Related Tasks  
  For more information about how to set these properties in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/en-US/library/ms139733(SQL.130).aspx)  
+-   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

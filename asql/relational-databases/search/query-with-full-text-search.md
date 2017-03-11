@@ -265,6 +265,6 @@ GO
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/freetexttable-transact-sql.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](../Topic/Create%20Full-Text%20Search%20Queries%20\(Visual%20Database%20Tools\).md)   
+ [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [Improve the Performance of Full-Text Queries](../../relational-databases/search/improve-the-performance-of-full-text-queries.md)
  

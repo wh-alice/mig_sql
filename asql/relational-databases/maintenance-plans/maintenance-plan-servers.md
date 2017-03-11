@@ -24,8 +24,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Create a Multiserver Environment](../Topic/Create%20a%20Multiserver%20Environment.md)   
- [Make a Master Server](../Topic/Make%20a%20Master%20Server.md)   
- [Make a Target Server](../Topic/Make%20a%20Target%20Server.md)  
+ [Create a Multiserver Environment](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)   
+ [Make a Master Server](http://msdn.microsoft.com/library/05739a73-1fdf-4d9d-92a6-70f328380322)   
+ [Make a Target Server](http://msdn.microsoft.com/library/13aabe2d-67fe-4c67-8d49-2928dd705b7a)  
   
   

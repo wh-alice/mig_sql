@@ -1,7 +1,7 @@
 ---
 title: "Lesson 10: Create Hierarchies | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,7 +12,7 @@ ms.topic: "get-started-article"
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
-caps.latest.revision: 21
+caps.latest.revision: 22
 ms.author: "owend"
 manager: "erikre"
 ---
@@ -41,7 +41,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 4.  Click and drag the **ProductSubcategoryName** column to the **Category** hierarchy. Rename it **Subcategory**. 
   
-5.  Right-click the **ModelName** column and then click **Add to hierarchy**. Do the same for **ProductName**, adding both to the Category hierarchy. Rename these columns in the hierarchy **Model** and **Product**.  
+5.  Right-click the **ModelName** column, then click **Add to hierarchy**, and then select **Category**. Do the same for **ProductName**. Rename these columns in the hierarchy **Model** and **Product**.  
 
     ![as-tabular-lesson9-category](../../analysis-services/tutorials/media/as-tabular-lesson9-category.png)
   

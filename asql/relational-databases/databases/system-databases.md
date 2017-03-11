@@ -62,7 +62,7 @@ manager: "jhubbard"
 ## Related Tasks  
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [Hide System Objects in Object Explorer](../Topic/Hide%20System%20Objects%20in%20Object%20Explorer.md)  
+ [Hide System Objects in Object Explorer](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  
   
 ## Related Content  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/catalog-views-transact-sql.md)  

@@ -129,7 +129,7 @@ manager: "jhubbard"
 5.  Verify that the node has been removed by running the DMV sys.dm_exec_compute_nodes on PQTH4A-CMP01. Now, PQTH4A-CMP02 will function as a standalone head node  
   
 ## Next steps  
- For troubleshooting, see [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/en-US/library/mt146389(SQL.130).aspx).  
+ For troubleshooting, see [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
 ## See Also  
  [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   

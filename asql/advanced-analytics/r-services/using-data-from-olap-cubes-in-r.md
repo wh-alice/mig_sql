@@ -83,5 +83,5 @@ You can also download an existing cube as a backup, and restore it to an instanc
 ## See Also
 [How to Create MDX Queries using R](../../advanced-analytics/r-services/how-to-create-mdx-queries-using-olapr.md)
 
-[MDX Query Designer for Analysis Services](http://msdn.microsoft.com/en-US/library/dd220489(SQL.130).aspx)
+[MDX Query Designer for Analysis Services](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)
 

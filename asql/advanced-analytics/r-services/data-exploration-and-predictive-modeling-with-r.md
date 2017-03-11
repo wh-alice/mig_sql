@@ -53,16 +53,16 @@ manager: "jhubbard"
   
      The **RevoPemaR** package lets you develop your own parallel external memory algorithms in R.  
   
-     For more information about these packages and how to use them, see [Data Exploration and Predictive Modeling &#40;Tutorial: SQL Server R Services&#41;](http://msdn.microsoft.com/en-US/library/mt591995(SQL.130).aspx).  
+     For more information about these packages and how to use them, see [Data Exploration and Predictive Modeling &#40;Tutorial: SQL Server R Services&#41;](http://msdn.microsoft.com/library/65589d17-bd34-4baa-8ba1-998f60d0344f).  
   
 ## Using Data Sources and Compute Contexts  
  When using the RevoScaleR package to connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], there are some important new functions to use in your R code:  
   
--   [RxSqlServerData](http://msdn.microsoft.com/en-US/library/mt732689(SQL.130).aspx) is a function provided in the RevoScaleR package to support improved data connectivity to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   [RxSqlServerData](http://msdn.microsoft.com/library/0d2c53a6-b64b-4760-9903-825238b772d6) is a function provided in the RevoScaleR package to support improved data connectivity to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
   
      You use this function in your R code to define the *data source*. The data source object specifies the server and tables where the data resides and manages the task of  reading data from and writing data to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
   
--   The [RxInSqlServer](http://msdn.microsoft.com/en-US/library/mt732682(SQL.130).aspx) function can be used to specify the *compute context*.  In other words, you can indicate where the R code should be executed: on your local workstation, or on the computer that hosts the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+-   The [RxInSqlServer](http://msdn.microsoft.com/library/24bd1f0a-ec68-4b96-bf42-a4073014f1f1) function can be used to specify the *compute context*.  In other words, you can indicate where the R code should be executed: on your local workstation, or on the computer that hosts the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
   
      When you set the compute context, it affects only computations that support remote execution context, which means R operations provided by the RevoScaleR package and related functions. Typically, R solutions based on standard CRAN packages cannot run in a remote compute context, though they can be run on the [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer if started by T-SQL. However, you can use the `rxExec` function to call individual R functions and run them remotely in [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
   
@@ -82,7 +82,7 @@ manager: "jhubbard"
   
 ##  <a name="bkmk_SQLInR"></a> In This Section  
 
-[Comparison of ScaleR Functions and CRAN R Functions](http://msdn.microsoft.com/en-US/library/mt652103(SQL.130).aspx)
+[Comparison of ScaleR Functions and CRAN R Functions](http://msdn.microsoft.com/library/8f8c91d7-50c3-4ca1-9427-a83d9d2ecd22)
 
 [ScaleR Functions for Working with SQL Server](../../advanced-analytics/r-services/scaler-functions-for-working-with-sql-server-data.md)
    

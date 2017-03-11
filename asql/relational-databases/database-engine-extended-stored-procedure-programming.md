@@ -33,7 +33,7 @@ manager: "jhubbard"
  [Programming Extended Stored Procedures](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)  
  Explains how to create, manage, and use extended stored procedures.  
   
- [Extended Stored Procedures Programmer's Reference](http://msdn.microsoft.com/en-US/library/ms164643(SQL.130).aspx)  
+ [Extended Stored Procedures Programmer's Reference](http://msdn.microsoft.com/library/4e9d0374-0927-4f17-bab9-2215b1b8fea8)  
  Contains reference topics for the Extended Stored Procedure API.  
   
   

@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  When you press ENTER, the text wraps to the next line. The annotation box automatically increases in size as you add additional lines of text. Package annotations are persisted as clear text in the CDATA section of the package file.  
   
- For more information about changes to the format of the package file, see [SSIS Package Format](http://msdn.microsoft.com/en-US/library/hh758694(SQL.130).aspx).  
+ For more information about changes to the format of the package file, see [SSIS Package Format](http://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
   
  When you save the package, [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer saves the annotations in the package.  
   

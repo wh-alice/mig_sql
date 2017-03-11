@@ -48,7 +48,7 @@ manager: "erikre"
  ![SSRS SharePoint Mode Single Server Deployment](../../../reporting-services/install/windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint Mode Single Server Deployment")  
   
 > [!TIP]  
->  For more complex deployment examples, see [Deployment Topologies for SQL Server BI Features in SharePoint](http://msdn.microsoft.com/en-US/library/hh231674(SQL.130).aspx).  
+>  For more complex deployment examples, see [Deployment Topologies for SQL Server BI Features in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
   
 ##  <a name="bkmk_setupaccounts"></a> Setup accounts  
  This section describes the accounts and permissions used for the primary deployment steps of [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] in SharePoint mode.  

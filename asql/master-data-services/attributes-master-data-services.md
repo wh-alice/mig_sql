@@ -81,7 +81,7 @@ manager: "jhubbard"
 |Create a new file attribute.|[Create a File Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Create a new domain-based attribute.|[Create a Domain-Based Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |Change the name of an existing attribute.|[Change an Attribute Name and Data Type &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
-|Add existing attributes to a change tracking group.|[Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](http://msdn.microsoft.com/en-US/library/ff487060(SQL.130).aspx)|  
+|Add existing attributes to a change tracking group.|[Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](http://msdn.microsoft.com/library/e153eb5f-70ca-4c6f-89d8-1f937ed3917d)|  
 |Delete an existing attribute.|[Delete an Attribute &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)|  
 |Change the order of attributes.|[Change the Order of Attributes](../master-data-services/change-the-order-of-attributes.md)|  
 |Create a date attribute|[Create a Date Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  

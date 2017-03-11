@@ -30,7 +30,7 @@ manager: "jhubbard"
  **Inputs and outputs**  
  Select an input or output on the left to view its properties in the table on the right. Properties available for editing vary according to the selection. Many of the properties displayed are read-only. For more information on the individual properties, see the following topics.  
   
- [Common Properties](http://msdn.microsoft.com/en-US/library/ms135950(SQL.130).aspx)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

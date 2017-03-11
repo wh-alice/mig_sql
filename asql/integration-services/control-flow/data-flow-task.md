@@ -100,7 +100,7 @@ manager: "jhubbard"
   
  For more information about how to set these properties in the **Properties** window, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/en-US/library/ms139733(SQL.130).aspx)  
+-   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Programmatic Configuration of the Data Flow Task  
  For more information about programmatically adding a data flow task to a package and setting data flow properties, click the following topic:  
@@ -108,7 +108,7 @@ manager: "jhubbard"
 -   [Adding the Data Flow Task Programmatically](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## Related Tasks  
- [Set the Properties of a Task or Container](http://msdn.microsoft.com/en-US/library/ms139733(SQL.130).aspx)  
+ [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Related Content  
  Video, [Balanced Data Distributer](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  

@@ -20,7 +20,7 @@ manager: "jhubbard"
   The **Integration Services Project Conversion Wizard** converts a project to the project deployment model.  
   
 > [!NOTE]  
->  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that can be shared by the packages in the project, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/en-US/library/ms140237(SQL.130).aspx).  
+>  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that can be shared by the packages in the project, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
  **What do you want to do?**  
   

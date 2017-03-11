@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ## See Also  
  [What's New in SQL Server 2016](../../sql-server/what-s-new-in-sql-server-2016.md)
- [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/en-US/library/ms143287(SQL.130).aspx)   
+ [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

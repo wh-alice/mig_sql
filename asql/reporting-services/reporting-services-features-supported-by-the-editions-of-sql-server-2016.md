@@ -99,5 +99,5 @@ To navigate the table for a SQL Server technology, click on its link:
 
 ## See Also  
  [Features Supported by the Editions of SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
- [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/en-US/library/ms143287(SQL.130).aspx)   
+ [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Installation for SQL Server 2016](../database-engine/install/windows/installation-for-sql-server-2016.md) 

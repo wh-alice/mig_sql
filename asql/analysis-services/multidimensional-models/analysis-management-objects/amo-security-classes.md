@@ -53,7 +53,7 @@ manager: "erikre"
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
  [Programming AMO Security Objects](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)   
- [Permissions and Access Rights &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Permissions%20and%20Access%20Rights%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Permissions and Access Rights &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
  [Introducing AMO Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  

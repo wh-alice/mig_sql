@@ -117,7 +117,7 @@ You can connect to an on-premises Analysis Services tabular model database from 
   
      New schema rowset for obtaining the CSDL representation of a tabular model  
   
--   [DISCOVER_XEVENT_TRACE_DEFINITION Rowset](http://msdn.microsoft.com/en-US/library/hh270267(SQL.130).aspx)  
+-   [DISCOVER_XEVENT_TRACE_DEFINITION Rowset](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)  
   
      New schema rowset for monitoring SQL Server Extended Events. For more information, see [Monitor Analysis Services with SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   

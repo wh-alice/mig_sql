@@ -1,7 +1,7 @@
 ---
 title: "Add or Remove Nodes in a SQL Server Failover Cluster (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 8.  On the Cluster Node Configuration page, use the drop-down box to specify the name of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] failover cluster instance that will be modified during this Setup operation.  
   
-9. On the Server Configuration — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features you selected to install. For failover cluster installations, account name and startup type information will be pre-populated on this page based on settings provided for the active node. You must provide passwords for each account. For more information, see [Server Configuration - Service Accounts](http://msdn.microsoft.com/en-US/library/cc281953(SQL.130).aspx) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md).  
+9. On the Server Configuration — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features you selected to install. For failover cluster installations, account name and startup type information will be pre-populated on this page based on settings provided for the active node. You must provide passwords for each account. For more information, see [Server Configuration - Service Accounts](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Security Note** [!INCLUDE[ssNoteStrongPass](../../../database-engine/install/windows/includes/ssnotestrongpass-md.md)]  
   

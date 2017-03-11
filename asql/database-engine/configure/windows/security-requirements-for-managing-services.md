@@ -1,7 +1,7 @@
 ---
 title: "Security Requirements for Managing Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/04/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,7 +42,7 @@ manager: "jhubbard"
 -   Misc Server Settings  
   
 ## Related Tasks  
- [Configure WMI to Show Server Status in SQL Server Tools](../Topic/Configure%20WMI%20to%20Show%20Server%20Status%20in%20SQL%20Server%20Tools.md)  
+ [Configure WMI to Show Server Status in SQL Server Tools](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)  
   
 ## Related Content  
  [WMI Provider for Configuration Management Concepts](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  

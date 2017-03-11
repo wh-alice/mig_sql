@@ -50,7 +50,7 @@ manager: "jhubbard"
 |**DOMAIN_DEFAULT**|**nvarchar(**4000**)**|Actual text of the definition [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement.|  
   
 ## See Also  
- [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/ms177862(SQL.130).aspx)   
+ [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Information Schema Views &#40;Transact-SQL&#41;](../Topic/Information%20Schema%20Views%20\(Transact-SQL\).md)   
  [sys.syscharsets &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-compatibility-views/sys.syscharsets-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md)   

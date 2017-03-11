@@ -457,6 +457,6 @@ manager: "jhubbard"
 |Display the grid on the design surface|ENTER|No equivalent|  
   
 ## See Also  
- [Customize Menus and Shortcut Keys](../Topic/Customize%20Menus%20and%20Shortcut%20Keys.md)  
+ [Customize Menus and Shortcut Keys](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   
   

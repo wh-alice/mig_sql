@@ -34,7 +34,7 @@ manager: "jhubbard"
  Select a lookup table or view from the database by selecting an item from the list. The table or view should contain a column with an existing list of terms that the text in the source column can be compared to.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](http://msdn.microsoft.com/en-US/library/ms183481(SQL.130).aspx) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   

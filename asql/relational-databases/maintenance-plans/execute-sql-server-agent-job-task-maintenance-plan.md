@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 ## See Also  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-add-job-transact-sql.md)   
- [Create a Job](../Topic/Create%20a%20Job.md)   
+ [Create a Job](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)   
  [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   

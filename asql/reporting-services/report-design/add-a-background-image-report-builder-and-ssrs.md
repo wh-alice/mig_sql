@@ -67,6 +67,6 @@ manager: "erikre"
   
 ## See Also  
  [Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Image Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/en-US/library/dd220597(SQL.130).aspx)  
+ [Image Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

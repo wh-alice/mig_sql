@@ -43,6 +43,6 @@ manager: "erikre"
          If you make a mistake and need to start over, click **Clear Row Filters**.  
   
 ## See Also  
- [Edit Table Properties Dialog Box &#40;SSAS&#41;](http://msdn.microsoft.com/en-US/library/gg471703(SQL.130).aspx)  
+ [Edit Table Properties Dialog Box &#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)  
   
   

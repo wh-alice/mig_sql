@@ -171,7 +171,7 @@ sp_update_jobstep
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../Topic/SQL%20Server%20Agent%20Fixed%20Database%20Roles.md).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  Only members of **sysadmin** can update a job step owned by another user.  
   
@@ -192,7 +192,7 @@ GO
 ```  
   
 ## See Also  
- [View or Modify Jobs](../Topic/View%20or%20Modify%20Jobs.md)   
+ [View or Modify Jobs](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/system-stored-procedures-transact-sql.md)  

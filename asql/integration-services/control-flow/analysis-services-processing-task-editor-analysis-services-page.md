@@ -59,7 +59,7 @@ manager: "jhubbard"
  **Impact Analysis**  
  Perform impact analysis on the selected object.  
   
- **Related Topics:** [Impact Analysis Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/en-US/library/ms178524(SQL.130).aspx)  
+ **Related Topics:** [Impact Analysis Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Batch Settings Summary**  
  |Property|Description|  
@@ -73,7 +73,7 @@ manager: "jhubbard"
  **Change Settings**  
  Change the processing options and the handling of errors in dimension keys.  
   
- **Related Topics:** [Change Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/en-US/library/ms177214(SQL.130).aspx)  
+ **Related Topics:** [Change Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   

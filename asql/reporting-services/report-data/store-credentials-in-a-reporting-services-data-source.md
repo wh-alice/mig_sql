@@ -158,8 +158,8 @@ manager: "erikre"
 ## See Also  
  [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms159863(SQL.130).aspx)   
- [Data Sources Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms190041(SQL.130).aspx)   
- [New Data Source Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms180077(SQL.130).aspx)  
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Data Sources Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [New Data Source Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
   
   

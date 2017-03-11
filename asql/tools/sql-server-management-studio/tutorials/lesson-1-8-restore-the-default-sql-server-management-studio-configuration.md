@@ -29,7 +29,7 @@ Users new to [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/i
 [Summary: Basic Navigation](../../../tools/sql-server-management-studio/tutorials/lesson-1-9-summary-basic-navigation.md)  
   
 ## See Also  
-[Use SQL Server Management Studio](../Topic/Use%20SQL%20Server%20Management%20Studio.md)  
+[Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   
   

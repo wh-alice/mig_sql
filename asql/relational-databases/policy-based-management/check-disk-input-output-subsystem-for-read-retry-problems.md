@@ -31,7 +31,7 @@ manager: "jhubbard"
 -   Contact the disk manufacturer for the latest driver updates.  
   
 ## For More Information  
- [MSSQLSERVER_825](../Topic/MSSQLSERVER_825.md)  
+ [MSSQLSERVER_825](http://msdn.microsoft.com/library/f69f8214-5af1-4769-878b-117ad6eaff52)  
   
  [SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?linkid=69370)  
   

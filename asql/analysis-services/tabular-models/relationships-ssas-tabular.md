@@ -193,6 +193,6 @@ manager: "erikre"
   
 ## See Also  
  [Tables and Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/en-US/library/hh230968(SQL.130).aspx)  
+ [Import Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   

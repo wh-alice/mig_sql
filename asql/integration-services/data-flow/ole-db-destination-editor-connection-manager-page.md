@@ -43,7 +43,7 @@ manager: "jhubbard"
 |------------|-----------------|  
 |Table or view|Load data into a table or view in the OLE DB destination.|  
 |Table or view - fast load|Load data into a table or view in the OLE DB destination and use the fast load option. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
-|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](http://msdn.microsoft.com/en-US/library/ms140216(SQL.130).aspx)|  
+|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Table name or view name variable - fast load|Specify the table or view name in a variable, and use the fast load option to load the data. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
 |SQL command|Load data into the OLE DB destination by using a SQL query.|  
   

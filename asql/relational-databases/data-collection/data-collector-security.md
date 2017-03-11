@@ -22,7 +22,7 @@ manager: "jhubbard"
   The data collector uses the role-based security model implemented by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent. This model lets the database administrator run the various data collector tasks in a security context that has only the permissions required to perform that task. This approach is also used for operations involving internal tables, which can only be accessed by using a stored procedure or view. No permissions are granted to internal tables. Instead, permissions are checked on the user of the stored procedure or view that is used to access a table.  
   
 > [!IMPORTANT]  
->  Another key aspect of this security model is concentric permissions. Under concentric permissions, more privileged roles inherit the permissions of less privileged roles on objects (including alerts, operators, jobs, schedules, and proxies). For more information, see [SQL Server Agent Fixed Database Roles](../Topic/SQL%20Server%20Agent%20Fixed%20Database%20Roles.md).  
+>  Another key aspect of this security model is concentric permissions. Under concentric permissions, more privileged roles inherit the permissions of less privileged roles on objects (including alerts, operators, jobs, schedules, and proxies). For more information, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  The following sections describe data collection security in general, as well as the roles you must grant to users so they can configure and use the data collector, and carry out tasks associated with the management data warehouse.  
   
@@ -142,6 +142,6 @@ manager: "jhubbard"
  Members of the **mdw_reader** role have Read access to the management data warehouse. Because the purpose of this role is to support troubleshooting by providing access to historical data, members of this role cannot view other elements of the management data warehouse schema.  
   
 ## See Also  
- [Implement SQL Server Agent Security](../Topic/Implement%20SQL%20Server%20Agent%20Security.md)  
+ [Implement SQL Server Agent Security](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
   
   

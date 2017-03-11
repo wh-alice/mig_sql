@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 10. From the **File extension** list, select a file type that a user can upload, or accept the default value (*.\*) to allow all file types.  
   
-11. Optionally, select **Enable change tracking** to track changes to groups of attributes. For more information, see [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](http://msdn.microsoft.com/en-US/library/ff487060(SQL.130).aspx).  
+11. Optionally, select **Enable change tracking** to track changes to groups of attributes. For more information, see [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](http://msdn.microsoft.com/library/e153eb5f-70ca-4c6f-89d8-1f937ed3917d).  
   
 12. Click **Save**.  
   

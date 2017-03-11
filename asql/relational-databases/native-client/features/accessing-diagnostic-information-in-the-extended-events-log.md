@@ -19,7 +19,7 @@ manager: "jhubbard"
 
   Beginning in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client and data access tracing ([Data Access Tracing](http://go.microsoft.com/fwlink/?LinkId=125805)) have been updated to make it easier to get diagnostic information about connection failures from the connectivity ring buffer and application performance information from the extended events log.  
   
- For information about reading the extended events log, see [View Event Session Data](http://msdn.microsoft.com/en-US/library/hh710068(SQL.130).aspx).  
+ For information about reading the extended events log, see [View Event Session Data](http://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49).  
   
 > [!NOTE]  
 >  This feature is intended only for troubleshooting and diagnostic purposes and may not be suitable for auditing or security purposes.  

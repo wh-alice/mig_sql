@@ -128,7 +128,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 If you are creating a new table, you’ll need to estimate the array size or gather data from your testing prior to deployment.  
   
-For information on how hash indexes work in [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](http://msdn.microsoft.com/en-US/library/dn133190(SQL.130).aspx).  
+For information on how hash indexes work in [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
 #### Setting the hash index array size  
   

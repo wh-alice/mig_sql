@@ -33,7 +33,7 @@ manager: "jhubbard"
 -   Delete an Extended Events Session  
   
 ## Create an Extended Events Session  
- For more information about creating an Extended Events session, see [Create an Extended Events Session](http://msdn.microsoft.com/en-US/library/hh213147(SQL.130).aspx).  
+ For more information about creating an Extended Events session, see [Create an Extended Events Session](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
   
 ## Starting or Stopping an Extended Events Session  
  You can start or stop an Extended Events session through the **Query Editor** using the **ALTER EVENT SESSION** statement, or by using the **Extended Events** node of **Object Explorer**.  

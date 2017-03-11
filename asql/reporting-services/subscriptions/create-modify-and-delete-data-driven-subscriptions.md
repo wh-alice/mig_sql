@@ -101,9 +101,9 @@ manager: "erikre"
 ## See Also  
  [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [old_Create and Manage Subscriptions for Native Mode Report Servers](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Subscriptions Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms189377(SQL.130).aspx)   
- [My Subscriptions Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms181503(SQL.130).aspx)  
+ [Subscriptions Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [My Subscriptions Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

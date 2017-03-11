@@ -106,7 +106,7 @@ manager: "erikre"
   
   
 ## See Also  
- [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220483(SQL.130).aspx)   
+ [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

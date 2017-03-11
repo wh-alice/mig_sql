@@ -24,7 +24,7 @@ manager: "erikre"
   
 ### To view a report  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Find a report by browsing folders or searching for a report by name. Browse folder contents by clicking a folder name or folder icon in the **Contents** page. Search for a report by typing all or part of the report name in the **Search for** text box at the top of the page.  
   
@@ -40,7 +40,7 @@ manager: "erikre"
   
 ## See Also  
  [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Contents Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms186470(SQL.130).aspx)   
+ [Contents Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   

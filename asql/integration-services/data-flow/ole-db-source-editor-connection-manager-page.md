@@ -52,7 +52,7 @@ manager: "jhubbard"
 |Option|Description|  
 |------------|-----------------|  
 |Table or view|Retrieve data from a table or view in the OLE DB data source.|  
-|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](http://msdn.microsoft.com/en-US/library/ms140216(SQL.130).aspx)|  
+|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL command|Retrieve data from the OLE DB data source by using a SQL query.|  
 |SQL command from variable|Specify the SQL query text in a variable.|  
   

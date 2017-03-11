@@ -1,7 +1,7 @@
 ---
 title: "Lesson 5: Create Relationships | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,7 +12,7 @@ ms.topic: "get-started-article"
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: 27
+caps.latest.revision: 28
 ms.author: "owend"
 manager: "erikre"
 ---
@@ -24,7 +24,7 @@ Estimated time to complete this lesson: **10 minutes**
 ## Prerequisites  
 This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
   
-## Review Existing Relationships and Add New Relationships  
+## Review existing relationships and add new relationships  
 When you imported data by using the Table Import Wizard, you got seven tables from the AdventureWorksDW database. Generally, when you import data from a relational source, existing relationships are automatically imported together with the data. However, before you proceed with authoring your model you should verify those relationships between tables were created properly. For this tutorial, you will also add three new relationships.  
   
 #### To review existing relationships  
@@ -56,7 +56,7 @@ When you imported data by using the Table Import Wizard, you got seven tables fr
   
     If any of the relationships in the table above are missing, verify that your model includes the following tables: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory, and FactInternetSales. If tables from the same data source connection are imported at separate times, any relationships between those tables will not be created and must be created manually.  
 
-### Let's take a closer look
+### Take a closer look
 In Diagram View, you'll notice an arrow, an asterisk, and a number on the lines that show the relationship between tables.
 
 ![as-tabular-lesson4-line](../../analysis-services/tutorials/media/as-tabular-lesson4-line.png)

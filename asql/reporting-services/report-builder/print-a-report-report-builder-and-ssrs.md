@@ -55,7 +55,7 @@ manager: "erikre"
   
 ### To print a report from a Web browser application  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Report Manager, navigate to the report that you want to print. Open the report.  
   
@@ -96,7 +96,7 @@ manager: "erikre"
 ## See Also  
  [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Report Properties Dialog Box, Page Setup &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220640(SQL.130).aspx)   
+ [Report Properties Dialog Box, Page Setup &#40;Report Builder&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

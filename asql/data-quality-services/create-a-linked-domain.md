@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 6.  If necessary, you can change the name or description of the linked domain in the Domain Properties tab.  
   
-7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](http://msdn.microsoft.com/en-US/library/hh510411(SQL.130).aspx).  
+7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   

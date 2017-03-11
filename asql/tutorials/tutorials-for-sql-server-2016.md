@@ -48,7 +48,7 @@ If you are using a [!INCLUDE[ssCurrent](../advanced-analytics/r-services/include
 |[Integration Services Tutorials](../integration-services/tutorials/integration-services-tutorials.md)|Learn how to create and deploy [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] packages.|  
 |[Database Engine Tutorials](../relational-databases/tutorials/database-engine-tutorials.md)|Learn how to connect to an instance of the database engine and then build and run Transact-SQL statements.|  
 |[Replication Tutorials](../relational-databases/replication/tutorials/replication-tutorials.md)|Learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].|  
-|[Enterprise Information Management Tutorials](../Topic/Enterprise%20Information%20Management%20Tutorials.md)|Learn how to manage information in an enterprise using Microsoft EIM technologies.|  
+|[Enterprise Information Management Tutorials](http://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Learn how to manage information in an enterprise using Microsoft EIM technologies.|  
 |[SQL Server R Services Tutorials](../advanced-analytics/r-services/tutorials/sql-server-r-services-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] data using the R language, and run R scripts from [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)].|  
   
   

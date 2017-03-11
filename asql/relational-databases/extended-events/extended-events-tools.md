@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell provider. This is a powerful tool that you can use to create, alter, and manage Extended Events sessions. For more information, see [Use the PowerShell Provider for Extended Events](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md).  
   
--   [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. This enables you to create and execute the code samples that are provided in the Extended Events topics. For more information, see [Object Explorer](../Topic/Object%20Explorer.md).  
+-   [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. This enables you to create and execute the code samples that are provided in the Extended Events topics. For more information, see [Object Explorer](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2).  
   
  In addition to sessions that you create, a default system health session exists on the server. The session collects system data that you can use to help troubleshoot performance issues. For more information, see [Use the system_health Session](../../relational-databases/extended-events/use-the-system-health-session.md).  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server Extended Events Tables &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/ff929206(SQL.130).aspx)   
+ [SQL Server Extended Events Tables &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
  [Use the system_health Session](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Use the PowerShell Provider for Extended Events](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
   

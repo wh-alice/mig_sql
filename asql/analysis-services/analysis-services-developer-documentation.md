@@ -46,7 +46,7 @@ Analysis Services provides many ways to customize a solution through code, but m
  [Data Mining Programming](../analysis-services/data-mining-programming.md)  
  Describes the approaches building solutions that include data mining objects.  
   
- [Multidimensional Model Programming](http://msdn.microsoft.com/en-US/library/hh230848(SQL.130).aspx)  
+ [Multidimensional Model Programming](http://msdn.microsoft.com/library/871a6d98-85bf-4200-8343-137543029512)  
  Describes the development tasks and approaches for integrating multidimensional model objects in a custom solution.  
   
  [Tabular Model Programming for Compatibility Level 1200](../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)  
@@ -78,6 +78,6 @@ Analysis Services provides many ways to customize a solution through code, but m
   
 ## See Also  
  [Technical Reference &#40;SSAS&#41;](../analysis-services/powershell/technical-reference-ssas.md)   
- [Query and Expression Language Reference &#40;Analysis Services&#41;](http://msdn.microsoft.com/en-US/library/gg492188(SQL.130).aspx)  
+ [Query and Expression Language Reference &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/9597533d-35f4-4742-9d8c-7af392163527)  
   
   

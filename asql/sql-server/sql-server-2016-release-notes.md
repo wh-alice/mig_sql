@@ -27,7 +27,7 @@ manager: "jhubbard"
     
 [![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
     
- For information on what's new, see [What's New in SQL Server 2016](http://msdn.microsoft.com/en-US/library/(SQL.130).aspx).
+ For information on what's new, see [What's New in SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
     
 ##  <a name="bkmk_top"></a> Sections In this topic:    
 

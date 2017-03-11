@@ -187,7 +187,7 @@ These are tasks for creating and maintaining columnstore indexes.
 To create an empty columnstore index for:
 
 * SQL Server, use [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
-* SQL Database, use [CREATE TABLE on Azure SQL Database](http://msdn.microsoft.com/en-US/library/dn305849(SQL.130).aspx)
+* SQL Database, use [CREATE TABLE on Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)
 * SQL Data Warehouse, use [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 To convert an existing rowstore heap or btree index to a clustered columnstore index, or to create a nonclustered columnstore index, use:

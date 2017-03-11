@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 ## See Also  
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [Change Tracking Catalog Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/bb895278(SQL.130).aspx)   
+ [Change Tracking Catalog Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [Track Data Changes &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

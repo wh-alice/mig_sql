@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  The data collector enables you to adjust the scope of data collection to suit your test and production environments. The data collector also uses a data warehouse, a relational database that enables you to manage the data that you collect by setting different retention periods for your data.  
   
- The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](http://msdn.microsoft.com/en-US/library/bb677200(SQL.130).aspx).  
+ The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
   
  The following illustration shows how the data collector fits in the overall strategy for data collection and data management in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   Proxy accounts  
   
- For more information, see [Automated Administration Tasks &#40;SQL Server Agent&#41;](../Topic/Automated%20Administration%20Tasks%20\(SQL%20Server%20Agent\).md).  
+ For more information, see [Automated Administration Tasks &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
   
  [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)]) is used to execute packages that collect data from individual data providers. You should be familiar with the following [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] tools and concepts:  
   

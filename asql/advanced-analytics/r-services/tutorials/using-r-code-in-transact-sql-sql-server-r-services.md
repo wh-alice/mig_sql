@@ -2,7 +2,7 @@
 title: "Using R Code in Transact-SQL (SQL Server R Services) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-02-27"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,7 +15,7 @@ applies_to:
 dev_langs: 
   - "R"
 ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: 35
+caps.latest.revision: 36
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
@@ -35,10 +35,10 @@ This tutorial walks you through the basic mechanics of calling an R script from 
 
 ## Prerequisites
 
-You must have access to an instance of SQL Server where R Services is already installed. The instance can be in an Azure virtual machine or on-premises.
+You must have access to an instance of SQL Server where R Services is already installed. The instance can be in an Azure virtual machine or on-premises. YOu can use either SQL Server 2016 or SQL Server vNext.
 
 
-To run SQL queries that include R script, you can use SQL Server Management Studio (SSMS) or Visual Studio, or any other application that can connect to a database and run ad hoc T-SQL code. However, to demonstrate how easy it is to run R inside SQL Server, we'll use the new **mssql extension for Visual Studio Code**, which can run on Linux, macOS, or Windows. To install it, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+To run SQL queries that include R script, use SQL Server Management Studio (SSMS), Visual Studio, or any other application that can connect to a database and run ad hoc T-SQL code. To demonstrate how easy it is to run R inside SQL Server, we'll use the new **mssql extension for Visual Studio Code**, a free development environment that can run on Linux, macOS, or Windows. To install it, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 
 ## Connect to a database and run a Hello World test script
@@ -69,12 +69,10 @@ To run SQL queries that include R script, you can use SQL Server Management Stud
    
 ## Troubleshooting
 
-+ If you get any errors from this query, it is possible that you did not complete installation of R Services. After installing the feature using the SQL Server setup wizard, you must take some additional steps after setup to enable use of external code libraries.  See [Set up SQL Server R Services](../../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).
++ If you get any errors from this query, installation of R Services might be incomplete. After adding the feature using the SQL Server setup wizard, you must take some additional steps to enable use of external code libraries.  See [Set up SQL Server R Services](../../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).
 
-+ Make sure that the Launchpad service is running. Depending on your environment, you might also need to enable the R worker accounts, install additional network libraries, or enable remote code execution. You might need to restart the instance after everything is configured. See
++ Make sure that the Launchpad service is running. Depending on your environment, you might need to enable the R worker accounts to connect to SQL Server, install additional network libraries, enable remote code execution, or restart the instance after everything is configured. See
 [R Services Installation and Upgrade FAQ](../../../advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md)
-
-+ If you cannot find SQL Server Management Studio in the **Start** menu, you might need to install it: [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). 
 
 + To get Visual Studio Code, see [Download and install Visual Studio Code](https://code.visualstudio.com/Download).
 
@@ -84,7 +82,7 @@ Now that your instance of R Services is ready, let's get started.
 
 Step 1: [Working with Inputs and Outputs](../../../advanced-analytics/r-services/tutorials/working-with-inputs-and-outputs-r-in-t-sql-tutorial.md)
 
-Step 2: [R and SQL Data Typs andd Data Objects](../../../advanced-analytics/r-services/tutorials/r-and-sql-data-types-and-data-objects-r-in-t-sql-tutorial.md)
+Step 2: [R and SQL Data Types and Data Objects](../../../advanced-analytics/r-services/tutorials/r-and-sql-data-types-and-data-objects-r-in-t-sql-tutorial.md)
 
 Step 3: [Using R Functions with SQL Server Data](../../../advanced-analytics/r-services/tutorials/using-r-functions-with-sql-server-data-r-in-t-sql-tutorial.md)
 

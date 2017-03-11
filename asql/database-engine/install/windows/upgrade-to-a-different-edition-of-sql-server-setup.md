@@ -1,7 +1,7 @@
 ---
 title: "Upgrade to a Different Edition of SQL Server 2016 (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -78,6 +78,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Upgrade to SQL Server 2016](../../../database-engine/install/windows/upgrade-sql-server.md)   
- [Backward Compatibility_deleted](../Topic/Backward%20Compatibility_deleted.md)  
+ [Backward Compatibility_deleted](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

@@ -92,6 +92,6 @@ manager: "jhubbard"
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
 ## See Also  
- [Metadata &#40;ODBC&#41;](http://msdn.microsoft.com/en-US/library/bb677284(SQL.130).aspx)  
+ [Metadata &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

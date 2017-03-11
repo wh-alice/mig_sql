@@ -36,7 +36,7 @@ Instead of the standard [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r
   
 ## See Also  
 [SQL Server Management Studio Keyboard Shortcuts](../../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-[Customize Menus and Shortcut Keys](../Topic/Customize%20Menus%20and%20Shortcut%20Keys.md)  
+[Customize Menus and Shortcut Keys](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   
   
   

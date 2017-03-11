@@ -1,7 +1,7 @@
 ---
 title: "Security Overview (SQL Server R Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-31"
+ms.date: "2017-03-10"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 7
+caps.latest.revision: 9
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
@@ -53,6 +53,9 @@ After mapping to a worker account, [!INCLUDE[rsql_launchpad_md](../../advanced-a
 When all [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] operations are completed, the user worker account is marked as free and returned to the pool.
 
 For more information about [!INCLUDE[rsql_launchpad_md](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)], see [New Components in SQL Server to Support R Integration](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r-services.md).
+
+> [!NOTE]
+For Launchpad to manage the worker accounts and execute R jobs, the group that contains the worker accounts, SQLRUserGroup, must have "Allow Log on locally" permissions; otherwise R Services might not work. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced, which prevent the worker accounts from connecting to SQL Server to perform R jobs.  
 
 ## Security of Worker Accounts
 This mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the lifetime of the SQL query that runs the R script. 

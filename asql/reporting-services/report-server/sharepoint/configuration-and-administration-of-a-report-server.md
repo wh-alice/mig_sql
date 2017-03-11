@@ -35,7 +35,7 @@ manager: "erikre"
   
     -   [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../../reporting-services/report-server/sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
-    -   [Cache Refresh Options &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ee636367(SQL.130).aspx)  
+    -   [Cache Refresh Options &#40;Report Manager&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
 -   [Reporting Services Site Collection Features](../../../reporting-services/report-server/sharepoint/site-collection-features-reporting-services.md)  
   

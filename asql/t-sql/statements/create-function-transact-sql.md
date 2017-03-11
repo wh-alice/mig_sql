@@ -585,7 +585,7 @@ RETURNS return_data_type
 |**SystemDataAccess**|Function accesses system data (system catalogs or virtual system tables) in the local instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].||  
 |**UserDataAccess**|Function accesses user data in the local instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|Includes user-defined tables and temp tables, but not table variables.|  
   
- The precision and determinism properties of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions are determined automatically by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The data access and determinism properties of CLR functions can be specified by the user. For more information, see [Overview of CLR Integration Custom Attributes](http://msdn.microsoft.com/en-US/library/ms131098(SQL.130).aspx).  
+ The precision and determinism properties of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions are determined automatically by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The data access and determinism properties of CLR functions can be specified by the user. For more information, see [Overview of CLR Integration Custom Attributes](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
   
  To display the current values for these properties, use [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   

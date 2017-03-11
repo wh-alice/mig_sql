@@ -42,7 +42,7 @@ manager: "erikre"
 > -   Execute DTS 2000 Package task  
 > -   Upgrade Advisor scan of DTS packages.  
 >   
->  For information about other discontinued features, see [Discontinued Integration Services Functionality in SQL Server 2016](http://msdn.microsoft.com/en-US/library/bb500429(SQL.130).aspx).  
+>  For information about other discontinued features, see [Discontinued Integration Services Functionality in SQL Server 2016](http://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
   
 ## Upgrading Integration Services  
  You can upgrade by using one of the following methods:  

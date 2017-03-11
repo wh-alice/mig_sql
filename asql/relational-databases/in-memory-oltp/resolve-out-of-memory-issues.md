@@ -42,7 +42,7 @@ If the server does have enough physical memory, but you are still seeing this er
   
     > [!IMPORTANT]  
     >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT to the same value as MAX_MEMORY_PERCENT.   
-    > See the topic [Best Practices: Using In-Memory OLTP in a VM environment](http://msdn.microsoft.com/en-US/library/dn529286(SQL.130).aspx) for more information.  
+    > See the topic [Best Practices: Using In-Memory OLTP in a VM environment](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) for more information.  
   
     ```tsql  
   
@@ -106,7 +106,7 @@ This code snippet changes MAX_MEMORY_PERCENT for the resource pool PoolHk to 70%
   
 > [!IMPORTANT]  
 >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value.   
-> See the topic [Best Practices: Using In-Memory OLTP in a VM environment](http://msdn.microsoft.com/en-US/library/dn529286(SQL.130).aspx) for more information.  
+> See the topic [Best Practices: Using In-Memory OLTP in a VM environment](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) for more information.  
   
 ```tsql  
   
@@ -133,7 +133,7 @@ GO
   
 > [!IMPORTANT]  
 >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value.   
-> See the topic [Best Practices: Using In-Memory OLTP in a VM environment](http://msdn.microsoft.com/en-US/library/dn529286(SQL.130).aspx) for more information.  
+> See the topic [Best Practices: Using In-Memory OLTP in a VM environment](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) for more information.  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Resolve page allocation failures due to insufficient memory when sufficient memory is available  
  If you get the error message, “Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.” in the error log when the available physical memory is sufficient to allocate the page, it may be due to a disabled Resource Governor. When the Resource Governor is disabled MEMORYBROKER_FOR_RESERVE induces artificial memory pressure.  
@@ -143,9 +143,9 @@ GO
  See [Enable Resource Governor](http://technet.microsoft.com/library/bb895149.aspx) for information on Limits and Restrictions as well as guidance on enabling Resource Governor using Object Explorer, Resource Governor properties, or Transact-SQL.  
   
 ## See Also  
- [Managing Memory for In-Memory OLTP](http://msdn.microsoft.com/en-US/library/dn465872(SQL.130).aspx)   
+ [Managing Memory for In-Memory OLTP](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Monitor and Troubleshoot Memory Usage](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Best Practices: Using In-Memory OLTP in a VM environment](http://msdn.microsoft.com/en-US/library/dn529286(SQL.130).aspx)  
+ [Best Practices: Using In-Memory OLTP in a VM environment](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)  
   
   

@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ### For all upgrade scenarios:  
   
--   All TSX servers should be upgraded before the MSX server is upgraded. For more information about MSX/TSX in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Automated Administration Across an Enterprise](../Topic/Automated%20Administration%20Across%20an%20Enterprise.md).  
+-   All TSX servers should be upgraded before the MSX server is upgraded. For more information about MSX/TSX in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Automated Administration Across an Enterprise](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f).  
   
 -   All components in an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be upgraded at the same time. Version numbers of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] components must be the same in an instance of [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Supported Version and Edition Upgrades](../../../database-engine/install/windows/supported-version-and-edition-upgrades.md)   
- [Backward Compatibility_deleted](../Topic/Backward%20Compatibility_deleted.md)   
+ [Backward Compatibility_deleted](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
  [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../../database-engine/install/windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

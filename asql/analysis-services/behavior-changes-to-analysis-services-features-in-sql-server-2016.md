@@ -38,7 +38,7 @@ manager: "erikre"
  There is no in-place upgrade of a DirectQuery model because the settings from older compatibility levels do not have exact counterparts in the newer 1200 compatibility level. If you have an existing tabular model that runs in DirectQuery mode, you should open the model in SQL Server Data Tools, turn DirectQuery off, set the **Compatibility Level** property to 1200, and then reconfigure the DirectQuery properties as defined for tabular 1200 models. See [DirectQuery Mode &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md) for details.  
   
 ## See Also  
- [Backward Compatibility_deleted](../Topic/Backward%20Compatibility_deleted.md)   
+ [Backward Compatibility_deleted](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
  [Breaking Changes to Analysis Services Features in SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md)   
  [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Download SQL Server Data Tools](https://msdn.microsoft.com/en-us/library/mt204009.aspx)  

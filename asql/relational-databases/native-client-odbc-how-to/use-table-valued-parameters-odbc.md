@@ -19,7 +19,7 @@ manager: "jhubbard"
 
   This sample shows how to use table-valued parameters to insert multiple rows, with multiple columns, with one call to the server.  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). For more samples using table-valued parameters, see [ODBC Table-Valued Parameter Programming Examples](http://msdn.microsoft.com/en-US/library/bb510470(SQL.130).aspx).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). For more samples using table-valued parameters, see [ODBC Table-Valued Parameter Programming Examples](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
   
 ## Example  
  You will need an ODBC data source called TVPDemo. The default database for TVPDemo can be any test database on your computer. This data source must be based on the ODBC driver for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  

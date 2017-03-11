@@ -25,7 +25,7 @@ By leveraging the extensive developer features of [!INCLUDE[msCoName](../../../a
 ## See Also  
 [Tutorials for SQL Server 2016](../../../tutorials/tutorials-for-sql-server-2016.md)  
 [Database Engine Tutorials](../../../relational-databases/tutorials/database-engine-tutorials.md)  
-[SQL Server Management Studio](../Topic/SQL%20Server%20Management%20Studio.md)  
+[SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)  
   
   
   

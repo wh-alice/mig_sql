@@ -248,6 +248,6 @@ manager: "jhubbard"
 ## See Also  
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
- [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/en-US/library/ms143287(SQL.130).aspx)  
+ [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
   
   

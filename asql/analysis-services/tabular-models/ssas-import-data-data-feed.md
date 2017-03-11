@@ -193,6 +193,6 @@ manager: "erikre"
  [Data Types Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)   
  [Impersonation &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
  [Process Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/en-US/library/hh230968(SQL.130).aspx)  
+ [Import Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   

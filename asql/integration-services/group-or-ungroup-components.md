@@ -58,6 +58,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Add or Delete a Task or a Container in a Control Flow](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Connect Tasks and Containers by Using a Default Precedence Constraint](http://msdn.microsoft.com/en-US/library/ms141202(SQL.130).aspx)  
+ [Connect Tasks and Containers by Using a Default Precedence Constraint](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

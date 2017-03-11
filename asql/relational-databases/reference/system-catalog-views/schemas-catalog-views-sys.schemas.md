@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/catalog-views-transact-sql.md)   
- [Schemas Catalog Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/en-US/library/ms188904(SQL.130).aspx)   
+ [Schemas Catalog Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
  [sys.objects &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.objects-transact-sql.md)  
   
   

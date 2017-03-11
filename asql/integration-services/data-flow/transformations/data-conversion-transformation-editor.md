@@ -52,7 +52,7 @@ manager: "jhubbard"
  Select the appropriate code page for columns of type DT_STR.  
   
  **Configure error output**  
- Specify how to handle row-level errors by using the [Configure Error Output](http://msdn.microsoft.com/en-US/library/ms183481(SQL.130).aspx) dialog box.  
+ Specify how to handle row-level errors by using the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   

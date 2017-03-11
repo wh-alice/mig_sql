@@ -42,7 +42,7 @@ manager: "jhubbard"
  [Security Overview &#40;Data Mining&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
 ## See Also  
- [Multidimensional Model Programming](http://msdn.microsoft.com/en-US/library/hh230848(SQL.130).aspx)   
+ [Multidimensional Model Programming](http://msdn.microsoft.com/library/871a6d98-85bf-4200-8343-137543029512)   
  [Data Mining Programming](../../analysis-services/data-mining-programming.md)  
   
   

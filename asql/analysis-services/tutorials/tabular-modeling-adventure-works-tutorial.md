@@ -88,7 +88,7 @@ This tutorial includes the following lessons:
 |Lesson 13: Deploy|5 minutes|  
   
 ## Supplemental lessons  
-This tutorial also includes [Supplemental Lessons](http://msdn.microsoft.com/en-US/library/hh479749(SQL.130).aspx). Topics in this section are not required to complete the tutorial, but can be helpful in better understanding advanced tabular model authoring features.  
+This tutorial also includes [Supplemental Lessons](http://msdn.microsoft.com/library/2018456f-b4a6-496c-89fb-043c62d8b82e). Topics in this section are not required to complete the tutorial, but can be helpful in better understanding advanced tabular model authoring features.  
   
 |Lesson|Estimated time to complete|  
 |----------|------------------------------|  

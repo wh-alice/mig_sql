@@ -66,7 +66,7 @@ manager: "jhubbard"
 -   When you move a model, the same requirements apply: you must set up appropriate access to the location of the old data source, copy the data sources, or configure a new data source. Also, you must transfer logins and roles, or set up permissions to allow data mining objects to be processed and updated in the new location.  
   
 ## Configuring Permissions and Server Properties  
- Data mining requires additional permissions on an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database. Most data mining properties can be set by using the [Analysis Server Properties Dialog Box &#40;Analysis Services&#41;](http://msdn.microsoft.com/en-US/library/ms188484(SQL.130).aspx).  
+ Data mining requires additional permissions on an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database. Most data mining properties can be set by using the [Analysis Server Properties Dialog Box &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/b01ec658-c191-49c9-a6cb-549b21a368ab).  
   
  For more information about the properties that you can configure, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   

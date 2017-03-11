@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 11. In the **Length** box, type the maximum number of characters allowed.  
   
-12. Optionally, select **Enable change tracking** to track changes to groups of attributes. For more information, see [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](http://msdn.microsoft.com/en-US/library/ff487060(SQL.130).aspx).  
+12. Optionally, select **Enable change tracking** to track changes to groups of attributes. For more information, see [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](http://msdn.microsoft.com/library/e153eb5f-70ca-4c6f-89d8-1f937ed3917d).  
   
 13. Click **Save**.  
   

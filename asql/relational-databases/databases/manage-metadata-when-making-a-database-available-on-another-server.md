@@ -157,7 +157,7 @@ manager: "jhubbard"
   
  **To create a WMI alert using SQL Server Management Studio**  
   
--   [Create a WMI Event Alert](../Topic/Create%20a%20WMI%20Event%20Alert.md)  
+-   [Create a WMI Event Alert](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
   
 ### How Event Notifications Work for a Mirrored Database  
  Cross-database delivery of event notifications that involves a mirrored database is remote, by definition, because the mirrored database can fail over. [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] provides special support for mirrored databases, in the form of *mirrored routes*. A mirrored route has two addresses: one for the principal server instance and one for the mirror server instance.  
@@ -203,11 +203,11 @@ manager: "jhubbard"
   
 -   The login used by the job  
   
-     To create or execute [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs, you must first add any [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins required by the job to the destination server instance. For more information, see [Configure a User to Create and Manage SQL Server Agent Jobs](../Topic/Configure%20a%20User%20to%20Create%20and%20Manage%20SQL%20Server%20Agent%20Jobs.md).  
+     To create or execute [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs, you must first add any [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins required by the job to the destination server instance. For more information, see [Configure a User to Create and Manage SQL Server Agent Jobs](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef).  
   
 -   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service startup account  
   
-     The service startup account defines the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../Topic/Select%20an%20Account%20for%20the%20SQL%20Server%20Agent%20Service.md).  
+     The service startup account defines the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7).  
   
      To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -218,35 +218,35 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent Proxies  
   
-     A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent proxy defines the security context for a specified job step. For a job to run on the destination server instance, all the proxies it requires must be manually re-created on that instance. For more information, see [Create a SQL Server Agent Proxy](../Topic/Create%20a%20SQL%20Server%20Agent%20Proxy.md) and [Troubleshoot Multiserver Jobs That Use Proxies](../Topic/Troubleshoot%20Multiserver%20Jobs%20That%20Use%20Proxies.md).  
+     A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent proxy defines the security context for a specified job step. For a job to run on the destination server instance, all the proxies it requires must be manually re-created on that instance. For more information, see [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) and [Troubleshoot Multiserver Jobs That Use Proxies](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280).  
   
  For more information, see also:  
   
--   [Implement Jobs](../Topic/Implement%20Jobs.md)  
+-   [Implement Jobs](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
   
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (for database mirroring)  
   
 -   [Configure Windows Service Accounts and Permissions](../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)])  
   
--   [Configure SQL Server Agent](../Topic/Configure%20SQL%20Server%20Agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)])  
+-   [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) (when you install an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)])  
   
--   [Implement SQL Server Agent Security](../Topic/Implement%20SQL%20Server%20Agent%20Security.md)  
+-   [Implement SQL Server Agent Security](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
   
  **To view existing jobs and their properties**  
   
--   [Monitor Job Activity](../Topic/Monitor%20Job%20Activity.md)  
+-   [Monitor Job Activity](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [View Job Step Information](../Topic/View%20Job%20Step%20Information.md)  
+-   [View Job Step Information](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/dbo.sysjobs-transact-sql.md)  
   
  **To create a job**  
   
--   [Create a Job](../Topic/Create%20a%20Job.md)  
+-   [Create a Job](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
--   [Create a Job](../Topic/Create%20a%20Job.md)  
+-   [Create a Job](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
 #### Best Practices for Using a Script to Re-create a Job  
  We recommend that you start by scripting a simple job, re-creating the job on the other [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service, and running the job to see whether it works as intended. This will let you to identify incompatibilities and try to resolve them. If a scripted job does not work as intended in its new environment, we recommend that you create an equivalent job that works correctly in that environment.  

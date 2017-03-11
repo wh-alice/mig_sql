@@ -66,6 +66,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Running Stored Procedures How-to Topics &#40;ODBC&#41;](http://msdn.microsoft.com/en-US/library/ms403325(SQL.130).aspx)  
+ [Running Stored Procedures How-to Topics &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

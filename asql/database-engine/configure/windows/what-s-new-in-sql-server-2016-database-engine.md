@@ -436,7 +436,7 @@ Download the latest [SQL Server Management Studio (SSMS)](https://msdn.microsoft
 - [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] supports the Active Directory Authentication Library (ADAL) which is under development for connecting to Microsoft Azure. This replaces the certificate-based authentication used in [!INCLUDE[ssSQL14](../../../analysis-services/includes/sssql14-md.md)][!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].
 - [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] installation requires installing .NET 4.6 as a pre-requisite. .NET 4.6 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] is installed.
 - A new query result grid option supports keeping Carriage Return/Line Feed (newline characters) when copying or saving text from the results grid. Set this from the Tools/Options menu.
-- SQL Server Management Tools is no longer installed from the main feature tree; for details see [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/en-US/library/bb500441(SQL.130).aspx).
+- SQL Server Management Tools is no longer installed from the main feature tree; for details see [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
 - [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] installation requires installing .NET 4.6.1 as a pre-requisite. .NET 4.6.1 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] is installed.
 
 ####  <a name="UA"></a> Upgrade Advisor
@@ -449,5 +449,5 @@ SQL Server 2016 Upgrade Advisor Preview is a standalone tool that enables users 
  
 [SQL Server 2016 Release Notes](../../../sql-server/sql-server-2016-release-notes.md) 
  
-[Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/en-US/library/bb500441(SQL.130).aspx)
+[Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
 

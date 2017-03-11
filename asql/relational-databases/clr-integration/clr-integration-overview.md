@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Installing the .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [Architecture of CLR Integration](http://msdn.microsoft.com/en-US/library/ms131095(SQL.130).aspx)   
+ [Architecture of CLR Integration](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [Data Access from CLR Database Objects](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Getting Started with CLR Integration](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

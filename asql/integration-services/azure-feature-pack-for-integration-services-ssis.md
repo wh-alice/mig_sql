@@ -65,7 +65,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension th
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob Enumerator. See [Enumerator = Foreach Azure Blob Enumerator](http://msdn.microsoft.com/en-US/library/ms187670(SQL.130).aspx)
+-   Azure Blob Enumerator. See [Enumerator = Foreach Azure Blob Enumerator](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
 ## Download the Feature Pack
  Download the SQL Server Integration Services (SSIS) Feature Pack for Azure.

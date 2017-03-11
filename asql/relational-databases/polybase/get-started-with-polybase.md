@@ -351,12 +351,12 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  After upgrading from SQL Server 2016 RC1 to RC2 or RC3, queries may fail. For details and a remedy, see [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) and search for "PolyBase."  
   
 ## Next steps  
- To understand the scale-out feature, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  To monitor PolyBase, see [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md). To trouble shoot PolyBase perfomance, see [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/en-US/library/mt146389(SQL.130).aspx).  
+ To understand the scale-out feature, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  To monitor PolyBase, see [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md). To trouble shoot PolyBase perfomance, see [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
 ## See Also  
  [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)   
  [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)   
- [PolyBase stored procedures](http://msdn.microsoft.com/en-US/library/mt621173(SQL.130).aspx)   
+ [PolyBase stored procedures](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  

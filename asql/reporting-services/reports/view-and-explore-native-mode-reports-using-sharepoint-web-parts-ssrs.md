@@ -167,7 +167,7 @@ manager: "erikre"
     3.  Click **Report Viewer**.  
   
 ## See Also  
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Reporting Services Report Server &#40;SharePoint Mode&#41;](../../reporting-services/report-server/sharepoint/reporting-services-report-server-sharepoint-mode.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
   

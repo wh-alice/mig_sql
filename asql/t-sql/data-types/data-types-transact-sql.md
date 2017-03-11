@@ -108,7 +108,7 @@ manager: "jhubbard"
 |[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[timestamp](../../t-sql/data-types/rowversion-transact-sql.md)|  
 |[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
 |[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
-|[table](../../t-sql/data-types/table-transact-sql.md)|[Spatial Types](http://msdn.microsoft.com/en-US/library/ff848797(SQL.130).aspx)|  
+|[table](../../t-sql/data-types/table-transact-sql.md)|[Spatial Types](http://msdn.microsoft.com/library/d1715574-34b1-4ce5-a29f-25e35027a54c)|  
   
 ## See Also  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   

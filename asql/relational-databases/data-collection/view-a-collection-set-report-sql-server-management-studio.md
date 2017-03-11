@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
- [Custom Reports in Management Studio](../Topic/Custom%20Reports%20in%20Management%20Studio.md)   
+ [Custom Reports in Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979)   
  [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
   

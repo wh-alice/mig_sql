@@ -53,7 +53,7 @@ manager: "jhubbard"
  [SQL Server Data Types in the .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-.net-framework.md)  
  An overview of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data types and their .NET Framework equivalents.  
   
- [Overview of CLR Integration Custom Attributes](http://msdn.microsoft.com/en-US/library/ms131098(SQL.130).aspx)  
+ [Overview of CLR Integration Custom Attributes](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
  Provides information about CLR integration custom attributes.  
   
  [CLR User-Defined Functions](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
@@ -62,10 +62,10 @@ manager: "jhubbard"
  [CLR User-Defined Types](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Describes how to implement and use CLR user-defined types.  
   
- [CLR Stored Procedures](http://msdn.microsoft.com/en-US/library/ms131094(SQL.130).aspx)  
+ [CLR Stored Procedures](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
  Describes how to implement and use CLR stored procedures.  
   
- [CLR Triggers](http://msdn.microsoft.com/en-US/library/ms131093(SQL.130).aspx)  
+ [CLR Triggers](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
  Describes how to implement and use CLR triggers.  
   
 ## See Also  

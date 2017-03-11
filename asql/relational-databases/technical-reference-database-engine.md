@@ -23,9 +23,9 @@ manager: "jhubbard"
  ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Feature Reference**  
  [Registered Servers F1 Help](../tools/sql-server-management-studio/registered-servers-f1-help.md)  
   
- [SQL Server Management Studio Menu Help](../Topic/SQL%20Server%20Management%20Studio%20Menu%20Help.md)  
+ [SQL Server Management Studio Menu Help](http://msdn.microsoft.com/library/5b8b2e45-bee6-42c8-93d6-31432f4d5699)  
   
- [Visual Database Tools F1 Help](../Topic/Visual%20Database%20Tools%20F1%20Help.md)  
+ [Visual Database Tools F1 Help](http://msdn.microsoft.com/library/79d15b47-6759-4f48-b9ac-2c86a3cd9980)  
   
  ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Command Prompt Utility Reference**  
  [bcp Utility](../tools/bcp-utility.md)  

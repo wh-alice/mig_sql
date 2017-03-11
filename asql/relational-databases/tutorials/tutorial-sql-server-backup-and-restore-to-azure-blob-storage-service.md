@@ -22,16 +22,16 @@ This tutorial helps you understand how to write backups to and restore from the 
 ## What you will learn  
 This tutorial shows you how to create a Storage account, a blob container, creating credentials to access the storage account, writing a backup to the blob service, and performing a simple restore. This tutorial is divided into four lessons:  
   
-[Lesson 1: Create Azure Storage Objects](http://msdn.microsoft.com/en-US/library/jj720557(SQL.130).aspx)  
+[Lesson 1: Create Azure Storage Objects](http://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)  
 In this lesson, you create an Azure storage account and a blob container.  
   
-[Lesson 2: Create a SQL Server Credential](http://msdn.microsoft.com/en-US/library/jj720554(SQL.130).aspx)  
+[Lesson 2: Create a SQL Server Credential](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 In this lesson, you create a Credential to store security information used to access the Azure storage account.  
   
-[Lesson 3: Write a Full Database Backup to the Azure Blob Storage Service](http://msdn.microsoft.com/en-US/library/jj720552(SQL.130).aspx)  
+[Lesson 3: Write a Full Database Backup to the Azure Blob Storage Service](http://msdn.microsoft.com/library/454c8296-64e9-46ed-b141-5ebfbc8a4fe2)  
 In this lesson, you issue a T-SQL statement to write a backup of the AdventureWorks2012 database to the Azure Blob storage service.  
   
-[Lesson 4: Perform a Restore From a Full Database Backup](http://msdn.microsoft.com/en-US/library/jj852091(SQL.130).aspx)  
+[Lesson 4: Perform a Restore From a Full Database Backup](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  
 In this lesson, you issue a T-SQL statement to restore from the database backup you created in the previous lesson.  
   
 ### Requirements  

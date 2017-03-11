@@ -37,7 +37,7 @@ manager: "jhubbard"
  **New Variable**  
  Create a new variable.  
   
- **Related Topics:** [Add Variable](http://msdn.microsoft.com/en-US/library/ms189416(SQL.130).aspx)  
+ **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## See Also  
  [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)  
